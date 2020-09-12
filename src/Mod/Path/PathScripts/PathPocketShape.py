@@ -685,8 +685,8 @@ class ObjectPocket(PathPocketBase.ObjectPocket):
                             PathLog.debug('LimitDepthToFace adj_final_dep: {}'.format(adj_final_dep))
                     else:
                         face.translate(FreeCAD.Vector(0, 0, obj.FinalDepth.Value - shpZMin))
-                    
-                    extent = FreeCAD.Vector(0, 0, start_dep - shpZMin + clrnc)  # adj_final_dep + clrnc)
+
+                    extent = FreeCAD.Vector(0, 0, abs(start_dep - shpZMin) + clrnc)
                     extShp = face.removeSplitter().extrude(extent)
                     self.removalshapes.append((extShp, False, 'pathPocketShape', useAngle, axis, start_dep, adj_final_dep))
                     PathLog.debug("Extent values are strDep: {}, finDep: {},  extrd: {}".format(start_dep, adj_final_dep, extent))
