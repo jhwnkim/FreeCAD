@@ -44,7 +44,7 @@ linuxcnc_post.export(object,"/path/to/file.ncc","")
 
 now = datetime.datetime.now()
 
-parser = argparse.ArgumentParser(prog='linuxcnc', add_help=False)
+parser = argparse.ArgumentParser(prog='minitech4', add_help=False)
 parser.add_argument('--no-header', action='store_true', help='suppress header output')
 parser.add_argument('--no-comments', action='store_true', help='suppress comment output')
 parser.add_argument('--line-numbers', action='store_true', help='prefix with line numbers')
