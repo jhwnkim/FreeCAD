@@ -259,7 +259,9 @@ def getFillForObject(o, defaultFill, source):
         elif isinstance(o,str):
             material = FreeCAD.ActiveDocument.getObject(o)
         if material:
-            if hasattr(material, 'Color') and material.Color:
+            if hasattr(material, 'SectionColor') and material.SectionColor:
+                return material.SectionColor
+            elif hasattr(material, 'Color') and material.Color:
                 return material.Color
     return defaultFill
 
@@ -368,14 +370,14 @@ def getSVG(source,
     for o in objs:
         if Draft.getType(o) == "Space":
             spaces.append(o)
-        elif Draft.getType(o) in ["AngularDimension","LinearDimension","Annotation","Label","Text", "DraftText"]:
+        elif Draft.getType(o) in ["Dimension","AngularDimension","LinearDimension","Annotation","Label","Text", "DraftText"]:
             if isOriented(o,cutplane):
                 drafts.append(o)
         elif o.isDerivedFrom("Part::Part2DObject"):
             drafts.append(o)
         elif looksLikeDraft(o):
             drafts.append(o)
-        else:
+        elif not o.isDerivedFrom("App::DocumentObjectGroup"):
             nonspaces.append(o)
         if Draft.getType(o) == "Window":
             windows.append(o)
@@ -507,7 +509,7 @@ def getSVG(source,
                                 # temporarily disabling fill patterns
                                 svgcache += Draft.get_svg(s,
                                                           linewidth=0,
-                                                          fillstyle=Draft.getrgb(objectFill),
+                                                          fillstyle=Draft.getrgb(objectFill,testbw=False),
                                                           direction=direction.negative(),
                                                           color=lineColor)
                     svgcache += "</g>\n"
