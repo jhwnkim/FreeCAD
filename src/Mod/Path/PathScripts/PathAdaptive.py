@@ -1,5 +1,7 @@
-# /**************************************************************************
-# *   Copyright (c) Kresimir Tusek         (kresimir.tusek@gmail.com) 2018  *
+# -*- coding: utf-8 -*-
+# ***************************************************************************
+# *   Copyright (c) 2018 Kresimir Tusek <kresimir.tusek@gmail.com>          *
+# *                                                                         *
 # *   This file is part of the FreeCAD CAx development system.              *
 # *                                                                         *
 # *   This library is free software; you can redistribute it and/or         *
@@ -22,7 +24,7 @@
 # *   Additional modifications and contributions beginning 2019             *
 # *   by Schildkroet.       (https://github.com/Schildkroet)                *
 # *                                                                         *
-# **************************************************************************/
+# ***************************************************************************
 
 
 import PathScripts.PathOp as PathOp
@@ -136,7 +138,7 @@ def GenerateGCode(op,obj,adaptiveResults, helixDiameter):
 
 
     # ml: this is dangerous because it'll hide all unused variables hence forward
-    #     however, I don't know wht lx and ly signify so I leave them for now
+    #     however, I don't know what lx and ly signify so I'll leave them for now
     # pylint: disable=unused-variable
     lx = adaptiveResults[0]["HelixCenterPoint"][0]
     ly = adaptiveResults[0]["HelixCenterPoint"][1]
@@ -172,6 +174,7 @@ def GenerateGCode(op,obj,adaptiveResults, helixDiameter):
 
                 if obj.UseHelixArcs == False:
                     # rapid move to start point
+                    op.commandlist.append(Path.Command("G0", {"Z": obj.ClearanceHeight.Value}))
                     op.commandlist.append(Path.Command("G0", {"X": helixStart[0], "Y": helixStart[1], "Z": obj.ClearanceHeight.Value}))
 
                     # rapid move to safe height
@@ -203,6 +206,7 @@ def GenerateGCode(op,obj,adaptiveResults, helixDiameter):
                     helixStart = [region["HelixCenterPoint"][0] + r, region["HelixCenterPoint"][1]]
 
                     # rapid move to start point
+                    op.commandlist.append(Path.Command("G0", {"Z": obj.ClearanceHeight.Value}))
                     op.commandlist.append(Path.Command("G0", {"X": helixStart[0], "Y": helixStart[1], "Z": obj.ClearanceHeight.Value}))
 
                     # rapid move to safe height
@@ -236,6 +240,7 @@ def GenerateGCode(op,obj,adaptiveResults, helixDiameter):
 
             else: # no helix entry
                 # rapid move to clearance height
+                op.commandlist.append(Path.Command("G0", {"Z": obj.ClearanceHeight.Value}))
                 op.commandlist.append(Path.Command("G0", {"X": region["StartPoint"][0], "Y": region["StartPoint"][1], "Z": obj.ClearanceHeight.Value}))
                 # straight plunge to target depth
                 op.commandlist.append(Path.Command("G1", {"X":region["StartPoint"][0], "Y": region["StartPoint"][1], "Z": passEndDepth,"F": op.vertFeed}))
@@ -248,7 +253,7 @@ def GenerateGCode(op,obj,adaptiveResults, helixDiameter):
             for pth in region["AdaptivePaths"]:
                 motionType = pth[0]  #[0] contains motion type
 
-                for pt in pth[1]: #[1] contains list of points
+                for pt in pth[1]:    #[1] contains list of points
                     x = pt[0]
                     y = pt[1]
 
@@ -393,6 +398,7 @@ def Execute(op,obj):
             "operationType": obj.OperationType,
             "side": obj.Side,
             "forceInsideOut" : obj.ForceInsideOut,
+            "finishingProfile" : obj.FinishingProfile,
             "keepToolDownRatio": keepToolDownRatio,
             "stockToLeave": float(obj.StockToLeave)
         }
@@ -431,6 +437,7 @@ def Execute(op,obj):
             a2d.stockToLeave =float(obj.StockToLeave)
             a2d.tolerance = float(obj.Tolerance)
             a2d.forceInsideOut = obj.ForceInsideOut
+            a2d.finishingProfile = obj.FinishingProfile
             a2d.opType = opType
 
             # EXECUTE
@@ -468,7 +475,7 @@ class PathAdaptive(PathOp.ObjectOp):
         '''opFeatures(obj) ... returns the OR'ed list of features used and supported by the operation.
         The default implementation returns "FeatureTool | FeatureDepths | FeatureHeights | FeatureStartPoint"
         Should be overwritten by subclasses.'''
-        return PathOp.FeatureTool | PathOp.FeatureBaseEdges | PathOp.FeatureDepths | PathOp.FeatureFinishDepth | PathOp.FeatureStepDown | PathOp.FeatureHeights | PathOp.FeatureBaseGeometry | PathOp.FeatureCoolant 
+        return PathOp.FeatureTool | PathOp.FeatureBaseEdges | PathOp.FeatureDepths | PathOp.FeatureFinishDepth | PathOp.FeatureStepDown | PathOp.FeatureHeights | PathOp.FeatureBaseGeometry | PathOp.FeatureCoolant
 
     def initOperation(self, obj):
         '''initOperation(obj) ... implement to create additional properties.
@@ -487,6 +494,7 @@ class PathAdaptive(PathOp.ObjectOp):
         # obj.addProperty("App::PropertyBool", "ProcessHoles", "Adaptive","Process holes as well as the face outline")
 
         obj.addProperty("App::PropertyBool", "ForceInsideOut", "Adaptive","Force plunging into material inside and clearing towards the edges")
+        obj.addProperty("App::PropertyBool", "FinishingProfile", "Adaptive","To take a finishing profile path at the end")
         obj.addProperty("App::PropertyBool", "Stopped",
                         "Adaptive", "Stop processing")
         obj.setEditorMode('Stopped', 2) #hide this property
@@ -515,6 +523,7 @@ class PathAdaptive(PathOp.ObjectOp):
         obj.LiftDistance=0
         # obj.ProcessHoles = True
         obj.ForceInsideOut = False
+        obj.FinishingProfile = True
         obj.Stopped = False
         obj.StopProcessing = False
         obj.HelixAngle = 5

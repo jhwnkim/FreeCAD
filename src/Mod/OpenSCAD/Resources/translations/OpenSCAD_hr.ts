@@ -361,12 +361,14 @@
     <message>
       <location filename="../../OpenSCADCommands.py" line="254"/>
       <source>Resize Mesh Feature...</source>
-      <translation type="unfinished">Resize Mesh Feature...</translation>
+      <translation>Skaliranje svojstava mreže ...
+
+</translation>
     </message>
     <message>
       <location filename="../../OpenSCADCommands.py" line="255"/>
       <source>Create Resize Mesh Feature</source>
-      <translation type="unfinished">Create Resize Mesh Feature</translation>
+      <translation>Stvori Svojstvo Skaliranje Mreža</translation>
     </message>
   </context>
   <context>
@@ -374,12 +376,12 @@
     <message>
       <location filename="../../OpenSCADCommands.py" line="224"/>
       <source>Scale Mesh Feature...</source>
-      <translation type="unfinished">Scale Mesh Feature...</translation>
+      <translation>Skaliranje Svojstava  Mreže...</translation>
     </message>
     <message>
       <location filename="../../OpenSCADCommands.py" line="225"/>
       <source>Create Scale Mesh Feature</source>
-      <translation type="unfinished">Create Scale Mesh Feature</translation>
+      <translation>Stvori Svojstvo Skaliranje Mreža</translation>
     </message>
   </context>
   <context>

@@ -121,6 +121,81 @@
     </message>
   </context>
   <context>
+    <name>Command</name>
+    <message>
+      <source>Edit</source>
+      <translation>Upraviť</translation>
+    </message>
+    <message>
+      <source>Import</source>
+      <translation>Importovať</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Odstrániť</translation>
+    </message>
+    <message>
+      <source>Paste expressions</source>
+      <translation type="unfinished">Paste expressions</translation>
+    </message>
+    <message>
+      <source>Make link group</source>
+      <translation type="unfinished">Make link group</translation>
+    </message>
+    <message>
+      <source>Make link</source>
+      <translation type="unfinished">Make link</translation>
+    </message>
+    <message>
+      <source>Make sub-link</source>
+      <translation type="unfinished">Make sub-link</translation>
+    </message>
+    <message>
+      <source>Import links</source>
+      <translation type="unfinished">Import links</translation>
+    </message>
+    <message>
+      <source>Import all links</source>
+      <translation type="unfinished">Import all links</translation>
+    </message>
+    <message>
+      <source>Insert measurement</source>
+      <translation type="unfinished">Insert measurement</translation>
+    </message>
+    <message>
+      <source>Insert text document</source>
+      <translation type="unfinished">Insert text document</translation>
+    </message>
+    <message>
+      <source>Add a part</source>
+      <translation type="unfinished">Add a part</translation>
+    </message>
+    <message>
+      <source>Add a group</source>
+      <translation type="unfinished">Add a group</translation>
+    </message>
+    <message>
+      <source>Align</source>
+      <translation>Zarovnať</translation>
+    </message>
+    <message>
+      <source>Placement</source>
+      <translation>Umiestnenie</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Transformácia</translation>
+    </message>
+    <message>
+      <source>Link Transform</source>
+      <translation type="unfinished">Link Transform</translation>
+    </message>
+    <message>
+      <source>Measure distance</source>
+      <translation>Meranie vzdialenosti</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
@@ -433,11 +508,11 @@ while doing a left or right click and move the mouse up or down</source>
     </message>
     <message>
       <source> "</source>
-      <translation type="unfinished"> "</translation>
+      <translation> "</translation>
     </message>
     <message>
       <source>"</source>
-      <translation type="unfinished">"</translation>
+      <translation>"</translation>
     </message>
   </context>
   <context>
@@ -2119,7 +2194,7 @@ Určite iný adresár.</translation>
     </message>
     <message>
       <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation type="unfinished">If enabled, then 3D view selection will be synchronized with full object hierarchy.</translation>
+      <translation>Ak je zapnuté, potom výber v 3D pohľade bude synchronizovaný s kompletnou hierarchiou objektov.</translation>
     </message>
   </context>
   <context>
@@ -2529,6 +2604,30 @@ opening or creation</translation>
     <message>
       <source>Show axis cross by default</source>
       <translation type="unfinished">Show axis cross by default</translation>
+    </message>
+    <message>
+      <source>Pick radius (px):</source>
+      <translation type="unfinished">Pick radius (px):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation type="unfinished">Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation type="unfinished">This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation type="unfinished">Use software OpenGL</translation>
     </message>
   </context>
   <context>
@@ -3221,31 +3320,31 @@ You can also use the form: John Doe &lt;john@doe.com&gt;</translation>
     </message>
     <message>
       <source>Recent macros menu</source>
-      <translation type="unfinished">Recent macros menu</translation>
+      <translation>Menu nedávnych makier</translation>
     </message>
     <message>
       <source>Size of recent macro list</source>
-      <translation type="unfinished">Size of recent macro list</translation>
+      <translation>Veľkosť zoznamu nedávnych makier</translation>
     </message>
     <message>
       <source>How many macros should be listed in recent macros list</source>
-      <translation type="unfinished">How many macros should be listed in recent macros list</translation>
+      <translation>Koľko makier má byť uvedených v zozname nedávnych makier</translation>
     </message>
     <message>
       <source>Shortcut count</source>
-      <translation type="unfinished">Shortcut count</translation>
+      <translation>Počet skratiek</translation>
     </message>
     <message>
       <source>How many recent macros should have shortcuts</source>
-      <translation type="unfinished">How many recent macros should have shortcuts</translation>
+      <translation>Koľko nedávnych makier by malo mať skratky</translation>
     </message>
     <message>
       <source>Keyboard Modifiers</source>
-      <translation type="unfinished">Keyboard Modifiers</translation>
+      <translation>Modifikátory klávesnice</translation>
     </message>
     <message>
       <source>Keyboard modifiers, default = Ctrl+Shift+</source>
-      <translation type="unfinished">Keyboard modifiers, default = Ctrl+Shift+</translation>
+      <translation>Modifikátory klávesnice, predvolené = Ctrl+Shift+</translation>
     </message>
   </context>
   <context>
@@ -3393,10 +3492,6 @@ Mouse tilting is not disabled by this setting.</translation>
       <translation type="unfinished">Rotations in 3D will use current cursor position as center for rotation</translation>
     </message>
     <message>
-      <source>Rotate at cursor</source>
-      <translation type="unfinished">Rotate at cursor</translation>
-    </message>
-    <message>
       <source>Isometric</source>
       <translation type="unfinished">Isometric</translation>
     </message>
@@ -3443,6 +3538,22 @@ Mouse tilting is not disabled by this setting.</translation>
     <message>
       <source>Default camera orientation when creating a new document or selecting the home view</source>
       <translation type="unfinished">Default camera orientation when creating a new document or selecting the home view</translation>
+    </message>
+    <message>
+      <source>Rotation mode</source>
+      <translation type="unfinished">Rotation mode</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation type="unfinished">Window center</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation type="unfinished">Drag at cursor</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation type="unfinished">Object center</translation>
     </message>
   </context>
   <context>
@@ -3549,7 +3660,7 @@ Mouse tilting is not disabled by this setting.</translation>
     </message>
     <message>
       <source>FEM (mm, N, sec)</source>
-      <translation type="unfinished">FEM (mm, N, sec)</translation>
+      <translation>FEM (mm, N, sek)</translation>
     </message>
   </context>
   <context>
@@ -3587,10 +3698,6 @@ Mouse tilting is not disabled by this setting.</translation>
       <translation>Jednoduchá farba</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation type="unfinished">Pick radius (px):</translation>
-    </message>
-    <message>
       <source>Object being edited</source>
       <translation type="unfinished">Object being edited</translation>
     </message>
@@ -3605,12 +3712,6 @@ Mouse tilting is not disabled by this setting.</translation>
     <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation type="unfinished">Enable selection highlighting and use specified color</translation>
-    </message>
-    <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.</source>
-      <translation type="unfinished">Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
@@ -4721,14 +4822,14 @@ Chcete uložiť zmeny?</translation>
     <name>Gui::ExpressionLineEdit</name>
     <message>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Presná zhoda</translation>
     </message>
   </context>
   <context>
     <name>Gui::ExpressionTextEdit</name>
     <message>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Presná zhoda</translation>
     </message>
   </context>
   <context>
@@ -5369,7 +5470,7 @@ Chcete skončiť bez uloženia vašich údajov?</translation>
     <name>Gui::RecentMacrosAction</name>
     <message>
       <source>Run macro %1 (Shift+click to edit) shortcut: %2</source>
-      <translation type="unfinished">Run macro %1 (Shift+click to edit) shortcut: %2</translation>
+      <translation>Spustiť makro %1 (Shift+klik pre úpravu) klávesová skratka %2</translation>
     </message>
     <message>
       <source>File not found</source>
@@ -6715,7 +6816,7 @@ Choose 'Abort' to abort</translation>
       <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
 
 </source>
-      <translation type="unfinished">Identical physical path detected. It may cause unwanted overwrite of existing document!
+      <translation>Detekovaná identická fyzická dráha. Može spôsobiť nechcený prepis existujúceho dokumentu!
 
 </translation>
     </message>
@@ -6727,23 +6828,23 @@ Choose 'Abort' to abort</translation>
       <source>
 
 Please check report view for more...</source>
-      <translation type="unfinished">
+      <translation>
 
-Please check report view for more...</translation>
+Prosím skontroluj okno hlásení pre viac...</translation>
     </message>
     <message>
       <source>
 
 Pyhsical path: </source>
-      <translation type="unfinished">
+      <translation>
 
-Pyhsical path: </translation>
+Fyzická dráha: </translation>
     </message>
     <message>
       <source>
 Document: </source>
-      <translation type="unfinished">
-Document: </translation>
+      <translation>
+Dokument: </translation>
     </message>
     <message>
       <source>
@@ -6753,7 +6854,7 @@ Document: </translation>
     </message>
     <message>
       <source>Identical physical path</source>
-      <translation type="unfinished">Identical physical path</translation>
+      <translation>Identická fyzická dráha</translation>
     </message>
   </context>
   <context>
@@ -7969,11 +8070,11 @@ Document: </translation>
     </message>
     <message>
       <source>Recent macros</source>
-      <translation type="unfinished">Recent macros</translation>
+      <translation>Nedávne makrá</translation>
     </message>
     <message>
       <source>Recent macro list</source>
-      <translation type="unfinished">Recent macro list</translation>
+      <translation>Zoznam nedávnych makier</translation>
     </message>
   </context>
   <context>
@@ -8813,6 +8914,21 @@ Document: </translation>
     </message>
   </context>
   <context>
+    <name>StdCmdViewRestoreCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Štandardné zobrazenie</translation>
+    </message>
+    <message>
+      <source>Restore saved camera</source>
+      <translation type="unfinished">Restore saved camera</translation>
+    </message>
+    <message>
+      <source>Restore saved camera settings</source>
+      <translation type="unfinished">Restore saved camera settings</translation>
+    </message>
+  </context>
+  <context>
     <name>StdCmdViewRight</name>
     <message>
       <source>Standard-View</source>
@@ -8855,6 +8971,21 @@ Document: </translation>
     <message>
       <source>Rotate the view by 90° clockwise</source>
       <translation type="unfinished">Rotate the view by 90° clockwise</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdViewSaveCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Štandardné zobrazenie</translation>
+    </message>
+    <message>
+      <source>Save current camera</source>
+      <translation type="unfinished">Save current camera</translation>
+    </message>
+    <message>
+      <source>Save current camera settings</source>
+      <translation type="unfinished">Save current camera settings</translation>
     </message>
   </context>
   <context>

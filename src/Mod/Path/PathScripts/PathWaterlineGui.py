@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
 # *                                                                         *
 # *   Copyright (c) 2020 sliptonic <shopinthewoods@gmail.com>               *
@@ -146,9 +145,9 @@ class TaskPanelOpPage(PathOpGui.TaskPanelPage):
 Command = PathOpGui.SetupOperation('Waterline',
         PathWaterline.Create,
         TaskPanelOpPage,
-        'Path-Waterline',
-        QtCore.QT_TRANSLATE_NOOP("Waterline", "Waterline"),
-        QtCore.QT_TRANSLATE_NOOP("Waterline", "Create a Waterline Operation from a model"),
+        'Path_Waterline',
+        QtCore.QT_TRANSLATE_NOOP("Path_Waterline", "Waterline"),
+        QtCore.QT_TRANSLATE_NOOP("Path_Waterline", "Create a Waterline Operation from a model"),
         PathWaterline.SetupProperties)
 
 FreeCAD.Console.PrintLog("Loading PathWaterlineGui... done\n")

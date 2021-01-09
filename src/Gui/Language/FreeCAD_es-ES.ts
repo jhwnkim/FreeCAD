@@ -121,6 +121,81 @@
     </message>
   </context>
   <context>
+    <name>Command</name>
+    <message>
+      <source>Edit</source>
+      <translation>Editar</translation>
+    </message>
+    <message>
+      <source>Import</source>
+      <translation>Importar</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Borrar</translation>
+    </message>
+    <message>
+      <source>Paste expressions</source>
+      <translation type="unfinished">Paste expressions</translation>
+    </message>
+    <message>
+      <source>Make link group</source>
+      <translation>Hacer vínculo de grupo</translation>
+    </message>
+    <message>
+      <source>Make link</source>
+      <translation>Crear vínculo</translation>
+    </message>
+    <message>
+      <source>Make sub-link</source>
+      <translation>Crear sub-vínculo</translation>
+    </message>
+    <message>
+      <source>Import links</source>
+      <translation>Importar vínculo</translation>
+    </message>
+    <message>
+      <source>Import all links</source>
+      <translation>Importar todos los vínculos</translation>
+    </message>
+    <message>
+      <source>Insert measurement</source>
+      <translation type="unfinished">Insert measurement</translation>
+    </message>
+    <message>
+      <source>Insert text document</source>
+      <translation type="unfinished">Insert text document</translation>
+    </message>
+    <message>
+      <source>Add a part</source>
+      <translation type="unfinished">Add a part</translation>
+    </message>
+    <message>
+      <source>Add a group</source>
+      <translation type="unfinished">Add a group</translation>
+    </message>
+    <message>
+      <source>Align</source>
+      <translation>Alinear</translation>
+    </message>
+    <message>
+      <source>Placement</source>
+      <translation>Ubicación</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Transformar</translation>
+    </message>
+    <message>
+      <source>Link Transform</source>
+      <translation type="unfinished">Link Transform</translation>
+    </message>
+    <message>
+      <source>Measure distance</source>
+      <translation>Medir distancia</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
@@ -434,11 +509,11 @@ mientras hace clic con el botón izquierdo o derecho y mueve el ratón hacia arr
     </message>
     <message>
       <source> "</source>
-      <translation type="unfinished"> "</translation>
+      <translation> "</translation>
     </message>
     <message>
       <source>"</source>
-      <translation type="unfinished">"</translation>
+      <translation>"</translation>
     </message>
   </context>
   <context>
@@ -2125,7 +2200,7 @@ Especifique otro directorio, por favor.</translation>
     </message>
     <message>
       <source>If enabled, then 3D view selection will be synchronized with full object hierarchy.</source>
-      <translation type="unfinished">If enabled, then 3D view selection will be synchronized with full object hierarchy.</translation>
+      <translation>Si está activado, entonces la selección de vista 3D se sincronizará con la jerarquía completa de objetos.</translation>
     </message>
   </context>
   <context>
@@ -2530,6 +2605,29 @@ opening or creation</source>
     <message>
       <source>Show axis cross by default</source>
       <translation>Mostrar la cruz de los ejes por defecto</translation>
+    </message>
+    <message>
+      <source>Pick radius (px):</source>
+      <translation>Elegir radio (px):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation>Área para elegir elementos en la vista 3D.
+Valor más grande facilita la selección de cosas, pero puede hacer que las características pequeñas sean imposibles de seleccionar.               </translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation type="unfinished">This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation type="unfinished">Use software OpenGL</translation>
     </message>
   </context>
   <context>
@@ -3221,31 +3319,31 @@ También puede utilizar el formulario: John Doe &lt;john@doe.com&gt;</translatio
     </message>
     <message>
       <source>Recent macros menu</source>
-      <translation type="unfinished">Recent macros menu</translation>
+      <translation>Menú de macros recientes</translation>
     </message>
     <message>
       <source>Size of recent macro list</source>
-      <translation type="unfinished">Size of recent macro list</translation>
+      <translation>Tamaño de la lista de macros reciente</translation>
     </message>
     <message>
       <source>How many macros should be listed in recent macros list</source>
-      <translation type="unfinished">How many macros should be listed in recent macros list</translation>
+      <translation>Cuántas macros debería aparecer en la lista de macros recientes</translation>
     </message>
     <message>
       <source>Shortcut count</source>
-      <translation type="unfinished">Shortcut count</translation>
+      <translation>Contador de accesos directos</translation>
     </message>
     <message>
       <source>How many recent macros should have shortcuts</source>
-      <translation type="unfinished">How many recent macros should have shortcuts</translation>
+      <translation>Cuántas macros recientes deben tener accesos directos</translation>
     </message>
     <message>
       <source>Keyboard Modifiers</source>
-      <translation type="unfinished">Keyboard Modifiers</translation>
+      <translation>Modificadores de teclado</translation>
     </message>
     <message>
       <source>Keyboard modifiers, default = Ctrl+Shift+</source>
-      <translation type="unfinished">Keyboard modifiers, default = Ctrl+Shift+</translation>
+      <translation>Modificadores de teclado, por defecto = Ctrl+Shift+</translation>
     </message>
   </context>
   <context>
@@ -3391,10 +3489,6 @@ Mouse tilting is not disabled by this setting.</source>
       <translation>Las rotaciones en 3D usarán la posición actual del cursor como centro de rotación</translation>
     </message>
     <message>
-      <source>Rotate at cursor</source>
-      <translation>Girar el cursor</translation>
-    </message>
-    <message>
       <source>Isometric</source>
       <translation>Isométrico</translation>
     </message>
@@ -3441,6 +3535,22 @@ Mouse tilting is not disabled by this setting.</source>
     <message>
       <source>Default camera orientation when creating a new document or selecting the home view</source>
       <translation>Orientación de cámara por defecto al crear un nuevo documento o seleccionar la vista de inicio</translation>
+    </message>
+    <message>
+      <source>Rotation mode</source>
+      <translation type="unfinished">Rotation mode</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation type="unfinished">Window center</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation type="unfinished">Drag at cursor</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation type="unfinished">Object center</translation>
     </message>
   </context>
   <context>
@@ -3547,7 +3657,7 @@ Mouse tilting is not disabled by this setting.</source>
     </message>
     <message>
       <source>FEM (mm, N, sec)</source>
-      <translation type="unfinished">FEM (mm, N, sec)</translation>
+      <translation>FEM (mm, N, seg)</translation>
     </message>
   </context>
   <context>
@@ -3585,10 +3695,6 @@ Mouse tilting is not disabled by this setting.</source>
       <translation>Color simple</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Elegir radio (px):</translation>
-    </message>
-    <message>
       <source>Object being edited</source>
       <translation>Objeto editándose</translation>
     </message>
@@ -3603,12 +3709,6 @@ Mouse tilting is not disabled by this setting.</source>
     <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation>Activar resaltado de selección y usar el color especificado</translation>
-    </message>
-    <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.</source>
-      <translation>Área para elegir elementos en la vista 3D.
-Valor más grande facilita la selección de cosas, pero puede hacer que las características pequeñas sean imposibles de seleccionar.</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
@@ -4719,14 +4819,14 @@ Desea guardar los cambios?</translation>
     <name>Gui::ExpressionLineEdit</name>
     <message>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Coincidencia exacta</translation>
     </message>
   </context>
   <context>
     <name>Gui::ExpressionTextEdit</name>
     <message>
       <source>Exact match</source>
-      <translation type="unfinished">Exact match</translation>
+      <translation>Coincidencia exacta</translation>
     </message>
   </context>
   <context>
@@ -5364,7 +5464,7 @@ Do you want to exit without saving your data?</source>
     <name>Gui::RecentMacrosAction</name>
     <message>
       <source>Run macro %1 (Shift+click to edit) shortcut: %2</source>
-      <translation type="unfinished">Run macro %1 (Shift+click to edit) shortcut: %2</translation>
+      <translation>Ejecutar macro %1 (Shift+click para editar): %2</translation>
     </message>
     <message>
       <source>File not found</source>
@@ -6707,7 +6807,7 @@ Seleccione 'Abortar' para abortar</translation>
       <source>Identical physical path detected. It may cause unwanted overwrite of existing document!
 
 </source>
-      <translation type="unfinished">Identical physical path detected. It may cause unwanted overwrite of existing document!
+      <translation>Ruta física idéntica detectada. ¡Puede causar sobreescritura no deseada del documento existente!
 
 </translation>
     </message>
@@ -6719,33 +6819,33 @@ Seleccione 'Abortar' para abortar</translation>
       <source>
 
 Please check report view for more...</source>
-      <translation type="unfinished">
+      <translation>
 
-Please check report view for more...</translation>
+Por favor, compruebe la vista del informe para más...</translation>
     </message>
     <message>
       <source>
 
 Pyhsical path: </source>
-      <translation type="unfinished">
+      <translation>
 
-Pyhsical path: </translation>
+Ruta física: </translation>
     </message>
     <message>
       <source>
 Document: </source>
-      <translation type="unfinished">
-Document: </translation>
+      <translation>
+Documento: </translation>
     </message>
     <message>
       <source>
   Path: </source>
-      <translation type="unfinished">
-  Path: </translation>
+      <translation>
+  Ruta: </translation>
     </message>
     <message>
       <source>Identical physical path</source>
-      <translation type="unfinished">Identical physical path</translation>
+      <translation>Ruta física idéntica</translation>
     </message>
   </context>
   <context>
@@ -7961,11 +8061,11 @@ Document: </translation>
     </message>
     <message>
       <source>Recent macros</source>
-      <translation type="unfinished">Recent macros</translation>
+      <translation>Macros recientes</translation>
     </message>
     <message>
       <source>Recent macro list</source>
-      <translation type="unfinished">Recent macro list</translation>
+      <translation>Lista de macros recientes</translation>
     </message>
   </context>
   <context>
@@ -8805,6 +8905,21 @@ Document: </translation>
     </message>
   </context>
   <context>
+    <name>StdCmdViewRestoreCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Vista estándar</translation>
+    </message>
+    <message>
+      <source>Restore saved camera</source>
+      <translation type="unfinished">Restore saved camera</translation>
+    </message>
+    <message>
+      <source>Restore saved camera settings</source>
+      <translation type="unfinished">Restore saved camera settings</translation>
+    </message>
+  </context>
+  <context>
     <name>StdCmdViewRight</name>
     <message>
       <source>Standard-View</source>
@@ -8847,6 +8962,21 @@ Document: </translation>
     <message>
       <source>Rotate the view by 90° clockwise</source>
       <translation>Girar la vista a 90° en sentido horario</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdViewSaveCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Vista estándar</translation>
+    </message>
+    <message>
+      <source>Save current camera</source>
+      <translation type="unfinished">Save current camera</translation>
+    </message>
+    <message>
+      <source>Save current camera settings</source>
+      <translation type="unfinished">Save current camera settings</translation>
     </message>
   </context>
   <context>

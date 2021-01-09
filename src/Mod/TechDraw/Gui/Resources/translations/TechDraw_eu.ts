@@ -69,7 +69,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="977"/>
       <source>Add Cosmetic Line Through 2 Points</source>
-      <translation type="unfinished">Add Cosmetic Line Through 2 Points</translation>
+      <translation>Gehitu lerro kosmetikoa 2 puntu zeharkatuta</translation>
     </message>
   </context>
   <context>
@@ -88,12 +88,12 @@
   <context>
     <name>CmdTechDrawActiveView</name>
     <message>
-      <location filename="../../Command.cpp" line="400"/>
+      <location filename="../../Command.cpp" line="410"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="401"/>
+      <location filename="../../Command.cpp" line="411"/>
       <source>Insert Active View (3D View)</source>
       <translation>Txertatu bista aktiboa (3D bista)</translation>
     </message>
@@ -127,17 +127,17 @@
   <context>
     <name>CmdTechDrawArchView</name>
     <message>
-      <location filename="../../Command.cpp" line="1125"/>
+      <location filename="../../Command.cpp" line="1135"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1126"/>
+      <location filename="../../Command.cpp" line="1136"/>
       <source>Insert Arch Workbench Object</source>
       <translation>Txertatu Arch lan-mahaiaren objektua</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1127"/>
+      <location filename="../../Command.cpp" line="1137"/>
       <source>Insert a View of a Section Plane from Arch Workbench</source>
       <translation>Txertatu Arch lan-mahaiko sekzio-plano baten bista bat</translation>
     </message>
@@ -145,12 +145,12 @@
   <context>
     <name>CmdTechDrawBalloon</name>
     <message>
-      <location filename="../../Command.cpp" line="754"/>
+      <location filename="../../Command.cpp" line="764"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="755"/>
+      <location filename="../../Command.cpp" line="765"/>
       <source>Insert Balloon Annotation</source>
       <translation>Txertatu bunbuilo-oharpena</translation>
     </message>
@@ -176,12 +176,12 @@
   <context>
     <name>CmdTechDrawClipGroup</name>
     <message>
-      <location filename="../../Command.cpp" line="803"/>
+      <location filename="../../Command.cpp" line="813"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="804"/>
+      <location filename="../../Command.cpp" line="814"/>
       <source>Insert Clip Group</source>
       <translation>Txertatu ebaketa-taldea</translation>
     </message>
@@ -189,12 +189,12 @@
   <context>
     <name>CmdTechDrawClipGroupAdd</name>
     <message>
-      <location filename="../../Command.cpp" line="842"/>
+      <location filename="../../Command.cpp" line="852"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="843"/>
+      <location filename="../../Command.cpp" line="853"/>
       <source>Add View to Clip Group</source>
       <translation>Gehitu bista ebaketa-taldeari</translation>
     </message>
@@ -202,12 +202,12 @@
   <context>
     <name>CmdTechDrawClipGroupRemove</name>
     <message>
-      <location filename="../../Command.cpp" line="925"/>
+      <location filename="../../Command.cpp" line="935"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="926"/>
+      <location filename="../../Command.cpp" line="936"/>
       <source>Remove View from Clip Group</source>
       <translation>Kendu bista ebaketa-taldetik</translation>
     </message>
@@ -272,12 +272,12 @@
   <context>
     <name>CmdTechDrawDetailView</name>
     <message>
-      <location filename="../../Command.cpp" line="484"/>
+      <location filename="../../Command.cpp" line="494"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="485"/>
+      <location filename="../../Command.cpp" line="495"/>
       <source>Insert Detail View</source>
       <translation>Txertatu xehetasun-bista</translation>
     </message>
@@ -311,17 +311,17 @@
   <context>
     <name>CmdTechDrawDraftView</name>
     <message>
-      <location filename="../../Command.cpp" line="1059"/>
+      <location filename="../../Command.cpp" line="1069"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1060"/>
+      <location filename="../../Command.cpp" line="1070"/>
       <source>Insert Draft Workbench Object</source>
       <translation>Txertatu Draft lan-mahaiaren objektua</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1061"/>
+      <location filename="../../Command.cpp" line="1071"/>
       <source>Insert a View of a Draft Workbench object</source>
       <translation>Txertatu zirriborro lan-mahai objektu baten bista bat</translation>
     </message>
@@ -329,22 +329,22 @@
   <context>
     <name>CmdTechDrawExportPageDXF</name>
     <message>
-      <location filename="../../Command.cpp" line="1293"/>
+      <location filename="../../Command.cpp" line="1303"/>
       <source>File</source>
       <translation>Fitxategia</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1294"/>
+      <location filename="../../Command.cpp" line="1304"/>
       <source>Export Page as DXF</source>
       <translation>Esportatu orrialdea DXF gisa</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1327"/>
+      <location filename="../../Command.cpp" line="1337"/>
       <source>Save Dxf File </source>
       <translation>Gorde DXF fitxategia </translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1329"/>
+      <location filename="../../Command.cpp" line="1339"/>
       <source>Dxf (*.dxf)</source>
       <translation>DXF (*.dxf)</translation>
     </message>
@@ -352,12 +352,12 @@
   <context>
     <name>CmdTechDrawExportPageSVG</name>
     <message>
-      <location filename="../../Command.cpp" line="1249"/>
+      <location filename="../../Command.cpp" line="1259"/>
       <source>File</source>
       <translation>Fitxategia</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1250"/>
+      <location filename="../../Command.cpp" line="1260"/>
       <source>Export Page as SVG</source>
       <translation>Esportatu orrialdea SVG gisa</translation>
     </message>
@@ -547,12 +547,12 @@
   <context>
     <name>CmdTechDrawPageDefault</name>
     <message>
-      <location filename="../../Command.cpp" line="102"/>
+      <location filename="../../Command.cpp" line="112"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="103"/>
+      <location filename="../../Command.cpp" line="113"/>
       <source>Insert Default Page</source>
       <translation>Txertatu orri lehenetsia</translation>
     </message>
@@ -560,22 +560,22 @@
   <context>
     <name>CmdTechDrawPageTemplate</name>
     <message>
-      <location filename="../../Command.cpp" line="165"/>
+      <location filename="../../Command.cpp" line="175"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="166"/>
+      <location filename="../../Command.cpp" line="176"/>
       <source>Insert Page using Template</source>
       <translation>Txertatu orria txantiloi bat erabilita</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="178"/>
+      <location filename="../../Command.cpp" line="188"/>
       <source>Select a Template File</source>
       <translation>Hautatu txantiloi-fitxategi bat</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="180"/>
+      <location filename="../../Command.cpp" line="190"/>
       <source>Template (*.svg *.dxf)</source>
       <translation>Txantiloia (*.svg *.dxf)</translation>
     </message>
@@ -583,17 +583,17 @@
   <context>
     <name>CmdTechDrawProjectionGroup</name>
     <message>
-      <location filename="../../Command.cpp" line="533"/>
+      <location filename="../../Command.cpp" line="543"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="534"/>
+      <location filename="../../Command.cpp" line="544"/>
       <source>Insert Projection Group</source>
       <translation>Txertatu proiekzio-taldea</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="535"/>
+      <location filename="../../Command.cpp" line="545"/>
       <source>Insert multiple linked views of drawable object(s)</source>
       <translation>Txertatu objektu marrazgai(ar)en bista estekatu anitz</translation>
     </message>
@@ -627,12 +627,12 @@
   <context>
     <name>CmdTechDrawRedrawPage</name>
     <message>
-      <location filename="../../Command.cpp" line="242"/>
+      <location filename="../../Command.cpp" line="252"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="243"/>
+      <location filename="../../Command.cpp" line="253"/>
       <source>Redraw Page</source>
       <translation>Marraztu orria berriro</translation>
     </message>
@@ -653,12 +653,12 @@
   <context>
     <name>CmdTechDrawSectionView</name>
     <message>
-      <location filename="../../Command.cpp" line="434"/>
+      <location filename="../../Command.cpp" line="444"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="435"/>
+      <location filename="../../Command.cpp" line="445"/>
       <source>Insert Section View</source>
       <translation>Txertatu sekzio-bista</translation>
     </message>
@@ -679,17 +679,17 @@
   <context>
     <name>CmdTechDrawSpreadsheetView</name>
     <message>
-      <location filename="../../Command.cpp" line="1190"/>
+      <location filename="../../Command.cpp" line="1200"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1191"/>
+      <location filename="../../Command.cpp" line="1201"/>
       <source>Insert Spreadsheet View</source>
       <translation>Txertatu kalkulu-orriaren bista</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1192"/>
+      <location filename="../../Command.cpp" line="1202"/>
       <source>Insert View to a spreadsheet</source>
       <translation>Txertatu bista kalkulu-orri bati</translation>
     </message>
@@ -697,19 +697,19 @@
   <context>
     <name>CmdTechDrawSymbol</name>
     <message>
-      <location filename="../../Command.cpp" line="1000"/>
+      <location filename="../../Command.cpp" line="1010"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1001"/>
+      <location filename="../../Command.cpp" line="1011"/>
       <source>Insert SVG Symbol</source>
       <translation>Txertatu SVG ikurra</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1002"/>
+      <location filename="../../Command.cpp" line="1012"/>
       <source>Insert symbol from an SVG file</source>
-      <translation type="unfinished">Insert symbol from an SVG file</translation>
+      <translation>Txertatu ikurra SVG fitxategi batetik</translation>
     </message>
   </context>
   <context>
@@ -755,17 +755,17 @@
   <context>
     <name>CmdTechDrawView</name>
     <message>
-      <location filename="../../Command.cpp" line="279"/>
+      <location filename="../../Command.cpp" line="289"/>
       <source>TechDraw</source>
       <translation>TechDraw</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="280"/>
+      <location filename="../../Command.cpp" line="290"/>
       <source>Insert View</source>
       <translation>Txertatu bista</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="281"/>
+      <location filename="../../Command.cpp" line="291"/>
       <source>Insert a View</source>
       <translation>Txertatu bista bat</translation>
     </message>
@@ -781,6 +781,189 @@
       <location filename="../../CommandAnnotate.cpp" line="1400"/>
       <source>Add Welding Information to Leaderline</source>
       <translation>Gehitu soldadura-informazioa gida-marrari</translation>
+    </message>
+  </context>
+  <context>
+    <name>Command</name>
+    <message>
+      <location filename="../../Command.cpp" line="132"/>
+      <location filename="../../Command.cpp" line="202"/>
+      <source>Drawing create page</source>
+      <translation type="unfinished">Drawing create page</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="356"/>
+      <source>Create view</source>
+      <translation type="unfinished">Create view</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="609"/>
+      <source>Create Projection Group</source>
+      <translation type="unfinished">Create Projection Group</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="831"/>
+      <source>Create Clip</source>
+      <translation type="unfinished">Create Clip</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="904"/>
+      <source>ClipGroupAdd</source>
+      <translation type="unfinished">ClipGroupAdd</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="977"/>
+      <source>ClipGroupRemove</source>
+      <translation type="unfinished">ClipGroupRemove</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1038"/>
+      <source>Create Symbol</source>
+      <translation type="unfinished">Create Symbol</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1102"/>
+      <source>Create DraftView</source>
+      <translation type="unfinished">Create DraftView</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1177"/>
+      <source>Create ArchView</source>
+      <translation type="unfinished">Create ArchView</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1225"/>
+      <source>Create spreadsheet view</source>
+      <translation type="unfinished">Create spreadsheet view</translation>
+    </message>
+    <message>
+      <location filename="../../Command.cpp" line="1346"/>
+      <location filename="../../MDIViewPage.cpp" line="936"/>
+      <source>Save page to dxf</source>
+      <translation type="unfinished">Save page to dxf</translation>
+    </message>
+    <message>
+      <location filename="../../CommandAnnotate.cpp" line="551"/>
+      <source>Create Annotation</source>
+      <translation type="unfinished">Create Annotation</translation>
+    </message>
+    <message>
+      <location filename="../../CommandCreateDims.cpp" line="333"/>
+      <location filename="../../CommandCreateDims.cpp" line="455"/>
+      <location filename="../../CommandCreateDims.cpp" line="552"/>
+      <location filename="../../CommandCreateDims.cpp" line="653"/>
+      <location filename="../../CommandCreateDims.cpp" line="755"/>
+      <location filename="../../CommandCreateDims.cpp" line="846"/>
+      <location filename="../../CommandCreateDims.cpp" line="935"/>
+      <location filename="../../CommandCreateDims.cpp" line="1362"/>
+      <source>Create Dimension</source>
+      <translation type="unfinished">Create Dimension</translation>
+    </message>
+    <message>
+      <location filename="../../CommandDecorate.cpp" line="251"/>
+      <source>Create Hatch</source>
+      <translation type="unfinished">Create Hatch</translation>
+    </message>
+    <message>
+      <location filename="../../CommandDecorate.cpp" line="354"/>
+      <source>Create GeomHatch</source>
+      <translation type="unfinished">Create GeomHatch</translation>
+    </message>
+    <message>
+      <location filename="../../CommandDecorate.cpp" line="422"/>
+      <source>Create Image</source>
+      <translation type="unfinished">Create Image</translation>
+    </message>
+    <message>
+      <location filename="../../QGIViewBalloon.cpp" line="487"/>
+      <source>Drag Balloon</source>
+      <translation type="unfinished">Drag Balloon</translation>
+    </message>
+    <message>
+      <location filename="../../QGIViewDimension.cpp" line="659"/>
+      <source>Drag Dimension</source>
+      <translation type="unfinished">Drag Dimension</translation>
+    </message>
+    <message>
+      <location filename="../../QGVPage.cpp" line="1197"/>
+      <location filename="../../QGVPage.cpp" line="1200"/>
+      <source>Create Balloon</source>
+      <translation type="unfinished">Create Balloon</translation>
+    </message>
+    <message>
+      <location filename="../../TaskActiveView.cpp" line="196"/>
+      <source>Create ActiveView</source>
+      <translation type="unfinished">Create ActiveView</translation>
+    </message>
+    <message>
+      <location filename="../../TaskCenterLine.cpp" line="347"/>
+      <source>Create CenterLine</source>
+      <translation type="unfinished">Create CenterLine</translation>
+    </message>
+    <message>
+      <location filename="../../TaskCenterLine.cpp" line="392"/>
+      <source>Edit CenterLine</source>
+      <translation type="unfinished">Edit CenterLine</translation>
+    </message>
+    <message>
+      <location filename="../../TaskCosmeticLine.cpp" line="272"/>
+      <source>Update CosmeticLine</source>
+      <translation type="unfinished">Update CosmeticLine</translation>
+    </message>
+    <message>
+      <location filename="../../TaskDetail.cpp" line="473"/>
+      <source>Create Detail View</source>
+      <translation type="unfinished">Create Detail View</translation>
+    </message>
+    <message>
+      <location filename="../../TaskDetail.cpp" line="510"/>
+      <source>Update Detail</source>
+      <translation type="unfinished">Update Detail</translation>
+    </message>
+    <message>
+      <location filename="../../TaskLeaderLine.cpp" line="401"/>
+      <source>Create Leader</source>
+      <translation type="unfinished">Create Leader</translation>
+    </message>
+    <message>
+      <location filename="../../TaskLeaderLine.cpp" line="455"/>
+      <source>Edit Leader</source>
+      <translation type="unfinished">Edit Leader</translation>
+    </message>
+    <message>
+      <location filename="../../TaskRichAnno.cpp" line="358"/>
+      <source>Create Anno</source>
+      <translation type="unfinished">Create Anno</translation>
+    </message>
+    <message>
+      <location filename="../../TaskRichAnno.cpp" line="417"/>
+      <source>Edit Anno</source>
+      <translation type="unfinished">Edit Anno</translation>
+    </message>
+    <message>
+      <location filename="../../TaskSectionView.cpp" line="355"/>
+      <source>Apply Quick</source>
+      <translation type="unfinished">Apply Quick</translation>
+    </message>
+    <message>
+      <location filename="../../TaskSectionView.cpp" line="381"/>
+      <source>Apply Aligned</source>
+      <translation type="unfinished">Apply Aligned</translation>
+    </message>
+    <message>
+      <location filename="../../TaskSectionView.cpp" line="404"/>
+      <source>Create SectionView</source>
+      <translation type="unfinished">Create SectionView</translation>
+    </message>
+    <message>
+      <location filename="../../TaskWeldingSymbol.cpp" line="653"/>
+      <source>Create WeldSymbol</source>
+      <translation type="unfinished">Create WeldSymbol</translation>
+    </message>
+    <message>
+      <location filename="../../TaskWeldingSymbol.cpp" line="661"/>
+      <source>Edit WeldSymbol</source>
+      <translation type="unfinished">Edit WeldSymbol</translation>
     </message>
   </context>
   <context>
@@ -1013,12 +1196,12 @@
       <translation>Estekaren URLa:</translation>
     </message>
     <message>
-      <location filename="../../mrichtextedit.cpp" line="674"/>
+      <location filename="../../mrichtextedit.cpp" line="675"/>
       <source>Select an image</source>
       <translation>Hautatu irudi bat</translation>
     </message>
     <message>
-      <location filename="../../mrichtextedit.cpp" line="676"/>
+      <location filename="../../mrichtextedit.cpp" line="677"/>
       <source>JPEG (*.jpg);; GIF (*.gif);; PNG (*.png);; BMP (*.bmp);; All (*)</source>
       <translation>JPEG (*.jpg);; GIF (*.gif);; PNG (*.png);; BMP (*.bmp);; Denak (*)</translation>
     </message>
@@ -1026,21 +1209,21 @@
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../../Command.cpp" line="338"/>
-      <location filename="../../Command.cpp" line="452"/>
-      <location filename="../../Command.cpp" line="503"/>
-      <location filename="../../Command.cpp" line="591"/>
-      <location filename="../../Command.cpp" line="855"/>
-      <location filename="../../Command.cpp" line="871"/>
-      <location filename="../../Command.cpp" line="876"/>
-      <location filename="../../Command.cpp" line="885"/>
-      <location filename="../../Command.cpp" line="939"/>
-      <location filename="../../Command.cpp" line="959"/>
-      <location filename="../../Command.cpp" line="1080"/>
-      <location filename="../../Command.cpp" line="1105"/>
-      <location filename="../../Command.cpp" line="1154"/>
-      <location filename="../../Command.cpp" line="1160"/>
-      <location filename="../../Command.cpp" line="1203"/>
+      <location filename="../../Command.cpp" line="348"/>
+      <location filename="../../Command.cpp" line="462"/>
+      <location filename="../../Command.cpp" line="513"/>
+      <location filename="../../Command.cpp" line="601"/>
+      <location filename="../../Command.cpp" line="865"/>
+      <location filename="../../Command.cpp" line="881"/>
+      <location filename="../../Command.cpp" line="886"/>
+      <location filename="../../Command.cpp" line="895"/>
+      <location filename="../../Command.cpp" line="949"/>
+      <location filename="../../Command.cpp" line="969"/>
+      <location filename="../../Command.cpp" line="1090"/>
+      <location filename="../../Command.cpp" line="1115"/>
+      <location filename="../../Command.cpp" line="1164"/>
+      <location filename="../../Command.cpp" line="1170"/>
+      <location filename="../../Command.cpp" line="1213"/>
       <location filename="../../CommandAnnotate.cpp" line="327"/>
       <location filename="../../CommandAnnotate.cpp" line="420"/>
       <location filename="../../CommandAnnotate.cpp" line="1154"/>
@@ -1055,104 +1238,104 @@
       <translation>Hautapen okerra</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="339"/>
-      <location filename="../../Command.cpp" line="592"/>
+      <location filename="../../Command.cpp" line="349"/>
+      <location filename="../../Command.cpp" line="602"/>
       <source>No Shapes, Groups or Links in this selection</source>
       <translation>Ez dago formarik, talderik edo estekarik hautapen honetan</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="453"/>
-      <location filename="../../Command.cpp" line="504"/>
+      <location filename="../../Command.cpp" line="463"/>
+      <location filename="../../Command.cpp" line="514"/>
       <source>Select at least 1 DrawViewPart object as Base.</source>
       <translation>Hautatu gutxienez marrazki-bistaren pieza bat oinarri gisa.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="856"/>
+      <location filename="../../Command.cpp" line="866"/>
       <source>Select one Clip group and one View.</source>
       <translation>Hautatu ebaketa talde bat eta bista bat.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="872"/>
+      <location filename="../../Command.cpp" line="882"/>
       <source>Select exactly one View to add to group.</source>
       <translation>Hautatu bista bakar bat taldeari gehitzeko.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="877"/>
+      <location filename="../../Command.cpp" line="887"/>
       <source>Select exactly one Clip group.</source>
       <translation>Hautatu ebaketa-talde bakar bat.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="886"/>
+      <location filename="../../Command.cpp" line="896"/>
       <source>Clip and View must be from same Page.</source>
       <translation>Ebaketak eta bistak orrialde berekoak izan behar dute.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="940"/>
+      <location filename="../../Command.cpp" line="950"/>
       <source>Select exactly one View to remove from Group.</source>
       <translation>Hautatu bista bakar bat taldetik kentzeko.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="960"/>
+      <location filename="../../Command.cpp" line="970"/>
       <source>View does not belong to a Clip</source>
       <translation>Bista ez da ebaketa batekoa</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1019"/>
+      <location filename="../../Command.cpp" line="1029"/>
       <source>Choose an SVG file to open</source>
       <translation>Hautatu SVG fitxategi bat irekitzeko</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1021"/>
+      <location filename="../../Command.cpp" line="1031"/>
       <source>Scalable Vector Graphic</source>
       <translation>Grafiko bektorial eskalagarria</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1022"/>
+      <location filename="../../Command.cpp" line="1032"/>
       <source>All Files</source>
       <translation>Fitxategi guztiak</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1081"/>
+      <location filename="../../Command.cpp" line="1091"/>
       <source>Select at least one object.</source>
       <translation>Hautatu objektu bat gutxienez.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1106"/>
+      <location filename="../../Command.cpp" line="1116"/>
       <source>There were no DraftWB objects in the selection.</source>
       <translation>Ez dago DraftWB objekturik hautapen honetan.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1155"/>
+      <location filename="../../Command.cpp" line="1165"/>
       <source>Please select only 1 Arch Section.</source>
-      <translation type="unfinished">Please select only 1 Arch Section.</translation>
+      <translation>Hautatu arkitektura-sekzio bakar bat.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1161"/>
+      <location filename="../../Command.cpp" line="1171"/>
       <source>No Arch Sections in selection.</source>
-      <translation type="unfinished">No Arch Sections in selection.</translation>
+      <translation>Ez dago arkitektura-sekziorik hautapenean.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1313"/>
+      <location filename="../../Command.cpp" line="1323"/>
       <source>Can not export selection</source>
       <translation>Ezin da hautapena esportatu</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1314"/>
+      <location filename="../../Command.cpp" line="1324"/>
       <source>Page contains DrawViewArch which will not be exported. Continue?</source>
       <translation>Orrialdeak DrawViewArch dauka, baina ez da esportatuko. Jarraitu?</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1204"/>
+      <location filename="../../Command.cpp" line="1214"/>
       <source>Select exactly one Spreadsheet object.</source>
       <translation>Hautatu kalkulu-orri objektu zehatz bat.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1273"/>
+      <location filename="../../Command.cpp" line="1283"/>
       <source>No Drawing View</source>
       <translation>Ez dago marrazki-bistarik</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="1274"/>
+      <location filename="../../Command.cpp" line="1284"/>
       <source>Open Drawing View before attempting export to SVG.</source>
       <translation>Ireki marrazki-bista SVG formatura esportatzen saiatu baino lehen.</translation>
     </message>
@@ -1244,10 +1427,10 @@
       <translation>Hautatu bi puntu-objektu eta bista bat. (2)</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="715"/>
-      <location filename="../../Command.cpp" line="722"/>
-      <location filename="../../Command.cpp" line="729"/>
-      <location filename="../../Command.cpp" line="741"/>
+      <location filename="../../Command.cpp" line="725"/>
+      <location filename="../../Command.cpp" line="732"/>
+      <location filename="../../Command.cpp" line="739"/>
+      <location filename="../../Command.cpp" line="751"/>
       <location filename="../../CommandCreateDims.cpp" line="1433"/>
       <location filename="../../CommandCreateDims.cpp" line="1440"/>
       <location filename="../../CommandCreateDims.cpp" line="1447"/>
@@ -1260,25 +1443,25 @@
       <translation>Hautapen okerra</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="716"/>
+      <location filename="../../Command.cpp" line="726"/>
       <location filename="../../CommandCreateDims.cpp" line="1434"/>
       <source>Select an object first</source>
       <translation>Hautatu objektu bat</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="723"/>
+      <location filename="../../Command.cpp" line="733"/>
       <location filename="../../CommandCreateDims.cpp" line="1441"/>
       <source>Too many objects selected</source>
       <translation>Objektu gehiegi hautatuta</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="730"/>
+      <location filename="../../Command.cpp" line="740"/>
       <location filename="../../CommandCreateDims.cpp" line="1448"/>
       <source>Create a page first.</source>
       <translation>Lehenengo, sortu orrialde bat.</translation>
     </message>
     <message>
-      <location filename="../../Command.cpp" line="742"/>
+      <location filename="../../Command.cpp" line="752"/>
       <location filename="../../CommandCreateDims.cpp" line="1460"/>
       <source>No View of a Part in selection.</source>
       <translation>Ez dago piezaren bistarik hautapenean.</translation>
@@ -1308,7 +1491,7 @@
       <location filename="../../CommandCreateDims.cpp" line="1161"/>
       <location filename="../../CommandCreateDims.cpp" line="1248"/>
       <source>Task In Progress</source>
-      <translation>Zeregina abian</translation>
+      <translation>Ataza abian</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="116"/>
@@ -1330,7 +1513,7 @@
       <location filename="../../CommandCreateDims.cpp" line="1162"/>
       <location filename="../../CommandCreateDims.cpp" line="1249"/>
       <source>Close active task dialog and try again.</source>
-      <translation>Itxi zeregin aktiboaren elkarrizketa-koadroa eta saiatu berriro.</translation>
+      <translation>Itxi ataza aktiboaren elkarrizketa-koadroa eta saiatu berriro.</translation>
     </message>
     <message>
       <location filename="../../CommandCreateDims.cpp" line="1188"/>
@@ -1397,7 +1580,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="750"/>
       <source>You must select Faces or an existing CenterLine.</source>
-      <translation type="unfinished">You must select Faces or an existing CenterLine.</translation>
+      <translation>Aurpegiak edo lehendik dagoen erdiko lerro bat hautatu behar duzu.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="760"/>
@@ -1409,7 +1592,7 @@
       <location filename="../../CommandAnnotate.cpp" line="838"/>
       <location filename="../../CommandAnnotate.cpp" line="951"/>
       <source>Selection is not a CenterLine.</source>
-      <translation type="unfinished">Selection is not a CenterLine.</translation>
+      <translation>Hautapena ez da erdiko lerroa.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="848"/>
@@ -1424,27 +1607,27 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="961"/>
       <source>Need 2 Vertices or 1 CenterLine.</source>
-      <translation type="unfinished">Need 2 Vertices or 1 CenterLine.</translation>
+      <translation>2 erpin edo erdiko lerro 1 behar da.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1038"/>
       <source>Selection is empty.</source>
-      <translation type="unfinished">Selection is empty.</translation>
+      <translation>Hautapena hutsik dago.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1052"/>
       <source>Not enough points in selection.</source>
-      <translation type="unfinished">Not enough points in selection.</translation>
+      <translation>Ez dago nahiko punturik hautapenean.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1072"/>
       <source>Selection is not a Cosmetic Line.</source>
-      <translation type="unfinished">Selection is not a Cosmetic Line.</translation>
+      <translation>Hautapena ez da lerro kosmetikoa.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1109"/>
       <source>You must select 2 Vertexes.</source>
-      <translation type="unfinished">You must select 2 Vertexes.</translation>
+      <translation>Bi erpin hautatu behar dituzu.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1285"/>
@@ -1454,7 +1637,7 @@
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1290"/>
       <source>You must select a View and/or lines.</source>
-      <translation type="unfinished">You must select a View and/or lines.</translation>
+      <translation>Bista bat eta/edo lerroak hautatu behar dituzu.</translation>
     </message>
     <message>
       <location filename="../../CommandAnnotate.cpp" line="1363"/>
@@ -1531,7 +1714,7 @@
     <message>
       <location filename="../../DrawGuiUtil.cpp" line="117"/>
       <source>No Drawing Pages in document.</source>
-      <translation type="unfinished">No Drawing Pages in document.</translation>
+      <translation>Ez dago marrazki-orririk dokumentuan.</translation>
     </message>
     <message>
       <location filename="../../DrawGuiUtil.cpp" line="130"/>
@@ -1584,7 +1767,7 @@
       <location filename="../../ViewProviderProjGroup.cpp" line="214"/>
       <location filename="../../ViewProviderTemplate.cpp" line="200"/>
       <source>Are you sure you want to continue?</source>
-      <translation type="unfinished">Are you sure you want to continue?</translation>
+      <translation>Ziur zaude jarraitu nahi duzula?</translation>
     </message>
     <message>
       <location filename="../../ViewProviderPage.cpp" line="249"/>
@@ -1656,7 +1839,7 @@
       <location filename="../../TaskSectionView.cpp" line="180"/>
       <location filename="../../TaskSectionView.cpp" line="363"/>
       <source>Select at first an orientation</source>
-      <translation type="unfinished">Select at first an orientation</translation>
+      <translation>Hasteko, hautatu orientazio bat</translation>
     </message>
     <message>
       <location filename="../../TaskSectionView.cpp" line="196"/>
@@ -1681,12 +1864,12 @@
     <message>
       <location filename="../../TaskCosmeticLine.cpp" line="151"/>
       <source>Create Cosmetic Line</source>
-      <translation type="unfinished">Create Cosmetic Line</translation>
+      <translation>Sortu lerro kosmetikoa</translation>
     </message>
     <message>
       <location filename="../../TaskCosmeticLine.cpp" line="186"/>
       <source>Edit Cosmetic Line</source>
-      <translation type="unfinished">Edit Cosmetic Line</translation>
+      <translation>Editatu lerro kosmetikoa</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.cpp" line="125"/>
@@ -1705,8 +1888,8 @@
       <location filename="../../ViewProviderLeader.cpp" line="253"/>
       <source>You cannot delete this leader line because
 it has a weld symbol that would become broken.</source>
-      <translation type="unfinished">You cannot delete this leader line because
-it has a weld symbol that would become broken.</translation>
+      <translation>Ezin da gida-marra hau ezabatu
+hautsi daitekeen soldadura-ikur bat duelako.</translation>
     </message>
     <message>
       <location filename="../../ViewProviderLeader.cpp" line="256"/>
@@ -1746,40 +1929,40 @@ it has a weld symbol that would become broken.</translation>
       <location filename="../../ViewProviderProjGroupItem.cpp" line="201"/>
       <location filename="../../ViewProviderViewPart.cpp" line="368"/>
       <source>You cannot delete this view because it has a leader line that would become broken.</source>
-      <translation type="unfinished">You cannot delete this view because it has a leader line that would become broken.</translation>
+      <translation>Ezin da bista hau ezabatu hautsita geratuko litzatekeen gida-marra bat duelako.</translation>
     </message>
     <message>
       <location filename="../../ViewProviderPage.cpp" line="224"/>
       <source>The page is not empty, therefore the
 following referencing objects might be lost:</source>
-      <translation type="unfinished">The page is not empty, therefore the
-following referencing objects might be lost:</translation>
+      <translation>Orria ez dago hutsik, eta honako erreferentzia
+duten objektuak galdu egin daitezke:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderProjGroup.cpp" line="195"/>
       <source>The group cannot be deleted because its items have the following
 section or detail views, or leader lines that would get broken:</source>
-      <translation type="unfinished">The group cannot be deleted because its items have the following
-section or detail views, or leader lines that would get broken:</translation>
+      <translation>Taldea ezin da ezabatu bere elementuak hautsi daitezkeen
+honako sekzio- eta xehetasun-bistak, edo gida-marrak, dituztelako:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderProjGroup.cpp" line="209"/>
       <source>The projection group is not empty, therefore
 the following referencing objects might be lost:</source>
-      <translation type="unfinished">The projection group is not empty, therefore
-the following referencing objects might be lost:</translation>
+      <translation>Proiekzio taldea ez dago hutsik, eta horregatik
+honako erreferentzia duten objektuak galdu egin daitezke:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderTemplate.cpp" line="197"/>
       <source>The following referencing object might break:</source>
-      <translation type="unfinished">The following referencing object might break:</translation>
+      <translation>Erreferentziako honako objektua hautsi daiteke:</translation>
     </message>
     <message>
       <location filename="../../ViewProviderWeld.cpp" line="194"/>
       <source>You cannot delete this weld symbol because
 it has a tile weld that would become broken.</source>
-      <translation type="unfinished">You cannot delete this weld symbol because
-it has a tile weld that would become broken.</translation>
+      <translation>Ezin da soldadura-ikur hau ezabatu
+hautsi daitekeen lauza-soldadura bat duelako.</translation>
     </message>
   </context>
   <context>
@@ -1818,8 +2001,8 @@ it has a tile weld that would become broken.</translation>
       <location filename="../../TaskActiveView.ui" line="115"/>
       <source>Minimal distance of the object from
 the top and left view border</source>
-      <translation type="unfinished">Minimal distance of the object from
-the top and left view border</translation>
+      <translation>Objektuaren distantzia minimoa
+bistaren goiko eta ezkerreko ertzetatik</translation>
     </message>
     <message>
       <location filename="../../TaskActiveView.ui" line="132"/>
@@ -1844,7 +2027,7 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskActiveView.ui" line="184"/>
       <source>Width of lines in generated view</source>
-      <translation type="unfinished">Width of lines in generated view</translation>
+      <translation>Lerroen zabalera sortutako bistan</translation>
     </message>
     <message>
       <location filename="../../TaskActiveView.ui" line="206"/>
@@ -1874,7 +2057,7 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskActiveView.ui" line="232"/>
       <source>Wireframe overlay</source>
-      <translation type="unfinished">Wireframe overlay</translation>
+      <translation>Alanbre-bilbearen gainjartzea</translation>
     </message>
     <message>
       <location filename="../../TaskActiveView.ui" line="237"/>
@@ -1884,7 +2067,7 @@ the top and left view border</translation>
     <message>
       <location filename="../../TaskActiveView.ui" line="242"/>
       <source>Bounding box</source>
-      <translation type="unfinished">Bounding box</translation>
+      <translation>Muga-kutxa</translation>
     </message>
   </context>
   <context>
@@ -1964,8 +2147,8 @@ the top and left view border</translation>
       <location filename="../../TaskWeldingSymbol.ui" line="232"/>
       <source>Adds the &apos;Field Weld&apos; symbol (flag)
 at the kink in the leader line</source>
-      <translation type="unfinished">Adds the &apos;Field Weld&apos; symbol (flag)
-at the kink in the leader line</translation>
+      <translation>&apos;Eremu-soldadura&apos; ikurra (bandera)
+gehitzen du gida-marraren muturrean</translation>
     </message>
     <message>
       <location filename="../../TaskWeldingSymbol.ui" line="236"/>
@@ -1976,8 +2159,8 @@ at the kink in the leader line</translation>
       <location filename="../../TaskWeldingSymbol.ui" line="243"/>
       <source>Adds the &apos;All Around&apos; symbol (circle)
 at the kink in the leader line</source>
-      <translation type="unfinished">Adds the &apos;All Around&apos; symbol (circle)
-at the kink in the leader line</translation>
+      <translation>&apos;Inguru osoan&apos; ikurra (zirkulua)
+gehitzen du gida-marraren muturrean</translation>
     </message>
     <message>
       <location filename="../../TaskWeldingSymbol.ui" line="247"/>
@@ -1987,7 +2170,7 @@ at the kink in the leader line</translation>
     <message>
       <location filename="../../TaskWeldingSymbol.ui" line="254"/>
       <source>Offsets the lower symbol to indicate alternating welds</source>
-      <translation type="unfinished">Offsets the lower symbol to indicate alternating welds</translation>
+      <translation>Beheko ikurra desplazatzen du ordezko soldadurak adierazteko</translation>
     </message>
     <message>
       <location filename="../../TaskWeldingSymbol.ui" line="257"/>
@@ -1998,8 +2181,8 @@ at the kink in the leader line</translation>
       <location filename="../../TaskWeldingSymbol.ui" line="268"/>
       <source>Directory to welding symbols.
 This directory will be used for the symbol selection.</source>
-      <translation type="unfinished">Directory to welding symbols.
-This directory will be used for the symbol selection.</translation>
+      <translation>Soldadura-ikurren direktorioa.
+Direktorio hau ikurrak hautatzeko erabiliko da.</translation>
     </message>
     <message>
       <location filename="../../TaskWeldingSymbol.ui" line="275"/>
@@ -2034,13 +2217,13 @@ This directory will be used for the symbol selection.</translation>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="63"/>
       <source>Shape of line end caps.
 Only change unless you know what you are doing!</source>
-      <translation type="unfinished">Shape of line end caps.
-Only change unless you know what you are doing!</translation>
+      <translation>Lerro-amaieretako estalkien forma.
+Zertan ari zaren ondo badakizu soilik aldatu hau!</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="74"/>
       <source>Round</source>
-      <translation type="unfinished">Round</translation>
+      <translation>Biribildua</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="79"/>
@@ -2057,19 +2240,19 @@ Only change unless you know what you are doing!</translation>
       <source>Limit of 64x64 pixel SVG tiles used to hatch a single face.
 For large scalings you might get an error about to many SVG tiles.
 Then you need to increase the tile limit.</source>
-      <translation type="unfinished">Limit of 64x64 pixel SVG tiles used to hatch a single face.
-For large scalings you might get an error about to many SVG tiles.
-Then you need to increase the tile limit.</translation>
+      <translation>Aurpegi bakar bat itzaleztatzeko erabiliko den SVG lauzen 64x64 pixeleko muga.
+Eskalatze handietan, SVG lauza gehiegiren errore bat gerta daiteke.
+Orduan, lauzen muga handitu beharko da.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="140"/>
       <source>Dump intermediate results during Detail view processing</source>
-      <translation type="unfinished">Dump intermediate results during Detail view processing</translation>
+      <translation>Bota bista-prozesatze xehean zehar sortutako tarteko emaitzak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="143"/>
       <source>Debug Detail</source>
-      <translation type="unfinished">Debug Detail</translation>
+      <translation>Arazketaren xehetasunak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="162"/>
@@ -2084,44 +2267,44 @@ Then you need to increase the tile limit.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="187"/>
       <source>Dump intermediate results during Section view processing</source>
-      <translation type="unfinished">Dump intermediate results during Section view processing</translation>
+      <translation>Bota sekzioaren prozesatzean zehar sortutako tarteko emaitzak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="190"/>
       <source>Debug Section</source>
-      <translation type="unfinished">Debug Section</translation>
+      <translation>Araztu sekzioa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="220"/>
       <source>Perform a fuse operation on input shape(s) before Section view processing</source>
-      <translation type="unfinished">Perform a fuse operation on input shape(s) before Section view processing</translation>
+      <translation>Aplikatu fusio-eragiketa bat sarrerako form(et)an sekzio-bista prozesatu baino lehen</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="223"/>
       <source>Fuse Before Section</source>
-      <translation type="unfinished">Fuse Before Section</translation>
+      <translation>Fusionatu sekzioaren aurretik</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="248"/>
       <source>Highlights border of section cut in section views</source>
-      <translation type="unfinished">Highlights border of section cut in section views</translation>
+      <translation>Sekzio-moztearen ertza nabarmentzen du sekzio-bistetan</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="251"/>
       <source>Show Section Edges</source>
-      <translation type="unfinished">Show Section Edges</translation>
+      <translation>Erakutsi sekzio-ertzak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="273"/>
       <source>Maximum hatch line segments to use
 when hatching a face with a PAT pattern</source>
-      <translation type="unfinished">Maximum hatch line segments to use
-when hatching a face with a PAT pattern</translation>
+      <translation>Aurpegi bat PAT eredu batekin itzaleztatzean
+erabiliko den itzal-lerro kopuru maximoa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="307"/>
       <source>Line End Cap Shape</source>
-      <translation type="unfinished">Line End Cap Shape</translation>
+      <translation>Lerroaren amaierako estalkiaren forma</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="320"/>
@@ -2129,10 +2312,10 @@ when hatching a face with a PAT pattern</translation>
 line segments returned by the hidden line removal algorithm.
 Faces must be detected in order to use hatching, but there
 can be a performance penalty in complex models.</source>
-      <translation type="unfinished">If checked, TechDraw will attempt to build faces using the
-line segments returned by the hidden line removal algorithm.
-Faces must be detected in order to use hatching, but there
-can be a performance penalty in complex models.</translation>
+      <translation>Markatuta badago, TechDraw saiatuko da lerroak kentzeko algoritmoak
+itzuli dituen lerro-segmentuak erabiltzen aurpegiak eraikitzeko.
+Aurpegiak detektatu behar dira itzaleztatzea erabiltzeko, baina
+errendimendua jaitsi egin daiteke eredu konplexuetan.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="326"/>
@@ -2157,7 +2340,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="384"/>
       <source>Max PAT Hatch Segments</source>
-      <translation type="unfinished">Max PAT Hatch Segments</translation>
+      <translation>PAT itzaleztadura-segmentuen kopuru maximoa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="396"/>
@@ -2172,7 +2355,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAdvanced.ui" line="436"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -2191,64 +2374,64 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="64"/>
       <source>Style for section lines</source>
-      <translation type="unfinished">Style for section lines</translation>
+      <translation>Sekzio-lerroetarako estiloa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="77"/>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="287"/>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="780"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="777"/>
       <source>NeverShow</source>
-      <translation type="unfinished">NeverShow</translation>
+      <translation>Ez erakutsi inoiz</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="86"/>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="296"/>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="789"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="786"/>
       <source>Continuous</source>
       <translation>Jarraia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="95"/>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="305"/>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="798"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="795"/>
       <source>Dash</source>
       <translation>Marra</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="104"/>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="314"/>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="807"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="804"/>
       <source>Dot</source>
       <translation>Puntua</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="113"/>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="323"/>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="816"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="813"/>
       <source>DashDot</source>
       <translation>MarraPuntua</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="122"/>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="332"/>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="825"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="822"/>
       <source>DashDotDot</source>
       <translation>MarraPuntuaPuntua</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="139"/>
       <source>Section Line Standard</source>
-      <translation type="unfinished">Section Line Standard</translation>
+      <translation>Sekzio-lerroaren estandarra</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="151"/>
       <source>Section Cut Surface</source>
-      <translation type="unfinished">Section Cut Surface</translation>
+      <translation>Sekzio-moztearen gainazala</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="164"/>
       <source>Default appearance of cut surface in section view</source>
-      <translation type="unfinished">Default appearance of cut surface in section view</translation>
+      <translation>Mozte-gainazalaren itxura lehenetsia sekzio-bistan</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="177"/>
@@ -2283,7 +2466,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="243"/>
       <source>Length of balloon leader line kink</source>
-      <translation type="unfinished">Length of balloon leader line kink</translation>
+      <translation>Bunbuiloaren gida-marraren muturraren luzera</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="274"/>
@@ -2339,7 +2522,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="456"/>
       <source>Standard to be used to draw section lines</source>
-      <translation type="unfinished">Standard to be used to draw section lines</translation>
+      <translation>Sekzio-lerroak marrazteko erabiliko den estandarra</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="469"/>
@@ -2354,7 +2537,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="507"/>
       <source>Outline shape for detail views</source>
-      <translation type="unfinished">Outline shape for detail views</translation>
+      <translation>Kanpoko forma bista xeheetarako</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="517"/>
@@ -2377,74 +2560,74 @@ can be a performance penalty in complex models.</translation>
       <translation>Erakutsi zentro-markak</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="595"/>
-      <source>Default name in LineGroup CSV file</source>
-      <translation type="unfinished">Default name in LineGroup CSV file</translation>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="696"/>
+      <source>Line group used to set line widths</source>
+      <translation type="unfinished">Line group used to set line widths</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="619"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="699"/>
+      <source>Line Width Group</source>
+      <translation type="unfinished">Line Width Group</translation>
+    </message>
+    <message>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="613"/>
       <source>Detail View Outline Shape</source>
-      <translation type="unfinished">Detail View Outline Shape</translation>
+      <translation>Eskema-formaren bista xehea</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="638"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="632"/>
       <source>Style for balloon leader line ends</source>
-      <translation type="unfinished">Style for balloon leader line ends</translation>
+      <translation>Bunbuiloen gida-marren amaieren estiloa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="656"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="650"/>
       <source>Length of horizontal portion of Balloon leader</source>
       <translation>Bunbuiloaren gida-marraren zati horizontalaren luzera</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="659"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="653"/>
       <source>Ballon Leader Kink Length</source>
       <translation>Bunbuiloaren gida-marraren muturraren luzera</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="678"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="672"/>
       <source>Restrict Filled Triangle line end to vertical or horizontal directions</source>
-      <translation type="unfinished">Restrict Filled Triangle line end to vertical or horizontal directions</translation>
+      <translation>Murriztu triangelu betearen lerro-amaiera norabide bertikaletara edo horizontaletara</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="681"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="675"/>
       <source>Balloon Orthogonal Triangle</source>
-      <translation type="unfinished">Balloon Orthogonal Triangle</translation>
+      <translation>Bunbuiloaren triangelu ortogonala</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="702"/>
-      <source>Line Group Name</source>
-      <translation type="unfinished">Line Group Name</translation>
-    </message>
-    <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="714"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="711"/>
       <source>Balloon Shape</source>
       <translation>Bunbuiloaren forma</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="733"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="730"/>
       <source>Show arc centers in printed output</source>
       <translation>Erakutsi arku-zentroak inprimatutako irteeran</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="736"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="733"/>
       <source>Print Center Marks</source>
       <translation>Inprimatu zentro-markak</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="754"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="751"/>
       <source>Line style of detail highlight on base view</source>
-      <translation type="unfinished">Line style of detail highlight on base view</translation>
+      <translation>Xehetasunen nabarmentzearen lerro-estiloa oinarri-bistan</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="757"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="754"/>
       <source>Detail Highlight Style</source>
-      <translation type="unfinished">Detail Highlight Style</translation>
+      <translation>Xehetasunen nabarmentzearen estiloa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="848"/>
+      <location filename="../../DlgPrefsTechDrawAnnotation.ui" line="845"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -2593,7 +2776,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawColors.ui" line="484"/>
       <source>Detail Highlight</source>
-      <translation type="unfinished">Detail Highlight</translation>
+      <translation>Xehetasunen nabarmentzea</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawColors.ui" line="496"/>
@@ -2603,12 +2786,12 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawColors.ui" line="503"/>
       <source>Default color for leader lines</source>
-      <translation type="unfinished">Default color for leader lines</translation>
+      <translation>Gida-marren kolore lehenetsia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawColors.ui" line="551"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -2627,7 +2810,7 @@ can be a performance penalty in complex models.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="77"/>
       <source>Standard to be used for dimensional values</source>
-      <translation type="unfinished">Standard to be used for dimensional values</translation>
+      <translation>Kota-balioetan erabiliko den estandarra</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawDimensions.ui" line="87"/>
@@ -2650,134 +2833,134 @@ can be a performance penalty in complex models.</translation>
       <translation>ASME erreferentzia</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="116"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="121"/>
       <source>Use system setting for number of decimals</source>
       <translation>Erabili sistemaren ezarpenak dezimal kopurua zehazteko</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="119"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="124"/>
       <source>Use Global Decimals</source>
       <translation>Erabili dezimal globalak</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="147"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="152"/>
       <source>Append unit to dimension values</source>
       <translation>Erantsi unitatea kota-lerroen balioei</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="150"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="155"/>
       <source>Show Units</source>
       <translation>Erakutsi unitateak</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="163"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="168"/>
       <source>Alternate Decimals</source>
       <translation>Txandakako dezimalak</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="185"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="190"/>
       <source>Number of decimals if &apos;Use Global Decimals&apos; is not used</source>
-      <translation type="unfinished">Number of decimals if &apos;Use Global Decimals&apos; is not used</translation>
+      <translation>Dezimal kopurua &apos;Erabili dezimal globalak&apos; erabiltzen ez bada</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="209"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="214"/>
       <source>Font Size</source>
       <translation>Letra-tamaina</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="241"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="246"/>
       <source>Dimension text font size</source>
       <translation>Kotaren letra-tamaina</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="260"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="265"/>
       <source>Diameter Symbol</source>
       <translation>Diametro-ikurra</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="284"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="289"/>
       <source>Character used to indicate diameter dimensions</source>
       <translation>Diametroaren kota adierazteko erabiliko den karakterea</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="287"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="292"/>
       <source>⌀</source>
       <translation>⌀</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="308"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="313"/>
       <source>Arrow Style</source>
       <translation>Gezi-estiloa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="327"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="332"/>
       <source>Arrowhead style</source>
       <translation>Geziburuaren estiloa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="348"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="353"/>
       <source>Arrow Size</source>
       <translation>Gezi-tamaina</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="367"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="372"/>
       <source>Arrowhead size</source>
       <translation>Geziburuaren tamaina</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="415"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="420"/>
       <source>Conventions</source>
       <translation>Konbentzioak</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="436"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="441"/>
       <source>Projection Group Angle</source>
       <translation>Proiekzio-taldearen angelua</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="455"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="460"/>
       <source>Use first- or third-angle multiview projection convention</source>
-      <translation type="unfinished">Use first- or third-angle multiview projection convention</translation>
+      <translation>Erabili lehen edo hirugarren angeluaren bista anitzaren proiekzioaren konbentzioa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="465"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="470"/>
       <source>First</source>
       <translation>Lehena</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="470"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="475"/>
       <source>Third</source>
       <translation>Hirugarrena</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="475"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="480"/>
       <source>Page</source>
       <translation>Orrialdea</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="483"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="488"/>
       <source>Hidden Line Style</source>
       <translation>Lerro ezkutuen estiloa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="502"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="507"/>
       <source>Style for hidden lines</source>
       <translation>Lerro ezkutuen estiloa</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="512"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="517"/>
       <source>Continuous</source>
       <translation>Jarraia</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="521"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="526"/>
       <source>Dashed</source>
       <translation>Marratua</translation>
     </message>
     <message>
-      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="544"/>
+      <location filename="../../DlgPrefsTechDrawDimensions.ui" line="549"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -2806,8 +2989,8 @@ can be a performance penalty in complex models.</translation>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="92"/>
       <source>Whether or not a page&apos;s &apos;Keep Updated&apos; property
 can override the global &apos;Update With 3D&apos; parameter</source>
-      <translation type="unfinished">Whether or not a page&apos;s &apos;Keep Updated&apos; property
-can override the global &apos;Update With 3D&apos; parameter</translation>
+      <translation>Orri baten &apos;Mantendu eguneratuta&apos; propietateak
+&apos;Eguneratu 3Drekin&apos; parametro globala gainidatzi dezakeen ala ez</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="96"/>
@@ -2818,8 +3001,8 @@ can override the global &apos;Update With 3D&apos; parameter</translation>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="123"/>
       <source>Keep drawing pages in sync with changes of 3D model in real time.
 This can slow down the response time.</source>
-      <translation type="unfinished">Keep drawing pages in sync with changes of 3D model in real time.
-This can slow down the response time.</translation>
+      <translation>Mantendu marraztutako orriak sinkronizatuta 3D ereduaren aldaketekin denbora errealean.
+Horrek erantzun-denbora moteldu dezake.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="127"/>
@@ -2876,57 +3059,57 @@ proiekzio-taldeetarako</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="377"/>
       <source>Default template file for new pages</source>
-      <translation type="unfinished">Default template file for new pages</translation>
+      <translation>Orrialde berrietarako txantiloi-fitxategi lehenetsia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="396"/>
       <source>Template Directory</source>
-      <translation type="unfinished">Template Directory</translation>
+      <translation>Txantiloien direktorioa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="422"/>
       <source>Starting directory for menu &apos;Insert Page using Template&apos;</source>
-      <translation type="unfinished">Starting directory for menu &apos;Insert Page using Template&apos;</translation>
+      <translation>Hasierako direktorioa &apos;Txertatu orrialdea txantiloia erabilita&apos; menurako</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="449"/>
       <source>Hatch Pattern File</source>
-      <translation type="unfinished">Hatch Pattern File</translation>
+      <translation>Itzaleztadura-ereduaren fitxategia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="462"/>
       <source>Default SVG or bitmap file for hatching</source>
-      <translation type="unfinished">Default SVG or bitmap file for hatching</translation>
+      <translation>SVG edo bit-mapa fitxategi lehenetsia itzaleztatzeko</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="486"/>
       <source>Line Group File</source>
-      <translation type="unfinished">Line Group File</translation>
+      <translation>Lerro taldearen fitxategia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="499"/>
       <source>Alternate file for personal LineGroup definition</source>
-      <translation type="unfinished">Alternate file for personal LineGroup definition</translation>
+      <translation>Lerro taldearen definizio pertsonalerako ordezko fitxategia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="523"/>
       <source>Welding Directory</source>
-      <translation type="unfinished">Welding Directory</translation>
+      <translation>Soldaduren direktorioa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="536"/>
       <source>Default directory for welding symbols</source>
-      <translation type="unfinished">Default directory for welding symbols</translation>
+      <translation>Soldadura-ikurretarako direktorio lehenetsia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="563"/>
       <source>PAT File</source>
-      <translation type="unfinished">PAT File</translation>
+      <translation>PAT fitxategia</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="576"/>
       <source>Default PAT pattern definition file for geometric hatching</source>
-      <translation type="unfinished">Default PAT pattern definition file for geometric hatching</translation>
+      <translation>PAT eredu-definizioen fitxategi lehenetsia itzaleztatze geometrikoetarako</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="600"/>
@@ -2936,7 +3119,7 @@ proiekzio-taldeetarako</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="619"/>
       <source>Name of the default PAT pattern</source>
-      <translation type="unfinished">Name of the default PAT pattern</translation>
+      <translation>PAT eredu lehenetsiaren izena</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="622"/>
@@ -2946,7 +3129,7 @@ proiekzio-taldeetarako</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawGeneral.ui" line="649"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -2954,23 +3137,23 @@ proiekzio-taldeetarako</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="20"/>
       <source>HLR</source>
-      <translation type="unfinished">HLR</translation>
+      <translation>HLR</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="47"/>
       <source>Hidden Line Removal</source>
-      <translation type="unfinished">Hidden Line Removal</translation>
+      <translation>Lerro ezkutua kentzea</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="66"/>
       <source>Show seam lines</source>
-      <translation type="unfinished">Show seam lines</translation>
+      <translation>Erakutsi jostura-lerroak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="69"/>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="250"/>
       <source>Show Seam Lines</source>
-      <translation type="unfinished">Show Seam Lines</translation>
+      <translation>Erakutsi jostura-lerroak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="96"/>
@@ -2981,35 +3164,35 @@ proiekzio-taldeetarako</translation>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="99"/>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="223"/>
       <source>Show Smooth Lines</source>
-      <translation type="unfinished">Show Smooth Lines</translation>
+      <translation>Erakutsi lerro leunak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="132"/>
       <source>Show hard and outline edges (always shown)</source>
-      <translation type="unfinished">Show hard and outline edges (always shown)</translation>
+      <translation>Erakutsi ertz gogorrak eta eskemakoak (erakutsi beti)</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="135"/>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="318"/>
       <source>Show Hard Lines</source>
-      <translation type="unfinished">Show Hard Lines</translation>
+      <translation>Erakutsi lerro gogorrak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="165"/>
       <source>Use an approximation to find hidden lines.
 Fast, but result is a collection of short straight lines.</source>
-      <translation type="unfinished">Use an approximation to find hidden lines.
-Fast, but result is a collection of short straight lines.</translation>
+      <translation>Erabili hurbilketa bat ezkutuko lerroak aurkitzeko.
+Azkarra, baina lerro zuzen laburren bilduma bat ematen du.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="169"/>
       <source>Use Polygon Approximation</source>
-      <translation type="unfinished">Use Polygon Approximation</translation>
+      <translation>Erabili poligonoen hurbilketa</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="193"/>
       <source>Make lines of equal parameterization</source>
-      <translation type="unfinished">Make lines of equal parameterization</translation>
+      <translation>Egin parametrizazio bereko lerroak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="196"/>
@@ -3060,7 +3243,7 @@ Fast, but result is a collection of short straight lines.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawHLR.ui" line="388"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -3114,7 +3297,7 @@ Fast, but result is a collection of short straight lines.</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="196"/>
       <source>Default scale for views if &apos;View Scale Type&apos; is &apos;Custom&apos;</source>
-      <translation type="unfinished">Default scale for views if &apos;View Scale Type&apos; is &apos;Custom&apos;</translation>
+      <translation>Bisten eskala lehenetsia &apos;Bistaren eskala mota&apos; aukeran &apos;Pertsonalizatua&apos; badago ezarrita</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="244"/>
@@ -3125,45 +3308,45 @@ Fast, but result is a collection of short straight lines.</translation>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="283"/>
       <source>Selection area around center marks
 Each unit is approx. 0.1 mm wide</source>
-      <translation type="unfinished">Selection area around center marks
-Each unit is approx. 0.1 mm wide</translation>
+      <translation>Zentro-marken inguruko hautapen-area
+Unitate bakoitzak 0.1 mm inguruko zabalera du</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="324"/>
       <source>Size of selection area around edges
 Each unit is approx. 0.1 mm wide</source>
-      <translation type="unfinished">Size of selection area around edges
-Each unit is approx. 0.1 mm wide</translation>
+      <translation>Ertzen inguruko hautapen-arearen tamaina
+Unitate bakoitzak 0.1 mm inguruko zabalera du</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="353"/>
       <source>Mark Fuzz</source>
-      <translation type="unfinished">Mark Fuzz</translation>
+      <translation>Markaren lausotasuna</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="372"/>
       <source>Edge Fuzz</source>
-      <translation type="unfinished">Edge Fuzz</translation>
+      <translation>Ertzaren lausotasuna</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="396"/>
       <source>Size Adjustments</source>
-      <translation type="unfinished">Size Adjustments</translation>
+      <translation>Tamaina-doikuntzak</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="422"/>
       <source>Tolerance font size adjustment. Multiplier of dimension font size.</source>
-      <translation type="unfinished">Tolerance font size adjustment. Multiplier of dimension font size.</translation>
+      <translation>Tolerantziako letra-tamainaren doikuntza. Kota-lerroaren letra-tamainaren biderkatzailea.</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="456"/>
       <source>Size of template field click handles</source>
-      <translation type="unfinished">Size of template field click handles</translation>
+      <translation>Txantiloi-eremuaren klik-heldulekuen tamaina</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="475"/>
       <source>Vertex Scale</source>
-      <translation type="unfinished">Vertex Scale</translation>
+      <translation>Erpin-eskala</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="507"/>
@@ -3198,12 +3381,12 @@ Each unit is approx. 0.1 mm wide</translation>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="613"/>
       <source>Multiplier for size of welding symbols</source>
-      <translation type="unfinished">Multiplier for size of welding symbols</translation>
+      <translation>Soldadura-ikurren tamainaren biderkatzailea</translation>
     </message>
     <message>
       <location filename="../../DlgPrefsTechDrawScale.ui" line="643"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Items in &lt;span style=&quot; font-style:italic;&quot;&gt;italics&lt;/span&gt; are default values for new objects. They have no effect on existing objects.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Oharra:&lt;/span&gt; &lt;span style=&quot; font-style:italic;&quot;&gt;Etzanean&lt;/span&gt; dauden elementuak objektu berrien balio lehenetsiak dira. Ez dute eraginik lehendik dauden objektuetan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
   </context>
   <context>
@@ -3290,12 +3473,12 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../SymbolChooser.ui" line="17"/>
       <source>Symbol Chooser</source>
-      <translation type="unfinished">Symbol Chooser</translation>
+      <translation>Ikurren aukeratzailea</translation>
     </message>
     <message>
       <location filename="../../SymbolChooser.ui" line="26"/>
       <source>Select a symbol that should be used</source>
-      <translation type="unfinished">Select a symbol that should be used</translation>
+      <translation>Hautatu erabiliko beharko den ikur bat</translation>
     </message>
     <message>
       <location filename="../../SymbolChooser.ui" line="48"/>
@@ -3333,7 +3516,7 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../TaskBalloon.ui" line="43"/>
       <source>Color for &apos;Text&apos;</source>
-      <translation type="unfinished">Color for &apos;Text&apos;</translation>
+      <translation>&apos;Testurako&apos; kolorea</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="57"/>
@@ -3343,7 +3526,7 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../TaskBalloon.ui" line="76"/>
       <source>Fontsize for &apos;Text&apos;</source>
-      <translation type="unfinished">Fontsize for &apos;Text&apos;</translation>
+      <translation>&apos;Testurako&apos; letra-tamaina</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="95"/>
@@ -3393,12 +3576,12 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../TaskBalloon.ui" line="172"/>
       <source>Shape Scale:</source>
-      <translation type="unfinished">Shape Scale:</translation>
+      <translation>Formaren eskala:</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="185"/>
       <source>Scale factor for the &apos;Shape&apos;</source>
-      <translation type="unfinished">Scale factor for the &apos;Shape&apos;</translation>
+      <translation>&apos;Formaren&apos; eskala-faktorea</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="204"/>
@@ -3408,27 +3591,27 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../TaskBalloon.ui" line="211"/>
       <source>End symbol for the balloon line</source>
-      <translation type="unfinished">End symbol for the balloon line</translation>
+      <translation>Bunbuilo-lerroaren amaierako ikurra</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="218"/>
       <source>Line Width:</source>
-      <translation type="unfinished">Line Width:</translation>
+      <translation>Lerro-zabalera:</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="237"/>
       <source>Leader line width</source>
-      <translation type="unfinished">Leader line width</translation>
+      <translation>Gida-marraren zabalera</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="256"/>
       <source>Leader Kink Length:</source>
-      <translation type="unfinished">Leader Kink Length:</translation>
+      <translation>Gida-marraren muturraren luzera:</translation>
     </message>
     <message>
       <location filename="../../TaskBalloon.ui" line="275"/>
       <source>Length of balloon leader line kink</source>
-      <translation type="unfinished">Length of balloon leader line kink</translation>
+      <translation>Bunbuiloaren gida-marraren muturraren luzera</translation>
     </message>
   </context>
   <context>
@@ -3479,10 +3662,10 @@ Jarraitu nahi duzu?</translation>
 - lines: in equal distance to the lines and with
   half of the angle the lines have to each other
 - points: in equal distance to the points</source>
-      <translation type="unfinished">centerline between
-- lines: in equal distance to the lines and with
-  half of the angle the lines have to each other
-- points: in equal distance to the points</translation>
+      <translation>erdiko lerroa honakoen artean
+- lerroak: lerroekiko distantzia berean eta lerroek
+ elkarrekiko duten angeluaren erdiarekin
+- puntuak: puntuekiko distantzia berean</translation>
     </message>
     <message>
       <location filename="../../TaskCenterLine.ui" line="142"/>
@@ -3492,7 +3675,7 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../TaskCenterLine.ui" line="157"/>
       <source>Shift Horizontal</source>
-      <translation type="unfinished">Shift Horizontal</translation>
+      <translation>Desplazatu horizontalean</translation>
     </message>
     <message>
       <location filename="../../TaskCenterLine.ui" line="170"/>
@@ -3502,7 +3685,7 @@ Jarraitu nahi duzu?</translation>
     <message>
       <location filename="../../TaskCenterLine.ui" line="183"/>
       <source>Shift Vertical</source>
-      <translation type="unfinished">Shift Vertical</translation>
+      <translation>Desplazatu bertikalean</translation>
     </message>
     <message>
       <location filename="../../TaskCenterLine.ui" line="196"/>
@@ -3543,13 +3726,13 @@ Jarraitu nahi duzu?</translation>
       <location filename="../../TaskCenterLine.ui" line="380"/>
       <source>Flips endpoints of selected lines for centerline creation,
 see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</source>
-      <translation type="unfinished">Flips endpoints of selected lines for centerline creation,
-see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
+      <translation>Lerro hautatuen amaiera-puntuak iraultzen ditu erdiko lerroa sortzeko,
+ikusi FreeCADen wikiko &apos;2LineCenterLine&apos; deskribapen baterako</translation>
     </message>
     <message>
       <location filename="../../TaskCenterLine.ui" line="384"/>
       <source>Flip Ends</source>
-      <translation type="unfinished">Flip Ends</translation>
+      <translation>Irauli amaierak</translation>
     </message>
     <message>
       <location filename="../../TaskCenterLine.ui" line="336"/>
@@ -3607,7 +3790,7 @@ see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
     <message>
       <location filename="../../TaskCosVertex.ui" line="107"/>
       <source>Position from the view center</source>
-      <translation type="unfinished">Position from the view center</translation>
+      <translation>Posizioa bistaren erditik</translation>
     </message>
     <message>
       <location filename="../../TaskCosVertex.ui" line="110"/>
@@ -3645,7 +3828,7 @@ see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
     <message>
       <location filename="../../TaskCosmeticLine.ui" line="26"/>
       <source>Cosmetic Line</source>
-      <translation type="unfinished">Cosmetic Line</translation>
+      <translation>Lerro kosmetikoa</translation>
     </message>
     <message>
       <location filename="../../TaskCosmeticLine.ui" line="34"/>
@@ -3656,13 +3839,13 @@ see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
       <location filename="../../TaskCosmeticLine.ui" line="61"/>
       <location filename="../../TaskCosmeticLine.ui" line="134"/>
       <source>2d Point</source>
-      <translation type="unfinished">2d Point</translation>
+      <translation>2d puntua</translation>
     </message>
     <message>
       <location filename="../../TaskCosmeticLine.ui" line="74"/>
       <location filename="../../TaskCosmeticLine.ui" line="147"/>
       <source>3d Point</source>
-      <translation type="unfinished">3d Point</translation>
+      <translation>3d puntua</translation>
     </message>
     <message>
       <location filename="../../TaskCosmeticLine.ui" line="88"/>
@@ -3688,7 +3871,7 @@ see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
     <message>
       <location filename="../../TaskDetail.ui" line="26"/>
       <source>Detail Anchor</source>
-      <translation type="unfinished">Detail Anchor</translation>
+      <translation>Xehetasun-aingura</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="54"/>
@@ -3698,27 +3881,27 @@ see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
     <message>
       <location filename="../../TaskDetail.ui" line="61"/>
       <source>Detail View</source>
-      <translation type="unfinished">Detail View</translation>
+      <translation>Bista xehea</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="92"/>
       <source>Click to drag detail highlight to new position</source>
-      <translation type="unfinished">Click to drag detail highlight to new position</translation>
+      <translation>Egin klik xehetasunaren nabarmentzea posizio berrira arrastatzeko</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="95"/>
       <source>Drag Highlight</source>
-      <translation type="unfinished">Drag Highlight</translation>
+      <translation>Arrastatu nabarmentzea</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="168"/>
       <source>scale factor for detail view</source>
-      <translation type="unfinished">scale factor for detail view</translation>
+      <translation>bista xehearen eskala-faktorea</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="197"/>
       <source>size of detail view</source>
-      <translation type="unfinished">size of detail view</translation>
+      <translation>bista xehearen tamaina</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="263"/>
@@ -3726,10 +3909,10 @@ see the FreeCAD Wiki &apos;2LineCenterLine&apos; for a description</translation>
 Automatic: if the detail view is larger than the page,
                    it will be scaled down to fit into the page
 Custom: custom scale factor is used</source>
-      <translation type="unfinished">Page: scale factor of page is used
-Automatic: if the detail view is larger than the page,
-                   it will be scaled down to fit into the page
-Custom: custom scale factor is used</translation>
+      <translation>Orria: orriaren eskala faktorea erabiliko da
+Automatikoa: bista xehea orria baino handiagoa bada,
+                   eskalatu egingo da orrian sartu dadin
+Pertsonalizatua: eskala-faktore pertsonalizatua erabiliko da</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="270"/>
@@ -3749,7 +3932,7 @@ Custom: custom scale factor is used</translation>
     <message>
       <location filename="../../TaskDetail.ui" line="288"/>
       <source>Scale Type</source>
-      <translation type="unfinished">Scale Type</translation>
+      <translation>Eskala mota</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="190"/>
@@ -3759,7 +3942,7 @@ Custom: custom scale factor is used</translation>
     <message>
       <location filename="../../TaskDetail.ui" line="216"/>
       <source>Scale Factor</source>
-      <translation type="unfinished">Scale Factor</translation>
+      <translation>Eskala-faktorea</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="223"/>
@@ -3769,17 +3952,17 @@ Custom: custom scale factor is used</translation>
     <message>
       <location filename="../../TaskDetail.ui" line="146"/>
       <source>x position of detail highlight within view</source>
-      <translation type="unfinished">x position of detail highlight within view</translation>
+      <translation>Xehetasun nabarmenduak bistaren baitan duen X posizioa</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="237"/>
       <source>reference label</source>
-      <translation type="unfinished">reference label</translation>
+      <translation>erreferentzia-etiketa</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="247"/>
       <source>y position of detail highlight within view</source>
-      <translation type="unfinished">y position of detail highlight within view</translation>
+      <translation>Xehetasun nabarmenduak bistaren baitan duen Y posizioa</translation>
     </message>
     <message>
       <location filename="../../TaskDetail.ui" line="230"/>
@@ -3868,7 +4051,7 @@ Custom: custom scale factor is used</translation>
     <message>
       <location filename="../../TaskHatch.ui" line="26"/>
       <source>Apply Hatch to Face</source>
-      <translation type="unfinished">Apply Hatch to Face</translation>
+      <translation>Aplikatu itzaleztadura aurpegiari</translation>
     </message>
     <message>
       <location filename="../../TaskHatch.ui" line="38"/>
@@ -3968,9 +4151,9 @@ Custom: custom scale factor is used</translation>
       <source>First pick the start point of the line,
 then at least a second point.
 You can pick further points to get line segments.</source>
-      <translation type="unfinished">First pick the start point of the line,
-then at least a second point.
-You can pick further points to get line segments.</translation>
+      <translation>Lehenengo aukeratu lerroaren hasierako puntua,
+ondoren gutxienez bigarren puntu bat.
+Puntu gehiago ere aukeratu daitezke lerro-segmentuak sortzeko.</translation>
     </message>
     <message>
       <location filename="../../TaskLeaderLine.ui" line="199"/>
@@ -4332,33 +4515,33 @@ You can pick further points to get line segments.</translation>
       <location filename="../../TaskProjGroup.ui" line="653"/>
       <source>Distributes projections automatically
 using the given X/Y Spacing</source>
-      <translation type="unfinished">Distributes projections automatically
-using the given X/Y Spacing</translation>
+      <translation>Proiekzioak automatikoki banatzen ditu
+emandako X/Y espazioa erabilita</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="657"/>
       <source>Auto Distribute</source>
-      <translation type="unfinished">Auto Distribute</translation>
+      <translation>Banatu automatikoki</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="691"/>
       <source>Horizontal space between border of projections</source>
-      <translation type="unfinished">Horizontal space between border of projections</translation>
+      <translation>Proiekzioen ertzen arteko tarte horizontala</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="719"/>
       <source>X Spacing</source>
-      <translation type="unfinished">X Spacing</translation>
+      <translation>X tartea</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="738"/>
       <source>Y Spacing</source>
-      <translation type="unfinished">Y Spacing</translation>
+      <translation>Y tartea</translation>
     </message>
     <message>
       <location filename="../../TaskProjGroup.ui" line="757"/>
       <source>Vertical space between border of projections</source>
-      <translation type="unfinished">Vertical space between border of projections</translation>
+      <translation>Proiekzioen ertzen arteko tarte bertikala</translation>
     </message>
   </context>
   <context>
@@ -4555,7 +4738,7 @@ using the given X/Y Spacing</translation>
     <message>
       <location filename="../../TaskSectionView.ui" line="283"/>
       <source>Position from the 3D origin of the object in the view</source>
-      <translation type="unfinished">Position from the 3D origin of the object in the view</translation>
+      <translation>Posizioa objektuak bistan duen 3D jatorritik</translation>
     </message>
     <message>
       <location filename="../../TaskSectionView.ui" line="286"/>
@@ -4581,17 +4764,17 @@ using the given X/Y Spacing</translation>
       <location filename="../../TaskSectionView.cpp" line="89"/>
       <location filename="../../TaskSectionView.cpp" line="124"/>
       <source>TaskSectionView - bad parameters.  Can not proceed.</source>
-      <translation>Sekzio-bistaren zeregina - parametro okerrak. Ezin da jarraitu.</translation>
+      <translation>Sekzio-bistaren ataza - parametro okerrak. Ezin da jarraitu.</translation>
     </message>
     <message>
       <location filename="../../TaskSectionView.cpp" line="339"/>
       <source>Nothing to apply. No section direction picked yet</source>
-      <translation type="unfinished">Nothing to apply. No section direction picked yet</translation>
+      <translation>Ez dago aplikatzeko ezer. Oraindik ez da sekzio-norabiderik aukeratu</translation>
     </message>
     <message>
       <location filename="../../TaskSectionView.cpp" line="478"/>
       <source>Can not continue. Object * %1 * not found.</source>
-      <translation type="unfinished">Can not continue. Object * %1 * not found.</translation>
+      <translation>Ezin da jarraitu. Ez da * %1 * objektua aurkitu.</translation>
     </message>
   </context>
   <context>

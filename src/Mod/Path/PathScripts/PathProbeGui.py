@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
-# *                                                                         *
 # *   Copyright (c) 2017 sliptonic <shopinthewoods@gmail.com>               *
 # *                                                                         *
 # *   This program is free software; you can redistribute it and/or modify  *
@@ -86,7 +84,7 @@ class TaskPanelOpPage(PathOpGui.TaskPanelPage):
 
 
 Command = PathOpGui.SetupOperation('Probe', PathProbe.Create, TaskPanelOpPage,
-                'Path-Probe',
+                'Path_Probe',
                 QtCore.QT_TRANSLATE_NOOP("Probe", "Probe"),
                 QtCore.QT_TRANSLATE_NOOP("Probe", "Create a Probing Grid from a job stock"),
                 PathProbe.SetupProperties)

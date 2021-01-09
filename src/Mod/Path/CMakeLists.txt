@@ -111,6 +111,8 @@ SET(PathScripts_SRCS
     PathScripts/PathSurface.py
     PathScripts/PathSurfaceGui.py
     PathScripts/PathSurfaceSupport.py
+    PathScripts/PathThreadMilling.py
+    PathScripts/PathThreadMillingGui.py
     PathScripts/PathToolBit.py
     PathScripts/PathToolBitCmd.py
     PathScripts/PathToolBitEdit.py
@@ -138,6 +140,7 @@ SET(PathScripts_post_SRCS
     PathScripts/post/centroid_post.py
     PathScripts/post/comparams_post.py
     PathScripts/post/dynapath_post.py
+    PathScripts/post/dxf_post.py
     PathScripts/post/example_pre.py
     PathScripts/post/gcode_pre.py
     PathScripts/post/grbl_post.py
@@ -155,26 +158,29 @@ SET(PathScripts_post_SRCS
 )
 
 SET(Tools_Bit_SRCS
-    Tools/Bit/t1.fctb
-    Tools/Bit/t2.fctb
-    Tools/Bit/t3.fctb
-    Tools/Bit/t4.fctb
-    Tools/Bit/t5.fctb
-    Tools/Bit/t6.fctb
-    Tools/Bit/t7.fctb
-    Tools/Bit/t8.fctb
-    Tools/Bit/t9.fctb
+    Tools/Bit/45degree_chamfer.fctb
+    Tools/Bit/5mm_Drill.fctb
+    Tools/Bit/5mm_Endmill.fctb
+    Tools/Bit/60degree_Vbit.fctb
+    Tools/Bit/6mm_Ball_End.fctb
+    Tools/Bit/6mm_Bullnose.fctb
+    Tools/Bit/slittingsaw.fctb
+    Tools/Bit/probe.fctb
 )
 
 SET(Tools_Library_SRCS
-    Tools/Library/endmills.fctl
+    Tools/Library/Default.fctl
 )
 
 SET(Tools_Shape_SRCS
     Tools/Shape/ballend.fcstd
     Tools/Shape/bullnose.fcstd
     Tools/Shape/drill.fcstd
+    Tools/Shape/chamfer.fcstd
     Tools/Shape/endmill.fcstd
+    Tools/Shape/probe.fcstd
+    Tools/Shape/slittingsaw.fcstd
+    Tools/Shape/thread-mill.fcstd
     Tools/Shape/v-bit.fcstd
 )
 
@@ -194,11 +200,14 @@ SET(PathTests_SRCS
     PathTests/TestPathPreferences.py
     PathTests/TestPathSetupSheet.py
     PathTests/TestPathStock.py
+    PathTests/TestPathThreadMilling.py
     PathTests/TestPathTool.py
     PathTests/TestPathToolBit.py
     PathTests/TestPathToolController.py
     PathTests/TestPathTooltable.py
     PathTests/TestPathUtil.py
+    PathTests/TestPathVcarve.py
+    PathTests/TestPathVoronoi.py
     PathTests/boxtest.fcstd
     PathTests/test_centroid_00.ngc
     PathTests/test_geomop.fcstd
@@ -221,6 +230,15 @@ SET(Path_Images
     ${PathImages_Tools}
 )
 
+SET(PathData_Threads
+    Data/Threads/metric-internal.csv
+    Data/Threads/imperial-internal.csv
+)
+
+SET(Path_Data
+    ${PathData_Threads}
+)
+
 SET(all_files
     ${PathScripts_SRCS}
     ${PathScripts_post_SRCS}
@@ -228,6 +246,7 @@ SET(all_files
     ${Tools_Library_SRCS}
     ${Tools_Shape_SRCS}
     ${Path_Images}
+    ${Path_Data}
 )
 
 ADD_CUSTOM_TARGET(PathScripts ALL
@@ -300,5 +319,12 @@ INSTALL(
         ${PathImages_Tools}
     DESTINATION
         Mod/Path/Images/Tools
+)
+
+INSTALL(
+    FILES
+        ${PathData_Threads}
+    DESTINATION
+        Mod/Path/Data/Threads
 )
 

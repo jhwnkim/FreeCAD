@@ -121,6 +121,81 @@
     </message>
   </context>
   <context>
+    <name>Command</name>
+    <message>
+      <source>Edit</source>
+      <translation>Редактировать</translation>
+    </message>
+    <message>
+      <source>Import</source>
+      <translation>Импорт</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Удалить</translation>
+    </message>
+    <message>
+      <source>Paste expressions</source>
+      <translation type="unfinished">Paste expressions</translation>
+    </message>
+    <message>
+      <source>Make link group</source>
+      <translation>Создать группу ссылок</translation>
+    </message>
+    <message>
+      <source>Make link</source>
+      <translation>Создать ссылку</translation>
+    </message>
+    <message>
+      <source>Make sub-link</source>
+      <translation>Сделать доп. ссылку</translation>
+    </message>
+    <message>
+      <source>Import links</source>
+      <translation>Импорт ссылок</translation>
+    </message>
+    <message>
+      <source>Import all links</source>
+      <translation>Импорт всех ссылок</translation>
+    </message>
+    <message>
+      <source>Insert measurement</source>
+      <translation type="unfinished">Insert measurement</translation>
+    </message>
+    <message>
+      <source>Insert text document</source>
+      <translation type="unfinished">Insert text document</translation>
+    </message>
+    <message>
+      <source>Add a part</source>
+      <translation type="unfinished">Add a part</translation>
+    </message>
+    <message>
+      <source>Add a group</source>
+      <translation type="unfinished">Add a group</translation>
+    </message>
+    <message>
+      <source>Align</source>
+      <translation>Выравнивание</translation>
+    </message>
+    <message>
+      <source>Placement</source>
+      <translation>Расположение</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Преобразовать</translation>
+    </message>
+    <message>
+      <source>Link Transform</source>
+      <translation type="unfinished">Link Transform</translation>
+    </message>
+    <message>
+      <source>Measure distance</source>
+      <translation>Измерить расстояние</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
@@ -2529,6 +2604,30 @@ opening or creation</source>
       <source>Show axis cross by default</source>
       <translation>Показывать перекрестие осей по умолчанию</translation>
     </message>
+    <message>
+      <source>Pick radius (px):</source>
+      <translation>Укажите радиус (пикс.):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation>Область выбора элементов в 3D виде.
+Большее значение облегчает выбор элемента, но может сделать невозможным выбор небольших элементов.
+               </translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation type="unfinished">This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation type="unfinished">Use software OpenGL</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettings3DViewImp</name>
@@ -3396,10 +3495,6 @@ Mouse tilting is not disabled by this setting.</source>
       <translation>Вращение в 3D будет использовать текущую позицию курсора как центр вращения</translation>
     </message>
     <message>
-      <source>Rotate at cursor</source>
-      <translation>Повернуть под курсором</translation>
-    </message>
-    <message>
       <source>Isometric</source>
       <translation>Изометрическая</translation>
     </message>
@@ -3446,6 +3541,22 @@ Mouse tilting is not disabled by this setting.</source>
     <message>
       <source>Default camera orientation when creating a new document or selecting the home view</source>
       <translation>Ориентация камеры по умолчанию при создании нового документа или выборе вида "Домой"</translation>
+    </message>
+    <message>
+      <source>Rotation mode</source>
+      <translation type="unfinished">Rotation mode</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation type="unfinished">Window center</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation type="unfinished">Drag at cursor</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation type="unfinished">Object center</translation>
     </message>
   </context>
   <context>
@@ -3552,7 +3663,7 @@ Mouse tilting is not disabled by this setting.</source>
     </message>
     <message>
       <source>FEM (mm, N, sec)</source>
-      <translation type="unfinished">FEM (mm, N, sec)</translation>
+      <translation>Метод конечных элементов (мм, Н, с)</translation>
     </message>
   </context>
   <context>
@@ -3590,10 +3701,6 @@ Mouse tilting is not disabled by this setting.</source>
       <translation>Один цвет</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Укажите радиус (пикс.):</translation>
-    </message>
-    <message>
       <source>Object being edited</source>
       <translation>Объект редактируется</translation>
     </message>
@@ -3608,12 +3715,6 @@ Mouse tilting is not disabled by this setting.</source>
     <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation>Включить подсветку выделения и использовать указанный цвет</translation>
-    </message>
-    <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.</source>
-      <translation>Область выбора элементов в 3D представлении.
-Большее значение облегчает выбор элементов, но может помешать выбрать небольшие элементы.</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
@@ -6749,7 +6850,7 @@ Document: </source>
     </message>
     <message>
       <source>Identical physical path</source>
-      <translation type="unfinished">Identical physical path</translation>
+      <translation>Идентичная физическая траектория</translation>
     </message>
   </context>
   <context>
@@ -7965,11 +8066,11 @@ Document: </source>
     </message>
     <message>
       <source>Recent macros</source>
-      <translation type="unfinished">Recent macros</translation>
+      <translation>Недавние макросы</translation>
     </message>
     <message>
       <source>Recent macro list</source>
-      <translation type="unfinished">Recent macro list</translation>
+      <translation>Список недавних макросов</translation>
     </message>
   </context>
   <context>
@@ -8809,6 +8910,21 @@ Document: </source>
     </message>
   </context>
   <context>
+    <name>StdCmdViewRestoreCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Стандартный вид</translation>
+    </message>
+    <message>
+      <source>Restore saved camera</source>
+      <translation type="unfinished">Restore saved camera</translation>
+    </message>
+    <message>
+      <source>Restore saved camera settings</source>
+      <translation type="unfinished">Restore saved camera settings</translation>
+    </message>
+  </context>
+  <context>
     <name>StdCmdViewRight</name>
     <message>
       <source>Standard-View</source>
@@ -8851,6 +8967,21 @@ Document: </source>
     <message>
       <source>Rotate the view by 90° clockwise</source>
       <translation>Повернуть вид на 90° по часовой стрелке</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdViewSaveCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Стандартный вид</translation>
+    </message>
+    <message>
+      <source>Save current camera</source>
+      <translation type="unfinished">Save current camera</translation>
+    </message>
+    <message>
+      <source>Save current camera settings</source>
+      <translation type="unfinished">Save current camera settings</translation>
     </message>
   </context>
   <context>

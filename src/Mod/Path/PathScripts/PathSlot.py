@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
-# *                                                                         *
 # *   Copyright (c) 2020 Russell Johnson (russ4262) <russ4262@gmail.com>    *
 # *                                                                         *
 # *   This program is free software; you can redistribute it and/or modify  *
@@ -42,21 +40,18 @@ import math
 # lazily loaded modules
 from lazy_loader.lazy_loader import LazyLoader
 Part = LazyLoader('Part', globals(), 'Part')
-
+Arcs = LazyLoader('draftgeoutils.arcs', globals(), 'draftgeoutils.arcs')
 if FreeCAD.GuiUp:
-    import FreeCADGui
-
-DEBUG = False
-if DEBUG:
-    PathLog.setLevel(PathLog.Level.DEBUG, PathLog.thisModule())
-    PathLog.trackModule(PathLog.thisModule())
-else:
-    PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
+    FreeCADGui = LazyLoader('FreeCADGui', globals(), 'FreeCADGui')
 
 
 # Qt translation handling
 def translate(context, text, disambig=None):
     return QtCore.QCoreApplication.translate(context, text, disambig)
+
+
+PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
+# PathLog.trackModule(PathLog.thisModule())
 
 
 class ObjectSlot(PathOp.ObjectOp):
@@ -186,7 +181,8 @@ class ObjectSlot(PathOp.ObjectOp):
         ENUMS = self.opPropertyEnumerations()
         if hasattr(obj, 'Base'):
             if obj.Base:
-                (base, subsList) = obj.Base[0]
+                # (base, subsList) = obj.Base[0]
+                subsList = obj.Base[0][1]
                 subCnt = len(subsList)
                 if subCnt == 1:
                     # Adjust available enumerations
@@ -232,7 +228,8 @@ class ObjectSlot(PathOp.ObjectOp):
         C = 0
         if hasattr(obj, 'Base'):
             if obj.Base:
-                (base, subsList) = obj.Base[0]
+                # (base, subsList) = obj.Base[0]
+                subsList = obj.Base[0][1]
                 subCnt = len(subsList)
                 if subCnt == 1:
                     A = 0
@@ -286,7 +283,7 @@ class ObjectSlot(PathOp.ObjectOp):
                     if isinstance(val, int) or isinstance(val, float):
                         setVal = True
                 if setVal:
-                    propVal = getattr(prop, 'Value')
+                    # propVal = getattr(prop, 'Value')
                     setattr(prop, 'Value', val)
                 else:
                     setattr(obj, n, val)
@@ -357,10 +354,9 @@ class ObjectSlot(PathOp.ObjectOp):
         self.arcRadius = 0.0
         self.newRadius = 0.0
         self.isDebug = False if PathLog.getLevel(PathLog.thisModule()) != 4 else True
-        self.showDebugObjects = obj.ShowTempObjects
+        self.showDebugObjects = False
         self.stockZMin = self.job.Stock.Shape.BoundBox.ZMin
         CMDS = list()
-        FCAD = FreeCAD.ActiveDocument
 
         try:
             dotIdx = __name__.index('.') + 1
@@ -368,18 +364,17 @@ class ObjectSlot(PathOp.ObjectOp):
             dotIdx = 0
         self.module = __name__[dotIdx:]
 
-        if not self.isDebug:
-            self.showDebugObjects = False
+        # Setup debugging group for temp objects, when in DEBUG mode
+        if self.isDebug:
+            self.showDebugObjects = obj.ShowTempObjects
         if self.showDebugObjects:
+            FCAD = FreeCAD.ActiveDocument
             for grpNm in ['tmpDebugGrp', 'tmpDebugGrp001']:
-                if hasattr(FreeCAD.ActiveDocument, grpNm):
-                    for go in FreeCAD.ActiveDocument.getObject(grpNm).Group:
-                        FreeCAD.ActiveDocument.removeObject(go.Name)
-                    FreeCAD.ActiveDocument.removeObject(grpNm)
-            self.tmpGrp = FreeCAD.ActiveDocument.addObject('App::DocumentObjectGroup', 'tmpDebugGrp')
-            tmpGrpNm = self.tmpGrp.Name
-
-        # self.updateEnumerations(obj)
+                if hasattr(FCAD, grpNm):
+                    for go in FCAD.getObject(grpNm).Group:
+                        FCAD.removeObject(go.Name)
+                    FCAD.removeObject(grpNm)
+            self.tmpGrp = FCAD.addObject('App::DocumentObjectGroup', 'tmpDebugGrp')
 
         # Begin GCode for operation with basic information
         # ... and move cutter to clearance height and startpoint
@@ -417,8 +412,7 @@ class ObjectSlot(PathOp.ObjectOp):
         # Hide the temporary objects
         if self.showDebugObjects:
             if FreeCAD.GuiUp:
-                import FreeCADGui
-                FreeCADGui.ActiveDocument.getObject(tmpGrpNm).Visibility = False
+                FreeCADGui.ActiveDocument.getObject(self.tmpGrp.Name).Visibility = False
             self.tmpGrp.purgeTouched()
 
         return True
@@ -428,9 +422,6 @@ class ObjectSlot(PathOp.ObjectOp):
         """This method controls the overall slot creation process."""
         pnts = False
         featureCnt = 0
-
-        def eLen(E):
-            return E.Length
 
         if not hasattr(obj, 'Base'):
             msg = translate('PathSlot',
@@ -450,30 +441,27 @@ class ObjectSlot(PathOp.ObjectOp):
                 FreeCAD.Console.PrintError(msg + '\n')
                 return False
 
-        if pnts:
-            (p1, p2) = pnts
+        baseGeom = obj.Base[0]
+        base, subsList = baseGeom
+        self.base = base
+        lenSL = len(subsList)
+        featureCnt = lenSL
+        if lenSL == 1:
+            PathLog.debug('Reference 1: {}'.format(obj.Reference1))
+            sub1 = subsList[0]
+            shape_1 = getattr(base.Shape, sub1)
+            self.shape1 = shape_1
+            pnts = self._processSingle(obj, shape_1, sub1)
         else:
-            baseGeom = obj.Base[0]
-            base, subsList = baseGeom
-            self.base = base
-            lenSL = len(subsList)
-            featureCnt = lenSL
-            if lenSL == 1:
-                PathLog.debug('Reference 1: {}'.format(obj.Reference1))
-                sub1 = subsList[0]
-                shape_1 = getattr(base.Shape, sub1)
-                self.shape1 = shape_1
-                pnts = self._processSingle(obj, shape_1, sub1)
-            else:
-                PathLog.debug('Reference 1: {}'.format(obj.Reference1))
-                PathLog.debug('Reference 2: {}'.format(obj.Reference2))
-                sub1 = subsList[0]
-                sub2 = subsList[1]
-                shape_1 = getattr(base.Shape, sub1)
-                shape_2 = getattr(base.Shape, sub2)
-                self.shape1 = shape_1
-                self.shape2 = shape_2
-                pnts = self._processDouble(obj, shape_1, sub1, shape_2, sub2)
+            PathLog.debug('Reference 1: {}'.format(obj.Reference1))
+            PathLog.debug('Reference 2: {}'.format(obj.Reference2))
+            sub1 = subsList[0]
+            sub2 = subsList[1]
+            shape_1 = getattr(base.Shape, sub1)
+            shape_2 = getattr(base.Shape, sub2)
+            self.shape1 = shape_1
+            self.shape2 = shape_2
+            pnts = self._processDouble(obj, shape_1, sub1, shape_2, sub2)
 
         if not pnts:
             return False
@@ -557,7 +545,8 @@ class ObjectSlot(PathOp.ObjectOp):
         It accepts the operation object and two end points for the path.
         It returns the slot gcode for the operation."""
         CMDS = list()
-        PATHS = [(p1, p2, 'G2'), (p2, p1, 'G3')]
+        PATHS = [(p2, p1, 'G2'), (p1, p2, 'G3')]
+        path_index = 0
 
         def arcPass(PNTS, depth):
             cmds = list()
@@ -574,33 +563,40 @@ class ObjectSlot(PathOp.ObjectOp):
             return cmds
 
         if obj.LayerMode == 'Single-pass':
-            PNTS = PATHS[0]
             if obj.ReverseDirection:
-                PNTS = PATHS[1]
-            CMDS.extend(arcPass(PNTS, obj.FinalDepth.Value))
+                path_index = 1
+            CMDS.extend(arcPass(PATHS[path_index], obj.FinalDepth.Value))
         else:
             if obj.CutPattern == 'Line':
-                PNTS = PATHS[0]
                 if obj.ReverseDirection:
-                    PNTS = PATHS[1]
+                    path_index = 1
                 for dep in self.depthParams:
-                    CMDS.extend(arcPass(PNTS, dep))
+                    CMDS.extend(arcPass(PATHS[path_index], dep))
                     CMDS.append(Path.Command('G0', {'Z': obj.SafeHeight.Value, 'F': self.vertRapid}))
             elif obj.CutPattern == 'ZigZag':
                 i = 0
                 for dep in self.depthParams:
-                    if i % 2.0 == 0:  # even
-                        CMDS.extend(arcPass(PATHS[0], dep))
-                    else:  # odd
-                        CMDS.extend(arcPass(PATHS[1], dep))
+                    if obj.ReverseDirection:
+                        if i % 2.0 == 0:  # even
+                            CMDS.extend(arcPass(PATHS[0], dep))
+                        else:  # odd
+                            CMDS.extend(arcPass(PATHS[1], dep))
+                    else:
+                        if i % 2.0 == 0:  # even
+                            CMDS.extend(arcPass(PATHS[1], dep))
+                        else:  # odd
+                            CMDS.extend(arcPass(PATHS[0], dep))
                     i += 1
         # Raise to SafeHeight when finished
         CMDS.append(Path.Command('G0', {'Z': obj.SafeHeight.Value, 'F': self.vertRapid}))
 
+        if self.isDebug:
+            PathLog.debug('G-code arc command is: {}'.format(PATHS[path_index][2]))
+
         return CMDS
 
     def _finishLine(self, obj, pnts, featureCnt):
-        """This method finishes an Line Slot operation."""
+        """This method finishes a Line Slot operation."""
         # Apply perpendicular rotation if requested
         perpZero = True
         if obj.PathOrientation == 'Perpendicular':
@@ -611,11 +607,27 @@ class ObjectSlot(PathOp.ObjectOp):
                         BE = self.bottomEdges[0]
                         pnts = self._processSingleVertFace(obj, BE)
                         perpZero = False
+                elif self.shapeType1 == 'Edge' and self.shapeType2 == 'Edge':
+                    PathLog.debug('_finishLine() Perp, featureCnt == 2')
             if perpZero:
                 (p1, p2) = pnts
                 pnts = self._makePerpendicular(p1, p2, 10.0)  # 10.0 offset below
         else:
-            perpZero = False
+            # Modify path points if user selected two parallel edges
+            if (featureCnt == 2 and self.shapeType1 == 'Edge' and 
+                    self.shapeType2 == 'Edge' and self._isParallel(self.dYdX1, self.dYdX2)):
+                (p1, p2) = pnts
+                edg1_len = self.shape1.Length
+                edg2_len = self.shape2.Length
+                set_length = max(edg1_len, edg2_len)
+                pnts = self._makePerpendicular(p1, p2, 10.0 + set_length)  # 10.0 offset below
+                if edg1_len != edg2_len:
+                    msg = obj.Label + ' '
+                    msg += translate('PathSlot',
+                            'Verify slot path start and end points.')
+                    FreeCAD.Console.PrintWarning(msg + '\n')
+            else:
+                perpZero = False
 
         # Reverse direction of path if requested
         if obj.ReverseDirection:
@@ -696,7 +708,6 @@ class ObjectSlot(PathOp.ObjectOp):
     def _processSingle(self, obj, shape_1, sub1):
         """This is the control method for slots based on a
         single Base Geometry feature."""
-        cmds = False
         make = False
         cat1 = sub1[:4]
 
@@ -774,11 +785,16 @@ class ObjectSlot(PathOp.ObjectOp):
 
         # Sort tuples by edge angle
         eTups.sort(key=lambda tup: tup[2])
+
         # Identify parallel edges
-        pairs = list()
+        parallel_edge_pairs = list()
+        parallel_edge_flags = list()
+        flag = 1
         eCnt = len(shape.Edges)
         lstE = eCnt - 1
-        for i in range(0, eCnt):
+        for i in range(0, eCnt):  # populate empty parallel edge flag list
+            parallel_edge_flags.append(0)        
+        for i in range(0, eCnt):  # Cycle through edges to identify parallel pairs
             if i < lstE:
                 ni = i + 1
                 A = eTups[i]
@@ -793,19 +809,24 @@ class ObjectSlot(PathOp.ObjectOp):
                         if eB.Curve.TypeId not in lineTypes:
                             debug = eB.Curve.TypeId
                         else:
-                            pairs.append((eA, eB))
+                            parallel_edge_pairs.append((eA, eB))
+                            # set parallel flags for this pair of edges
+                            parallel_edge_flags[A[0]] = flag
+                            parallel_edge_flags[B[0]] = flag
+                            flag += 1
                     if debug:
                         msg = 'Erroneous Curve.TypeId: {}'.format(debug)
                         PathLog.debug(msg)
 
-        pairCnt = len(pairs)
+        pairCnt = len(parallel_edge_pairs)
         if pairCnt > 1:
-            pairs.sort(key=lambda tup: tup[0].Length, reverse=True)
+            parallel_edge_pairs.sort(key=lambda tup: tup[0].Length, reverse=True)
 
         if self.isDebug:
             PathLog.debug(' -pairCnt: {}'.format(pairCnt))
-            for (a, b) in pairs:
+            for (a, b) in parallel_edge_pairs:
                 PathLog.debug(' -pair: {}, {}'.format(round(a.Length, 4), round(b.Length,4)))
+            PathLog.debug(' -parallel_edge_flags: {}'.format(parallel_edge_flags))
 
         if pairCnt == 0:
             msg = translate('PathSlot',
@@ -813,12 +834,24 @@ class ObjectSlot(PathOp.ObjectOp):
             FreeCAD.Console.PrintError(msg + '\n')
             return False
         elif pairCnt == 1:
-            same = pairs[0]
+            # One pair of parallel edges identified
+            if eCnt == 4:
+                flag_set = list()
+                for i in range(0, 4):
+                    e = parallel_edge_flags[i]
+                    if e == 0:
+                        flag_set.append(shape.Edges[i])
+                if len(flag_set) == 2:
+                    same = (flag_set[0], flag_set[1])
+                else:
+                    same = parallel_edge_pairs[0]
+            else:
+                same = parallel_edge_pairs[0]
         else:
             if obj.Reference1 == 'Long Edge':
-                same = pairs[1]
+                same = parallel_edge_pairs[1]
             elif obj.Reference1 == 'Short Edge':
-                same = pairs[0]
+                same = parallel_edge_pairs[0]
             else:
                 msg = 'Reference1 '
                 msg += translate('PathSlot',
@@ -867,6 +900,12 @@ class ObjectSlot(PathOp.ObjectOp):
         b1 = v0.sub(perpVect)
         b2 = v1.sub(perpVect)
         (p1, p2) = self._getCutSidePoints(obj, v0, v1, a1, a2, b1, b2)
+
+        msg = obj.Label + ' '
+        msg += translate('PathSlot',
+                'Verify slot path start and end points.')
+        FreeCAD.Console.PrintWarning(msg + '\n')
+
         return (p1, p2)
 
     def _processSingleEdge(self, obj, edge):
@@ -894,7 +933,7 @@ class ObjectSlot(PathOp.ObjectOp):
             return True
 
         def circleCentFrom3Points(P1, P2, P3):
-            # Source code for this function copied from:
+            # Source code for this function copied from (with modifications):
             # https://wiki.freecadweb.org/Macro_Draft_Circle_3_Points_3D
             P1P2 = (P2 - P1).Length
             P2P3 = (P3 - P2).Length
@@ -902,21 +941,20 @@ class ObjectSlot(PathOp.ObjectOp):
 
             # Circle radius.
             l = ((P1 - P2).cross(P2 - P3)).Length
-            try:
-                r = P1P2 * P2P3 * P3P1 / 2 / l
-            except:
+            # r = P1P2 * P2P3 * P3P1 / 2 / l
+            if round(l, 8) == 0.0:
                 PathLog.error("The three points are aligned.")
                 return False
-            else:
-                # Sphere center.
-                a = P2P3**2 * (P1 - P2).dot(P1 - P3) / 2 / l**2
-                b = P3P1**2 * (P2 - P1).dot(P2 - P3) / 2 / l**2
-                c = P1P2**2 * (P3 - P1).dot(P3 - P2) / 2 / l**2
-                P1.multiply(a)
-                P2.multiply(b)
-                P3.multiply(c)
-                PC = P1 + P2 + P3
-                return PC
+
+            # Sphere center.
+            a = P2P3**2 * (P1 - P2).dot(P1 - P3) / 2 / l**2
+            b = P3P1**2 * (P2 - P1).dot(P2 - P3) / 2 / l**2
+            c = P1P2**2 * (P3 - P1).dot(P3 - P2) / 2 / l**2
+            P1.multiply(a)
+            P2.multiply(b)
+            P3.multiply(c)
+            PC = P1 + P2 + P3
+            return PC
 
         # Process edge based on curve type
         if edge.Curve.TypeId in lineTypes:
@@ -977,12 +1015,10 @@ class ObjectSlot(PathOp.ObjectOp):
 
     # Methods for processing double geometry
     def _processDouble(self, obj, shape_1, sub1, shape_2, sub2):
-        PathLog.debug('_processDouble()')
         """This is the control method for slots based on a
         two Base Geometry features."""
-        cmds = False
-        make = False
-        cat2 = sub2[:4]
+        PathLog.debug('_processDouble()')
+
         p1 = None
         p2 = None
         dYdX1 = None
@@ -1013,12 +1049,13 @@ class ObjectSlot(PathOp.ObjectOp):
 
         # Parallel check for twin face, and face-edge cases
         if dYdX1 and dYdX2:
+            PathLog.debug('dYdX1, dYdX2: {}, {}'.format(dYdX1, dYdX2))
             if not self._isParallel(dYdX1, dYdX2):
-                PathLog.debug('dYdX1, dYdX2: {}, {}'.format(dYdX1, dYdX2))
-                msg = translate('PathSlot',
-                    'Selected geometry not parallel.')
-                FreeCAD.Console.PrintError(msg + '\n')
-                return False
+                if self.shapeType1 != 'Edge' or self.shapeType2 != 'Edge':
+                    msg = translate('PathSlot',
+                        'Selected geometry not parallel.')
+                    FreeCAD.Console.PrintError(msg + '\n')
+                    return False
 
         if p2:
             return (p1, p2)
@@ -1027,6 +1064,8 @@ class ObjectSlot(PathOp.ObjectOp):
 
     # Support methods
     def _dXdYdZ(self, E):
+        """_dXdYdZ(E) Calculates delta-X, delta-Y, and delta-Z between two vertexes
+        of edge passed in.  Returns these three values as vector."""
         v1 = E.Vertexes[0]
         v2 = E.Vertexes[1]
         dX = v2.X - v1.X
@@ -1035,6 +1074,8 @@ class ObjectSlot(PathOp.ObjectOp):
         return FreeCAD.Vector(dX, dY, dZ)
 
     def _normalizeVector(self, v):
+        """_normalizeVector(v)...
+        Returns a copy of the vector received with values rounded to 10 decimal places."""
         posTol = 0.0000000001
         negTol = -1 * posTol
         V = FreeCAD.Vector(v.x, v.y, v.z)
@@ -1067,6 +1108,7 @@ class ObjectSlot(PathOp.ObjectOp):
         return FreeCAD.Vector(x, y, z)
 
     def _getLowestPoint(self, shape_1):
+        """_getLowestPoint(shape)... Returns lowest vertex of shape as vector."""
         # find lowest vertex
         vMin = shape_1.Vertexes[0]
         zmin = vMin.Z
@@ -1074,7 +1116,7 @@ class ObjectSlot(PathOp.ObjectOp):
         for V in shape_1.Vertexes:
             if V.Z < zmin:
                 zmin = V.Z
-                vMin = V
+                # vMin = V
             elif V.Z == zmin:
                 same.append(V)
         if len(same) > 1:
@@ -1087,6 +1129,7 @@ class ObjectSlot(PathOp.ObjectOp):
             return FreeCAD.Vector(V.X, V.Y, V.Z)
 
     def _getHighestPoint(self, shape_1):
+        """_getHighestPoint(shape)... Returns highest vertex of shape as vector."""
         # find highest vertex
         vMax = shape_1.Vertexes[0]
         zmax = vMax.Z
@@ -1094,7 +1137,7 @@ class ObjectSlot(PathOp.ObjectOp):
         for V in shape_1.Vertexes:
             if V.Z > zmax:
                 zmax = V.Z
-                vMax = V
+                # vMax = V
             elif V.Z == zmax:
                 same.append(V)
         if len(same) > 1:
@@ -1107,9 +1150,15 @@ class ObjectSlot(PathOp.ObjectOp):
             return FreeCAD.Vector(V.X, V.Y, V.Z)
 
     def _processFeature(self, obj, shape, sub, pNum):
+        """_processFeature(obj, shape, sub, pNum)...
+        This function analyzes a shape and returns a three item tuple containing:
+            working point,
+            shape orientation/slope,
+            shape category as face, edge, or vert."""
         p = None
         dYdX = None
         cat = sub[:4]
+        PathLog.debug('sub-feature is {}'.format(cat))
         Ref = getattr(obj, 'Reference' + str(pNum))
         if cat == 'Face':
             BE = self._getBottomEdge(shape)
@@ -1169,6 +1218,10 @@ class ObjectSlot(PathOp.ObjectOp):
         return False
 
     def _extendArcSlot(self, p1, p2, cent, begExt, endExt):
+        """_extendArcSlot(p1, p2, cent, begExt, endExt)...
+        This function extends an arc defined by two end points, p1 and p2, and the center.
+        The arc is extended along the circumference with begExt and endExt values.
+        The function returns the new end points as tuple (n1, n2) to replace p1 and p2."""
         cancel = True
         n1 = p1
         n2 = p2
@@ -1179,7 +1232,6 @@ class ObjectSlot(PathOp.ObjectOp):
             y = self.newRadius * math.sin(rads)
             a = FreeCAD.Vector(self.newRadius, 0.0, 0.0)
             b = FreeCAD.Vector(x, y, 0.0)
-            c = FreeCAD.Vector(0.0, 0.0, 0.0)
             return Part.makeLine(a, b)
 
         if begExt or endExt:
@@ -1230,6 +1282,10 @@ class ObjectSlot(PathOp.ObjectOp):
         return (n1, n2)
 
     def _makeOffsetArc(self, p1, p2, center, newRadius):
+        """_makeOffsetArc(p1, p2, center, newRadius)...
+        This function offsets an arc defined by endpoints, p1 and p2, and the center.
+        New end points are returned at the radius passed by newRadius.
+        The angle of the original arc is maintained."""
         n1 = p1.sub(center).normalize()
         n2 = p2.sub(center).normalize()
         n1.multiply(newRadius)
@@ -1239,6 +1295,9 @@ class ObjectSlot(PathOp.ObjectOp):
         return (p1, p2)
 
     def _extendLineSlot(self, p1, p2, begExt, endExt):
+        """_extendLineSlot(p1, p2, begExt, endExt)...
+        This function extends a line defined by endpoints, p1 and p2.
+        The beginning is extended by begExt value and the end by endExt value."""
         if begExt:
             beg = p1.sub(p2)
             beg.normalize()
@@ -1256,7 +1315,8 @@ class ObjectSlot(PathOp.ObjectOp):
         return (n1, n2)
 
     def _getOppMidPoints(self, same):
-        # Find mid-points between ends of equal, oppossing edges
+        """_getOppMidPoints(same)...
+        Find mid-points between ends of equal, oppossing edges passed in tuple (edge1, edge2)."""
         com1 = same[0].CenterOfMass
         com2 = same[1].CenterOfMass
         p1 = FreeCAD.Vector(com1.x, com1.y, 0.0)
@@ -1264,6 +1324,7 @@ class ObjectSlot(PathOp.ObjectOp):
         return (p1, p2)
 
     def _isParallel(self, dYdX1, dYdX2):
+        """Determine if two orientation vectors are parallel."""
         if dYdX1.add(dYdX2).Length == 0:
             return True
         if ((dYdX1.x + dYdX2.x) / 2.0 == dYdX1.x and
@@ -1272,6 +1333,9 @@ class ObjectSlot(PathOp.ObjectOp):
         return False
 
     def _makePerpendicular(self, p1, p2, length):
+        """_makePerpendicular(p1, p2, length)...
+        Using a line defined by p1 and p2, returns a perpendicular vector centered
+        at the midpoint of the line, with length value."""
         line = Part.makeLine(p1, p2)
         midPnt = line.CenterOfMass
 
@@ -1288,7 +1352,6 @@ class ObjectSlot(PathOp.ObjectOp):
             return (n1, n2)
         else:
             toEnd = p2.sub(p1)
-            factor = halfDist / toEnd.Length
             perp = FreeCAD.Vector(-1 * toEnd.y, toEnd.x, 0.0)
             perp.normalize()
             perp.multiply(halfDist)
@@ -1464,8 +1527,6 @@ class ObjectSlot(PathOp.ObjectOp):
         for i in slcs:
             wires.append(i)
         if len(wires) > 0:
-            isFace = False
-            csWire = wires[0]
             if wires[0].isClosed():
                 face = Part.Face(wires[0])
                 if face.Area > 0:
@@ -1573,7 +1634,10 @@ class ObjectSlot(PathOp.ObjectOp):
         Make arch face between circles. Fuse and extrude it vertically.
         Check for collision with model."""
         # Make path travel of tool as 3D solid.
-        rad = self.tool.Diameter / 2.0
+        if hasattr(self.tool.Diameter, 'Value'):
+            rad = self.tool.Diameter.Value / 2.0
+        else:
+            rad = self.tool.Diameter / 2.0
         extFwd = obj.StartDepth.Value - obj.FinalDepth.Value
         extVect = FreeCAD.Vector(0.0, 0.0, extFwd)
 
@@ -1616,8 +1680,7 @@ class ObjectSlot(PathOp.ObjectOp):
 
             # Make wire with inside and outside arcs, and lines on ends.
             # Convert wire to face, then extrude
-            import draftgeoutils.arcs as Arcs
-            # Arc 1 - inside
+
             # verify offset does not force radius < 0
             newRadius = arcRadius - rad
             # PathLog.debug('arcRadius, newRadius: {}, {}'.format(arcRadius, newRadius))
@@ -1684,7 +1747,7 @@ class ObjectSlot(PathOp.ObjectOp):
             do = FreeCAD.ActiveDocument.addObject('Part::Feature', 'tmp_' + objName)
             do.Shape = objShape
             do.purgeTouched()
-            self.tempGroup.addObject(do)
+            self.tmpGrp.addObject(do)
 # Eclass
 
 

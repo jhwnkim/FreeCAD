@@ -1,5 +1,5 @@
 # ***************************************************************************
-# *   (c) Yorik van Havre (yorik@uncreated.net) 2014                        *
+# *   Copyright (c) 2014 Yorik van Havre <yorik@uncreated.net>              *
 # *                                                                         *
 # *   This file is part of the FreeCAD CAx development system.              *
 # *                                                                         *
@@ -19,7 +19,7 @@
 # *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
 # *   USA                                                                   *
 # *                                                                         *
-# ***************************************************************************/
+# ***************************************************************************
 
 
 class PathCommandGroup:
@@ -76,20 +76,13 @@ class PathWorkbench (Workbench):
 
         from PathScripts import PathToolBitCmd
         from PathScripts import PathToolBitLibraryCmd
-        if PathPreferences.experimentalFeaturesEnabled():
-            toolbitcmdlist = PathToolBitCmd.CommandList + ["Separator"] + PathToolBitLibraryCmd.CommandList + ["Path_ToolController", "Separator"]
-            self.toolbitctxmenu = ["Path_ToolBitLibraryLoad", "Path_ToolController"]
-        else:
-            toolbitcmdlist = []
-            self.toolbitctxmenu = []
 
         import PathCommands
         PathGuiInit.Startup()
 
         # build commands list
         projcmdlist = ["Path_Job", "Path_Post"]
-        toolcmdlist = ["Path_Inspect", "Path_Simulator",
-                       "Path_ToolLibraryEdit", "Path_SelectLoop",
+        toolcmdlist = ["Path_Inspect", "Path_Simulator", "Path_SelectLoop",
                        "Path_OpActiveToggle"]
         prepcmdlist = ["Path_Fixture", "Path_Comment", "Path_Stop",
                        "Path_Custom", "Path_Probe"]
@@ -106,6 +99,17 @@ class PathWorkbench (Workbench):
         extracmdlist = []
         # modcmdmore = ["Path_Hop",]
         # remotecmdlist = ["Path_Remote"]
+        specialcmdlist = []
+
+
+        if PathPreferences.toolsReallyUseLegacyTools():
+            toolcmdlist.append("Path_ToolLibraryEdit")
+            toolbitcmdlist = []
+        else:
+            toolcmdlist.extend(PathToolBitLibraryCmd.BarList)
+            toolbitcmdlist = PathToolBitLibraryCmd.MenuList
+
+
 
         engravecmdgroup = ['Path_EngraveTools']
         FreeCADGui.addCommand('Path_EngraveTools', PathCommandGroup(engravecmdlist, QtCore.QT_TRANSLATE_NOOP("Path", 'Engraving Operations')))
@@ -115,6 +119,7 @@ class PathWorkbench (Workbench):
             projcmdlist.append("Path_Sanity")
             prepcmdlist.append("Path_Shape")
             extracmdlist.extend(["Path_Area", "Path_Area_Workplane"])
+            specialcmdlist.append('Path_Thread_Milling')
 
             try:
                 import ocl  # pylint: disable=unused-variable
@@ -124,7 +129,8 @@ class PathWorkbench (Workbench):
                 threedcmdgroup = ['Path_3dTools']
                 FreeCADGui.addCommand('Path_3dTools', PathCommandGroup(threedopcmdlist, QtCore.QT_TRANSLATE_NOOP("Path", '3D Operations')))
             except ImportError:
-                FreeCAD.Console.PrintError("OpenCamLib is not working!\n")
+                if not PathPreferences.suppressOpenCamLibWarning():
+                    FreeCAD.Console.PrintError("OpenCamLib is not working!\n")
 
         self.appendToolbar(QtCore.QT_TRANSLATE_NOOP("Path", "Project Setup"), projcmdlist)
         self.appendToolbar(QtCore.QT_TRANSLATE_NOOP("Path", "Tool Commands"), toolcmdlist)
@@ -134,7 +140,7 @@ class PathWorkbench (Workbench):
             self.appendToolbar(QtCore.QT_TRANSLATE_NOOP("Path", "Helpful Tools"), extracmdlist)
 
         self.appendMenu([QtCore.QT_TRANSLATE_NOOP("Path", "&Path")], projcmdlist + ["Path_ExportTemplate", "Separator"] +
-                        toolbitcmdlist + toolcmdlist + ["Separator"] + twodopcmdlist + engravecmdlist + ["Separator"] +
+                        toolcmdlist + toolbitcmdlist + ["Separator"] + twodopcmdlist + engravecmdlist + ["Separator"] +
                         threedopcmdlist + ["Separator"])
         self.appendMenu([QtCore.QT_TRANSLATE_NOOP("Path", "&Path"), QtCore.QT_TRANSLATE_NOOP(
             "Path", "Path Dressup")], dressupcmdlist)
@@ -142,6 +148,9 @@ class PathWorkbench (Workbench):
             "Path", "Supplemental Commands")], prepcmdlist)
         self.appendMenu([QtCore.QT_TRANSLATE_NOOP("Path", "&Path"), QtCore.QT_TRANSLATE_NOOP(
             "Path", "Path Modification")], modcmdlist)
+        if specialcmdlist:
+            self.appendMenu([QtCore.QT_TRANSLATE_NOOP("Path", "&Path"), QtCore.QT_TRANSLATE_NOOP(
+            "Path", "Specialty Operations")], specialcmdlist)
         if extracmdlist:
             self.appendMenu([QtCore.QT_TRANSLATE_NOOP("Path", "&Path")], extracmdlist)
 
@@ -159,10 +168,11 @@ class PathWorkbench (Workbench):
     def Activated(self):
         # update the translation engine
         FreeCADGui.updateLocale()
-        Msg("Path workbench activated\n")
+        # Msg("Path workbench activated\n")
 
     def Deactivated(self):
-        Msg("Path workbench deactivated\n")
+        # Msg("Path workbench deactivated\n")
+        pass
 
     def ContextMenu(self, recipient):
         import PathScripts

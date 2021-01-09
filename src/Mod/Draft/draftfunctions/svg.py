@@ -220,6 +220,8 @@ def _svg_shape(svg, obj, plane,
         fill = fillstyle
     elif fillstyle == "shape color":
         fill = "#888888"
+    elif fillstyle in ("none",None):
+        fill = "none"
     else:
         fill = 'url(#' + fillstyle + ')'
 
@@ -476,7 +478,12 @@ def get_svg(obj,
         else:
             stroke = utils.get_rgb(color)
     elif App.GuiUp:
-        if hasattr(obj, "ViewObject"):
+        # find print color
+        pc = get_print_color(obj)
+        if pc:
+            stroke = utils.get_rgb(pc)
+        # get line color
+        elif hasattr(obj, "ViewObject"):
             if hasattr(obj.ViewObject, "LineColor"):
                 stroke = utils.get_rgb(obj.ViewObject.LineColor)
             elif hasattr(obj.ViewObject, "TextColor"):
@@ -789,8 +796,12 @@ def get_svg(obj,
             scale = vobj.FirstLine.Value/vobj.FontSize.Value
             f1 = fontsize * scale
 
-            _v = vobj.Proxy.coords.translation.getValue().getValue()
-            p2 = obj.Placement.multVec(App.Vector(_v))
+            if round(plane.axis.getAngle(App.Vector(0,0,1)),2) not in [0,3.14]:
+                # if not in XY view, place the label at center
+                p2 = obj.Shape.CenterOfMass
+            else:
+                _v = vobj.Proxy.coords.translation.getValue().getValue()
+                p2 = obj.Placement.multVec(App.Vector(_v))
 
             _h = vobj.Proxy.header.translation.getValue().getValue()
             lspc = App.Vector(_h)
@@ -837,6 +848,8 @@ def get_svg(obj,
                         fill = utils.get_rgb(vobj.ShapeColor,
                                              testbw=False)
                         fill_opacity = 1 - vobj.Transparency / 100.0
+                    elif fillstyle in ("none",None):
+                        fill = "none"
                     else:
                         fill = 'url(#'+fillstyle+')'
                         svg += get_pattern(fillstyle)
@@ -908,6 +921,17 @@ def get_svg(obj,
         svg = '<g transform ="scale(1,-1)">\n    ' + svg + '</g>\n'
 
     return svg
+
+
+def get_print_color(obj):
+    """returns the print color of the parent layer, if available"""
+    for parent in obj.InListRecursive:
+        if (hasattr(parent,"ViewObject")
+                and hasattr(parent.ViewObject,"UsePrintColor")
+                and parent.ViewObject.UsePrintColor):
+            if hasattr(parent.ViewObject,"LinePrintColor"):
+                return parent.ViewObject.LinePrintColor
+    return None
 
 
 def getSVG(obj,

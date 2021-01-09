@@ -14,219 +14,249 @@
       <translation>Estilo-izena</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="38"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="50"/>
       <source>Add new...</source>
       <translation>Gehitu berria...</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="61"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="79"/>
       <source>Renames the selected style</source>
       <translation>Hautatutako estiloaren izena aldatzen du</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="64"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="82"/>
       <source>Rename</source>
       <translation>Aldatu izena</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="86"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="110"/>
       <source>Deletes the selected style</source>
       <translation>Hautatutako estiloa ezabatzen du</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="89"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="113"/>
       <source>Delete</source>
       <translation>Ezabatu</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="120"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="144"/>
       <source>Text</source>
       <translation>Testua</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="129"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="153"/>
       <source>Font size</source>
       <translation>Letra-tamaina</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="139"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="163"/>
       <source>Line spacing</source>
       <translation>Lerro-tartea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="149"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="173"/>
       <source>Font name</source>
       <translation>Letra-tipoaren izena</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="156"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="192"/>
       <source>The font to use for texts and dimensions</source>
       <translation>Testuetarako eta kotetarako erabiliko den letra-tipoa</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="183"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="219"/>
       <source>Units</source>
       <translation>Unitateak</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="192"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="228"/>
       <source>Scale multiplier</source>
       <translation>Eskalaren biderkatzailea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="202"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="238"/>
       <source>Decimals</source>
       <translation>Dezimalak</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="212"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="248"/>
       <source>Unit override</source>
       <translation>Unitatea gainidaztea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="222"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="258"/>
       <source>Show unit</source>
       <translation>Erakutsi unitatea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="275"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="311"/>
       <source>Line and arrows</source>
       <translation>Lerroa eta geziak</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="284"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="320"/>
       <source>Line width</source>
       <translation>Lerro-zabalera</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="294"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="330"/>
       <source>Extension overshoot</source>
       <translation>Luzapenaren soberakina</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="304"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="340"/>
       <source>Arrow size</source>
       <translation>Gezi-tamaina</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="314"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="350"/>
       <source>Show lines</source>
       <translation>Erakutsi lerroak</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="324"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="360"/>
       <source>Dimension overshoot</source>
       <translation>Kota-lerroaren soberakina</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="334"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="370"/>
       <source>Extension lines</source>
       <translation>Luzapen-lerroak</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="344"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="380"/>
       <source>Arrow type</source>
       <translation>Gezi mota</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="354"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="390"/>
       <source>Line / text color</source>
       <translation>Lerroaren / testuaren kolorea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="377"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="413"/>
       <source>The width of the dimension lines</source>
       <translation>Kota-lerroen zabalera</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="380"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="416"/>
       <source>px</source>
       <translation>px</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="390"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="426"/>
       <source>The color of dimension lines, arrows and texts</source>
       <translation>Kota-lerroen, gezien eta testuen kolorea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="408"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="456"/>
       <source>Dot</source>
       <translation>Puntua</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="413"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="466"/>
       <source>Arrow</source>
       <translation>Gezia</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="418"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="471"/>
       <source>Tick</source>
       <translation>Tika</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="26"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="38"/>
       <source>The name of your style. Existing style names can be edited.</source>
       <translation>Estiloaren izena. Lehendik dauden estilo-izenak editatu daitezke.</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="163"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="199"/>
       <source>Font size in the system units</source>
       <translation>Letra-tamaina sistemaren unitateetan</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="136"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="160"/>
       <source>Line spacing in system units</source>
       <translation>Lerroartea sistemaren unitateetan</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="229"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="265"/>
       <source>A multiplier factor that affects the size of texts and markers</source>
       <translation>Testuen eta markatzaileen tamainan eragina duen faktore biderkatzailea</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="249"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="285"/>
       <source>The number of decimals to show for dimension values</source>
       <translation>Kota-lerroetan erakutsiko den dezimal kopurua</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="242"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="278"/>
       <source>Specify a valid length unit like mm, m, in, ft, to force displaying the dimension value in this unit</source>
       <translation>Adierazi luzera-unitate baliozko bat, adibidez milimetroak, metroak, hazbeteak edo oinak, kota-lerroa unitate horretan bistaratu dadin</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="259"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="295"/>
       <source>If it is checked it will show the unit next to the dimension value</source>
       <translation>Markatuta badago, unitatea kota-balioaren alboan erakutsiko du</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="456"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="514"/>
       <source>The distance that the extension lines are additionally extended beyond the dimension line</source>
       <translation>Luzapen-lerroak zein distantziara luzatzen diren kota-lerrotik haratago</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="426"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="484"/>
       <source>The size of the dimension arrows or markers in system units</source>
       <translation>Kota-gezien edo -markatzaileen tamaina sistema-unitatetan</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="361"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="397"/>
       <source>If it is checked it will display the dimension line</source>
       <translation>Markatuta badago, kota-lerroa bistaratuko da</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="436"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="494"/>
       <source>The distance that the dimension line is additionally extended</source>
       <translation>Kota-lerroa zein distantziara luzatzen den</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="446"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="504"/>
       <source>The length of the extension lines</source>
       <translation>Luzatze-lerroen luzera</translation>
     </message>
     <message>
-      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="404"/>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="452"/>
       <source>The type of arrows or markers to use at the end of dimension lines</source>
       <translation>Kota-lerroen amaieran erabiliko diren gezien edo markatzaileen mota</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="461"/>
+      <source>Circle</source>
+      <translation>Zirkulua</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="476"/>
+      <source>Tick-2</source>
+      <translation>Tika-2</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="529"/>
+      <source>Import styles from json file</source>
+      <translation type="unfinished">Import styles from json file</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="532"/>
+      <source>Import...</source>
+      <translation>Inportatu...</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="539"/>
+      <source>Export styles to json file</source>
+      <translation type="unfinished">Export styles to json file</translation>
+    </message>
+    <message>
+      <location filename="../ui/dialog_AnnotationStyleEditor.ui" line="542"/>
+      <source>Export...</source>
+      <translation type="unfinished">Export...</translation>
     </message>
   </context>
   <context>
@@ -840,24 +870,254 @@ value by using the [ and ] keys while drawing</source>
       <translation>Atxikitze-erradioa</translation>
     </message>
     <message>
-      <location filename="../ui/TaskSelectPlane.ui" line="221"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="241"/>
       <source>Centers the view on the current working plane</source>
       <translation>Bista uneko laneko planoan zentratzen du</translation>
     </message>
     <message>
-      <location filename="../ui/TaskSelectPlane.ui" line="224"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="244"/>
       <source>Center view</source>
       <translation>Zentratu bista</translation>
     </message>
     <message>
-      <location filename="../ui/TaskSelectPlane.ui" line="231"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="251"/>
       <source>Resets the working plane to its previous position</source>
       <translation>Laneko planoa aurreko posiziora berrezartzen du</translation>
     </message>
     <message>
-      <location filename="../ui/TaskSelectPlane.ui" line="234"/>
+      <location filename="../ui/TaskSelectPlane.ui" line="254"/>
       <source>Previous</source>
       <translation>Aurrekoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="219"/>
+      <source>Grid extension</source>
+      <translation>Saretaren hedadura</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskSelectPlane.ui" line="226"/>
+      <source> lines</source>
+      <translation> lerroak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="14"/>
+      <source>Style settings</source>
+      <translation>Estilo-ezarpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="207"/>
+      <source>Text color</source>
+      <translation>Testu-kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="132"/>
+      <source>Shape color</source>
+      <translation>Formaren kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="50"/>
+      <source>Line width</source>
+      <translation>Lerro-zabalera</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="29"/>
+      <source>The color of faces</source>
+      <translation>Aurpegien kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="168"/>
+      <source>The type of dimension arrows</source>
+      <translation>Kota-gezien mota</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="172"/>
+      <source>Dot</source>
+      <translation>Puntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="177"/>
+      <source>Circle</source>
+      <translation>Zirkulua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="182"/>
+      <source>Arrow</source>
+      <translation>Gezia</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="187"/>
+      <source>Tick</source>
+      <translation>Tika</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="192"/>
+      <source>Tick-2</source>
+      <translation>Tika-2</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="234"/>
+      <source>The color of texts and dimension texts</source>
+      <translation>Testuen eta kota-testuen kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="241"/>
+      <source>The size of texts and dimension texts</source>
+      <translation>Testuen eta kota-testuen tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="281"/>
+      <source>Show unit</source>
+      <translation>Erakutsi unitatea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="43"/>
+      <source>Line color</source>
+      <translation>Lerro-kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="271"/>
+      <source>The size of dimension arrows</source>
+      <translation>Kota-gezien tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="220"/>
+      <source>The font to use for texts and dimensions</source>
+      <translation>Testuetarako eta kotetarako erabiliko den letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="64"/>
+      <source>The line style</source>
+      <translation>Lerro-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="68"/>
+      <source>Solid</source>
+      <translation>Solidoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="73"/>
+      <source>Dashed</source>
+      <translation>Marratua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="78"/>
+      <source>Dotted</source>
+      <translation>Puntukatua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="83"/>
+      <source>DashDot</source>
+      <translation>MarraPuntua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="227"/>
+      <source>Text size</source>
+      <translation>Testu-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="295"/>
+      <source>Unit override</source>
+      <translation>Unitatea gainidaztea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="302"/>
+      <source>The unit to use for dimensions. Leave blank to use current FreeCAD unit</source>
+      <translation>Kota-lerroetan erabiliko den unitatea. Utzi hutsik FreeCAden uneko unitatea erabiltzeko</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="146"/>
+      <source>The transparency of faces</source>
+      <translation>Aurpegien gardentasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="149"/>
+      <source> %</source>
+      <translation> %</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="139"/>
+      <source>Transparency</source>
+      <translation>Gardentasuna</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="98"/>
+      <source>Display mode</source>
+      <translation>Bistaratze modua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="200"/>
+      <source>Text font</source>
+      <translation>Testuaren letra-tipoa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="288"/>
+      <source>Arrow size</source>
+      <translation>Gezi-tamaina</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="105"/>
+      <source>The display mode for faces</source>
+      <translation>Aurpegien bistaratze modua</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="109"/>
+      <source>Flat Lines</source>
+      <translation>Lerro lauak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="114"/>
+      <source>Wireframe</source>
+      <translation>Alanbre-bilbea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="119"/>
+      <source>Shaded</source>
+      <translation>Itzaldurarekin</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="124"/>
+      <source>Points</source>
+      <translation>Puntuak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="36"/>
+      <source>Draw style</source>
+      <translation>Marrazte-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="57"/>
+      <source>The color of lines</source>
+      <translation>Lerroen kolorea</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="251"/>
+      <source>Arrow style</source>
+      <translation>Gezi-estiloa</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="91"/>
+      <source> px</source>
+      <translation> px</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="312"/>
+      <source>Apply to selected objects</source>
+      <translation>Aplikatu hautatutako objektuei</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="20"/>
+      <source>Lines and faces</source>
+      <translation type="unfinished">Lines and faces</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="162"/>
+      <source>Annotations</source>
+      <translation>Oharpenak</translation>
+    </message>
+    <message>
+      <location filename="../ui/TaskPanel_SetStyle.ui" line="258"/>
+      <source>If the unit suffix is shown on dimension texts or not</source>
+      <translation type="unfinished">If the unit suffix is shown on dimension texts or not</translation>
     </message>
   </context>
   <context>
@@ -1041,22 +1301,22 @@ such as "Arial:Bold"</source>
       <translation>Erabili sareta</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="383"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="402"/>
       <source>Grid spacing</source>
       <translation>Sareta-tarteak</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="406"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="425"/>
       <source>The spacing between each grid line</source>
       <translation>Sareta-lerroen arteko tartea</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="334"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="353"/>
       <source>Main lines every</source>
       <translation>Lerro nagusien maiztasuna</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="357"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="376"/>
       <source>Mainlines will be drawn thicker. Specify here how many squares between mainlines.</source>
       <translation>Lerro nagusiak lodiago marraztuko dira. Adierazi hemen zenbat lauki utziko diren lerro nagusien artean.</translation>
     </message>
@@ -1286,7 +1546,7 @@ such as "Arial:Bold"</source>
       <translation>Kota-lerroaren eta kota-testuaren arteko espazioa</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-drafttexts.ui" line="497"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="534"/>
       <source>Select a font file</source>
       <translation>Hautatu letra-tipo fitxategi bat</translation>
     </message>
@@ -1346,12 +1606,12 @@ such as "Arial:Bold"</source>
       <translation>mm</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="438"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="457"/>
       <source>Grid size</source>
       <translation>Sareta-tamaina</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="464"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="483"/>
       <source> lines</source>
       <translation> lerroak</translation>
     </message>
@@ -1366,32 +1626,32 @@ such as "Arial:Bold"</source>
       <translation> testua barruan (3D)</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="326"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="375"/>
       <source>Dashed line definition</source>
       <translation>Marraz osatutako lerroen definizioa</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="349"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="398"/>
       <source>0.09,0.05</source>
       <translation>0.09,0.05</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="369"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="418"/>
       <source>Dashdot line definition</source>
       <translation>Marra-puntuz osatutako lerroen definizioa</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="392"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="441"/>
       <source>0.09,0.05,0.02,0.05</source>
       <translation>0.09,0.05,0.02,0.05</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="412"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="461"/>
       <source>Dotted line definition</source>
       <translation>Puntuz osatutako lerroen definizioa</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="435"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="484"/>
       <source>0.02,0.02</source>
       <translation>0.02,0.02</translation>
     </message>
@@ -1446,17 +1706,17 @@ such as "Arial:Bold"</source>
       <translation>Testu-tartea</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-drafttexts.ui" line="476"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="513"/>
       <source>ShapeString settings</source>
       <translation>Testu-formen ezarpenak</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-drafttexts.ui" line="484"/>
+      <location filename="../ui/preferences-drafttexts.ui" line="521"/>
       <source>Default ShapeString font file</source>
       <translation>Testu-formaren letra-tipo lehenetsiaren fitxategia</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="318"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="367"/>
       <source>Drawing view line definitions</source>
       <translation>Marrizki-bistaren lerro-definizioak</translation>
     </message>
@@ -1571,14 +1831,9 @@ such as "Arial:Bold"</source>
       <translation>Alt tekla aldatzailea</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="458"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="477"/>
       <source>The number of horizontal or vertical lines of the grid</source>
       <translation>Saretaren lerro horizontalen edo bertikalen kopurua</translation>
-    </message>
-    <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="507"/>
-      <source>The default color for new objects</source>
-      <translation>Objektu berrien kolore lehenetsia</translation>
     </message>
     <message>
       <location filename="../ui/preferences-draftvisual.ui" line="87"/>
@@ -1596,7 +1851,7 @@ such as "Arial:Bold"</source>
       <translation>Markatuta badago, uneko lan-planoaren orientazioa adierazten duen widget bat agertuko da marrazte-eragiketetan</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="432"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="481"/>
       <source>An SVG linestyle definition</source>
       <translation>SVG lerro-estiloaren definizio bat</translation>
     </message>
@@ -1636,22 +1891,22 @@ such as "Arial:Bold"</source>
       <translation>Tika-2</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="277"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="326"/>
       <source>Check this if you want to preserve colors of faces while doing downgrade and upgrade (splitFaces and makeShell only)</source>
       <translation>Markatu hau aurpegien koloreak mantendu nahi badituzu zaharkitzean edo eguneratzean (splitFaces eta makeShell soilik)</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="280"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="329"/>
       <source>Preserve colors of faces during downgrade/upgrade</source>
       <translation>Mantendu aurpegien koloreak zaharkitzean/eguneratzean</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="297"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="346"/>
       <source>Check this if you want the face names to derive from the originating object name and vice versa while doing downgrade/upgrade (splitFaces and makeShell only)</source>
       <translation>Markatu hau aurpegien izenak jatorrizko objektuen izenetatik eratorri nahi badituzu, edo alderantziz, zaharkitzean edo eguneratzean (splitFaces eta makeShell soilik)</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftvisual.ui" line="300"/>
+      <location filename="../ui/preferences-draftvisual.ui" line="349"/>
       <source>Preserve names of faces during downgrade/upgrade</source>
       <translation>Mantendu aurpegien izenak zaharkitzean/eguneratzean</translation>
     </message>
@@ -1825,7 +2080,7 @@ Horren azpiko diferentziak dituzten balioak horretarako berdintzen dira. Balio h
     <message>
       <location filename="../ui/preferences-draftinterface.ui" line="257"/>
       <source>Cycle Snap</source>
-      <translation>Txandakatu atxikitzea</translation>
+      <translation>Ziklo-atxikitzea</translation>
     </message>
     <message>
       <location filename="../ui/preferences-draftinterface.ui" line="52"/>
@@ -1891,11 +2146,6 @@ Horren azpiko diferentziak dituzten balioak horretarako berdintzen dira. Balio h
       <location filename="../ui/preferences-draftinterface.ui" line="851"/>
       <source>Z</source>
       <translation>Z</translation>
-    </message>
-    <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="487"/>
-      <source>Grid color</source>
-      <translation>Sareta-kolorea</translation>
     </message>
     <message>
       <location filename="../ui/preferences-draft.ui" line="194"/>
@@ -1993,32 +2243,32 @@ Kontuan izan eragiketa horren euskarria ez dela osoa, eta zenbait objektu ez dir
       <translation>Oharpenen eskalaren trepeta</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="532"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="567"/>
       <source>Draft Edit preferences</source>
       <translation>Zirriborro-edizioaren hobespenak</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="535"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="570"/>
       <source>Edit</source>
       <translation>Editatu</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="549"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="584"/>
       <source>Maximum number of contemporary edited objects</source>
       <translation>Aldi berean editatutako objektuen kopuru maximoa</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="572"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="607"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the maximum number of objects Draft Edit&lt;/p&gt;&lt;p&gt;can process at the same time&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zirriborro-edizioak aldi berean prozesatu dezakeen&lt;/p&gt;&lt;p&gt;objektu kopuru maximoa ezartzen du&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="610"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="645"/>
       <source>Draft edit pick radius</source>
       <translation>Zirriborro-edizioaren aukeratze-erradioa</translation>
     </message>
     <message>
-      <location filename="../ui/preferences-draftsnap.ui" line="633"/>
+      <location filename="../ui/preferences-draftsnap.ui" line="668"/>
       <source>Controls pick radius of edit nodes</source>
       <translation>Edizio-nodoen aukeratze-erradioa kontrolatzen du</translation>
     </message>
@@ -2215,6 +2465,56 @@ Balio hau segmentu-luzera maximoa da. </translation>
       <source>Show grid border</source>
       <translation>Erakutsi saretaren ertza</translation>
     </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="475"/>
+      <source>Override unit</source>
+      <translation>Gainidatzi unitatea</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-drafttexts.ui" line="495"/>
+      <source>By leaving this field blank, the dimension measurements will be shown in the current unit defined in FreeCAD. By indicating a unit here such as m or cm, you can force new dimensions to be shown in that unit.</source>
+      <translation>Eremu hau hutsik uzten bada, koten neurketak FreeCADek definitutako uneko unitatean erakutsiko dira. Hemen unitate bat adierazten bada, adibidez m edo cm, kota berriak unitate horretan erakutsi daitezen behartu daiteke.</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="257"/>
+      <source>The resolution to draw the patterns in. Default value is 128. Higher values give better resolutions, lower values make drawing faster</source>
+      <translation>Ereduak marrazteko erabiliko den bereizmena. Balio lehenetsia 128 da. Balio altuagoek bereizmen hobeak ematen dituzte, balio baxuagoek marraztea azkartzen dute</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="280"/>
+      <source>Hatch Pattern default size</source>
+      <translation>Itzaleztadura-ereduaren tamaina lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftvisual.ui" line="300"/>
+      <source>The default size of hatch patterns</source>
+      <translation>Itzaleztadura-ereduaren tamaina lehenetsia</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="329"/>
+      <source>If set, the grid will have its two main axes colored in red, green or blue when they match global axes</source>
+      <translation type="unfinished">If set, the grid will have its two main axes colored in red, green or blue when they match global axes</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="332"/>
+      <source>Use colored axes</source>
+      <translation type="unfinished">Use colored axes</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="506"/>
+      <source>Grid color and transparency</source>
+      <translation type="unfinished">Grid color and transparency</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="526"/>
+      <source>The color of the grid</source>
+      <translation type="unfinished">The color of the grid</translation>
+    </message>
+    <message>
+      <location filename="../ui/preferences-draftsnap.ui" line="546"/>
+      <source>The overall transparency of the grid</source>
+      <translation type="unfinished">The overall transparency of the grid</translation>
+    </message>
   </context>
   <context>
     <name>ImportDWG</name>
@@ -2239,208 +2539,183 @@ Balio hau segmentu-luzera maximoa da. </translation>
     <message>
       <location filename="../../importSVG.py" line="1826"/>
       <source>The export list contains no object with a valid bounding box</source>
-      <translation type="unfinished">The export list contains no object with a valid bounding box</translation>
+      <translation>Esportazio-zerrenda ez du baliozko muga-koadroa duen objekturik</translation>
     </message>
   </context>
   <context>
     <name>draft</name>
     <message>
-      <location filename="../../DraftGui.py" line="230"/>
+      <location filename="../../DraftGui.py" line="233"/>
       <source>Draft Command Bar</source>
       <translation>Zirriborroen komando-barra</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="680"/>
+      <location filename="../../DraftGui.py" line="698"/>
       <source>Toggle construction mode</source>
       <translation>Txandakatu eraikuntza modua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="681"/>
-      <source>Current line color</source>
-      <translation>Uneko lerro-kolorea</translation>
-    </message>
-    <message>
-      <location filename="../../DraftGui.py" line="682"/>
-      <source>Current face color</source>
-      <translation>Uneko aurpegi-kolorea</translation>
-    </message>
-    <message>
-      <location filename="../../DraftGui.py" line="683"/>
-      <source>Current line width</source>
-      <translation>Uneko lerro-kolorea</translation>
-    </message>
-    <message>
-      <location filename="../../DraftGui.py" line="684"/>
-      <source>Current font size</source>
-      <translation>Uneko letra-tamaina</translation>
-    </message>
-    <message>
-      <location filename="../../DraftGui.py" line="685"/>
-      <source>Apply to selected objects</source>
-      <translation>Aplikatu hautatutako objektuei</translation>
-    </message>
-    <message>
-      <location filename="../../DraftGui.py" line="1817"/>
+      <location filename="../../DraftGui.py" line="1894"/>
       <source>Autogroup off</source>
       <translation>Talde automatikoa desgaituta</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="596"/>
+      <location filename="../../DraftGui.py" line="610"/>
       <source>active command:</source>
       <translation>Komando aktiboa:</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="908"/>
+      <location filename="../../DraftGui.py" line="929"/>
       <source>None</source>
       <translation>Bat ere ez</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="598"/>
+      <location filename="../../DraftGui.py" line="612"/>
       <source>Active Draft command</source>
       <translation>Zirriborro-komando aktiboa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="599"/>
+      <location filename="../../DraftGui.py" line="613"/>
       <source>X coordinate of next point</source>
       <translation>Hurrengo puntuaren X koordenatua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="909"/>
+      <location filename="../../DraftGui.py" line="930"/>
       <source>X</source>
       <translation>X</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="601"/>
+      <location filename="../../DraftGui.py" line="615"/>
       <source>Y</source>
       <translation>Y</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="602"/>
+      <location filename="../../DraftGui.py" line="616"/>
       <source>Z</source>
       <translation>Z</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="603"/>
+      <location filename="../../DraftGui.py" line="617"/>
       <source>Y coordinate of next point</source>
       <translation>Hurrengo puntuaren Y koordenatua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="604"/>
+      <location filename="../../DraftGui.py" line="618"/>
       <source>Z coordinate of next point</source>
       <translation>Hurrengo puntuaren Z koordenatua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="605"/>
+      <location filename="../../DraftGui.py" line="619"/>
       <source>Enter point</source>
       <translation>Sartu puntua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="606"/>
+      <location filename="../../DraftGui.py" line="620"/>
       <source>Enter a new point with the given coordinates</source>
       <translation>Sartu emandako koordenatuak dituen puntu berri bat</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="607"/>
+      <location filename="../../DraftGui.py" line="621"/>
       <source>Length</source>
       <translation>Luzera</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="608"/>
+      <location filename="../../DraftGui.py" line="622"/>
       <source>Angle</source>
       <translation>Angelua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="609"/>
+      <location filename="../../DraftGui.py" line="623"/>
       <source>Length of current segment</source>
       <translation>Uneko segmentuaren luzera</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="610"/>
+      <location filename="../../DraftGui.py" line="624"/>
       <source>Angle of current segment</source>
       <translation>Uneko segmentuaren angelua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="956"/>
+      <location filename="../../DraftGui.py" line="980"/>
       <source>Radius</source>
       <translation>Erradioa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="957"/>
+      <location filename="../../DraftGui.py" line="981"/>
       <source>Radius of Circle</source>
       <translation>Zirkuluaren erradioa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="621"/>
+      <location filename="../../DraftGui.py" line="635"/>
       <source>If checked, command will not finish until you press the command button again</source>
       <translation>Markatuta badago, komandoa ez da amaituko komando-botoia berriro sakatzen duzun arte</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="623"/>
+      <location filename="../../DraftGui.py" line="637"/>
       <source>If checked, an OCC-style offset will be performed instead of the classic offset</source>
       <translation>Markatuta badago, OCC estiloko desplazamendua egingo da, desplazamendu klasikoa egingo da</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="624"/>
+      <location filename="../../DraftGui.py" line="638"/>
       <source>&amp;OCC-style offset</source>
       <translation>&amp;OCC estiloko desplazamendua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="641"/>
+      <location filename="../../DraftGui.py" line="658"/>
       <source>Sides</source>
       <translation>Aldeak</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="642"/>
+      <location filename="../../DraftGui.py" line="659"/>
       <source>Number of sides</source>
       <translation>Alde kopurua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="886"/>
+      <location filename="../../DraftGui.py" line="907"/>
       <source>Offset</source>
       <translation>Desplazamendua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="547"/>
+      <location filename="../../DraftGui.py" line="552"/>
       <source>Auto</source>
       <translation>Automatikoa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="648"/>
+      <location filename="../../DraftGui.py" line="665"/>
       <source>Text string to draw</source>
       <translation>Marraztuko den testu-katea</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="649"/>
+      <location filename="../../DraftGui.py" line="666"/>
       <source>String</source>
       <translation>Katea</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="650"/>
+      <location filename="../../DraftGui.py" line="667"/>
       <source>Height of text</source>
       <translation>Testuaren altuera</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="651"/>
+      <location filename="../../DraftGui.py" line="668"/>
       <source>Height</source>
       <translation>Altuera</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="652"/>
+      <location filename="../../DraftGui.py" line="669"/>
       <source>Intercharacter spacing</source>
       <translation>Karaktereen arteko tartea</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="653"/>
+      <location filename="../../DraftGui.py" line="670"/>
       <source>Tracking</source>
       <translation>Jarraipena</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="654"/>
+      <location filename="../../DraftGui.py" line="671"/>
       <source>Full path to font file:</source>
       <translation>Letra-tipoaren fitxategiaren bide osoa:</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="655"/>
+      <location filename="../../DraftGui.py" line="672"/>
       <source>Open a FileChooser for font file</source>
       <translation>Ireki fitxategi-hautatzaile bat letra-tipoa aukeratzeko</translation>
     </message>
@@ -2450,132 +2725,132 @@ Balio hau segmentu-luzera maximoa da. </translation>
       <translation>Lerroa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="807"/>
+      <location filename="../../DraftGui.py" line="828"/>
       <source>DWire</source>
       <translation>DWire</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="824"/>
+      <location filename="../../DraftGui.py" line="845"/>
       <source>Circle</source>
       <translation>Zirkulua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="840"/>
+      <location filename="../../DraftGui.py" line="861"/>
       <source>Center X</source>
       <translation>X zentroa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="839"/>
+      <location filename="../../DraftGui.py" line="860"/>
       <source>Arc</source>
       <translation>Arkua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="845"/>
+      <location filename="../../DraftGui.py" line="866"/>
       <source>Point</source>
       <translation>Puntua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="870"/>
+      <location filename="../../DraftGui.py" line="891"/>
       <source>Label</source>
       <translation>Etiketa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="948"/>
+      <location filename="../../DraftGui.py" line="972"/>
       <source>Distance</source>
       <translation>Distantzia</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="945"/>
+      <location filename="../../DraftGui.py" line="969"/>
       <source>Trim</source>
       <translation>Muxarratu</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1043"/>
+      <location filename="../../DraftGui.py" line="1067"/>
       <source>Pick Object</source>
       <translation>Aukeratu objektua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1049"/>
+      <location filename="../../DraftGui.py" line="1073"/>
       <source>Edit</source>
       <translation>Editatu</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1099"/>
+      <location filename="../../DraftGui.py" line="1124"/>
       <source>Global X</source>
       <translation>X globala</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1100"/>
+      <location filename="../../DraftGui.py" line="1125"/>
       <source>Global Y</source>
       <translation>Y globala</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1101"/>
+      <location filename="../../DraftGui.py" line="1126"/>
       <source>Global Z</source>
       <translation>Z globala</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1104"/>
+      <location filename="../../DraftGui.py" line="1129"/>
       <source>Local X</source>
       <translation>X lokala</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1105"/>
+      <location filename="../../DraftGui.py" line="1130"/>
       <source>Local Y</source>
       <translation>Y lokala</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1106"/>
+      <location filename="../../DraftGui.py" line="1131"/>
       <source>Local Z</source>
       <translation>Z lokala</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1325"/>
+      <location filename="../../DraftGui.py" line="1360"/>
       <source>Invalid Size value. Using 200.0.</source>
       <translation>Baliogabeko tamaina-balioa. 200.0 erabiliko da.</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1333"/>
+      <location filename="../../DraftGui.py" line="1368"/>
       <source>Invalid Tracking value. Using 0.</source>
       <translation>Jarraipen-balio baliogabea. 0 erabiltzen.</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1347"/>
+      <location filename="../../DraftGui.py" line="1382"/>
       <source>Please enter a text string.</source>
       <translation>Sartu testu-kate bat.</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1355"/>
+      <location filename="../../DraftGui.py" line="1390"/>
       <source>Select a Font file</source>
       <translation>Hautatu letra-tipo fitxategi bat</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1386"/>
+      <location filename="../../DraftGui.py" line="1421"/>
       <source>Please enter a font file.</source>
       <translation>Sartu letra-tipo fitxategi bat.</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="1810"/>
+      <location filename="../../DraftGui.py" line="1887"/>
       <source>Autogroup: </source>
       <translation>Talde automatikoa: </translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="2111"/>
+      <location filename="../../DraftGui.py" line="2188"/>
       <source>Faces</source>
       <translation>Aurpegiak</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="2112"/>
+      <location filename="../../DraftGui.py" line="2189"/>
       <source>Remove</source>
       <translation>Kendu</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="2113"/>
+      <location filename="../../DraftGui.py" line="2190"/>
       <source>Add</source>
       <translation>Gehitu</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="2114"/>
+      <location filename="../../DraftGui.py" line="2191"/>
       <source>Facebinder elements</source>
       <translation>Aurpegi-zorro elementuak</translation>
     </message>
@@ -2590,7 +2865,7 @@ Balio hau segmentu-luzera maximoa da. </translation>
       <translation>Bezier kurba</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="644"/>
+      <location filename="../../DraftGui.py" line="661"/>
       <source>Copy</source>
       <translation>Kopiatu</translation>
     </message>
@@ -2614,17 +2889,17 @@ https://github.com/yorikvanhavre/Draft-dxf-importer
 FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="615"/>
+      <location filename="../../DraftGui.py" line="629"/>
       <source>Relative</source>
       <translation>Erlatiboa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="622"/>
+      <location filename="../../DraftGui.py" line="636"/>
       <source>Continue</source>
       <translation>Jarraitu</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="633"/>
+      <location filename="../../DraftGui.py" line="650"/>
       <source>Close</source>
       <translation>Itxi</translation>
     </message>
@@ -2669,7 +2944,7 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Murriztu Z</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="639"/>
+      <location filename="../../DraftGui.py" line="656"/>
       <source>Select edge</source>
       <translation>Hautatu ertza</translation>
     </message>
@@ -2684,7 +2959,7 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Luzera modua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="635"/>
+      <location filename="../../DraftGui.py" line="652"/>
       <source>Wipe</source>
       <translation>Garbitu</translation>
     </message>
@@ -2696,70 +2971,70 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
     <message>
       <location filename="../../DraftGui.py" line="73"/>
       <source>Cycle snap object</source>
-      <translation>Txandakatu atzikitze-objektua</translation>
+      <translation>Ziklo-atxikitzeko objektua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="612"/>
+      <location filename="../../DraftGui.py" line="626"/>
       <source>Check this to lock the current angle</source>
       <translation>Markatu hau uneko angelua blokeatzeko</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="616"/>
+      <location filename="../../DraftGui.py" line="630"/>
       <source>Coordinates relative to last point or absolute</source>
       <translation>Azken puntuarekiko erlatiboak diren edo absolutuak diren koordenatuak</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="617"/>
+      <location filename="../../DraftGui.py" line="631"/>
       <source>Filled</source>
       <translation>Beteta</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="619"/>
+      <location filename="../../DraftGui.py" line="633"/>
       <source>Finish</source>
       <translation>Amaitu</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="620"/>
+      <location filename="../../DraftGui.py" line="634"/>
       <source>Finishes the current drawing or editing operation</source>
       <translation>Uneko marrazte- edo editatze-eragiketa amaitzen du</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="631"/>
+      <location filename="../../DraftGui.py" line="648"/>
       <source>&amp;Undo (CTRL+Z)</source>
       <translation>&amp;Desegin (Ctrl+Z)</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="632"/>
+      <location filename="../../DraftGui.py" line="649"/>
       <source>Undo the last segment</source>
       <translation>Desegin azken segmentua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="634"/>
+      <location filename="../../DraftGui.py" line="651"/>
       <source>Finishes and closes the current line</source>
       <translation>Uneko lerroa amaitzen eta ixten du</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="636"/>
+      <location filename="../../DraftGui.py" line="653"/>
       <source>Wipes the existing segments of this line and starts again from the last point</source>
       <translation>Lerro honetan dauden segmentuak garbitzen ditu eta berriro hasten da azken puntutik</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="637"/>
+      <location filename="../../DraftGui.py" line="654"/>
       <source>Set WP</source>
       <translation>Ezarri WPa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="638"/>
+      <location filename="../../DraftGui.py" line="655"/>
       <source>Reorients the working plane on the last segment</source>
       <translation>Laneko planoaren orientazioa aldatzen du azken segmentuan</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="640"/>
+      <location filename="../../DraftGui.py" line="657"/>
       <source>Selects an existing edge to be measured by this dimension</source>
       <translation>Kota honek neurtuko duen eta lehendik dagoen ertz bat hautatzen du</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="645"/>
+      <location filename="../../DraftGui.py" line="662"/>
       <source>If checked, objects will be copied instead of moved. Preferences -&gt; Draft -&gt; Global copy mode to keep this mode in next commands</source>
       <translation>Markatuta badago, objektuak kopiatu egingo dira, ez mugitu. 'Hobespenak -&gt; Zirriborroa -&gt; Kopiatze modu globala' modu hau hurrengo komandoetan mantendu nahi bada</translation>
     </message>
@@ -2769,12 +3044,12 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Azpi-elementuen modua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="646"/>
+      <location filename="../../DraftGui.py" line="663"/>
       <source>Modify subelements</source>
       <translation>Aldatu azpi-elementuak</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="647"/>
+      <location filename="../../DraftGui.py" line="664"/>
       <source>If checked, subelements will be modified instead of entire objects</source>
       <translation>Hautatuta badaude, azpi-elementuek objektu osoa ordeztuko dute</translation>
     </message>
@@ -2799,12 +3074,12 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <translation>Aldea</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="679"/>
+      <location filename="../../DraftGui.py" line="696"/>
       <source>Current working plane</source>
       <translation>Uneko laneko planoa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="618"/>
+      <location filename="../../DraftGui.py" line="632"/>
       <source>Check this if the object should appear as filled, otherwise it will appear as wireframe. Not available if Draft preference option 'Use Part Primitives' is enabled</source>
       <translation>Markatu hau objektuak beteta agertu behar badu, bestela alanbre-bilbe gisa agertuko da. Ez dago erabilgarri zirriborroen 'Erabili piezen jatorrizkoak' aukera gaituta badago.</translation>
     </message>
@@ -2821,35 +3096,35 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
     <message>
       <location filename="../../DraftGui.py" line="74"/>
       <source>Toggle near snap on/off</source>
-      <translation>Aktibatu/desaktibatu atxikitzea</translation>
+      <translation>Aktibatu/desaktibatu atxikitze hurbila</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="656"/>
+      <location filename="../../DraftGui.py" line="673"/>
       <source>Create text</source>
       <translation>Sortu testua</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="657"/>
+      <location filename="../../DraftGui.py" line="674"/>
       <source>Press this button to create the text object, or finish your text with two blank lines</source>
       <translation>Sakatu botoi hau testu-objektua sortzeko, edo amaitu zure testua bi lerro zurirekin</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="841"/>
+      <location filename="../../DraftGui.py" line="862"/>
       <source>Center Y</source>
       <translation>Y zentroa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="842"/>
+      <location filename="../../DraftGui.py" line="863"/>
       <source>Center Z</source>
       <translation>Z zentroa</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="893"/>
+      <location filename="../../DraftGui.py" line="914"/>
       <source>Offset distance</source>
       <translation>Desplazamendu-distantzia</translation>
     </message>
     <message>
-      <location filename="../../DraftGui.py" line="949"/>
+      <location filename="../../DraftGui.py" line="973"/>
       <source>Trim distance</source>
       <translation>Muxarratze-distantzia</translation>
     </message>
@@ -2857,6 +3132,11 @@ FreeCADek liburutegi horiek deskarga ditzan gaitzeko, erantzun 'Bai'.</translati
       <location filename="../../InitGui.py" line="158"/>
       <source>Wire</source>
       <translation>Alanbrea</translation>
+    </message>
+    <message>
+      <location filename="../../DraftGui.py" line="697"/>
+      <source>Change default style for new objects</source>
+      <translation>Aldatu objektu berrien estilo lehenetsia</translation>
     </message>
   </context>
   <context>

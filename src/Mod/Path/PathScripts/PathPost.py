@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
-# *                                                                         *
 # *   Copyright (c) 2015 Dan Falck <ddfalck@gmail.com>                      *
 # *                                                                         *
 # *   This program is free software; you can redistribute it and/or modify  *
@@ -21,6 +19,7 @@
 # *   USA                                                                   *
 # *                                                                         *
 # ***************************************************************************
+
 ''' Post Process command that will make use of the Output File and Post Processor entries in PathJob '''
 
 from __future__ import print_function
@@ -177,7 +176,7 @@ class CommandPathPost:
         return dlg.exec_()
 
     def GetResources(self):
-        return {'Pixmap': 'Path-Post',
+        return {'Pixmap': 'Path_Post',
                 'MenuText': QtCore.QT_TRANSLATE_NOOP("Path_Post", "Post Process"),
                 'Accel': "P, P",
                 'ToolTip': QtCore.QT_TRANSLATE_NOOP("Path_Post", "Post Process the selected Job")}

@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
-# *                                                                         *
 # *   Copyright (c) 2018 sliptonic <shopinthewoods@gmail.com>               *
 # *                                                                         *
 # *   This program is free software; you can redistribute it and/or modify  *
@@ -33,7 +31,7 @@ from PySide import QtCore, QtGui
 
 __title__ = "Path Deburr Operation UI"
 __author__ = "sliptonic (Brad Collette), Schildkroet"
-__url__ = "http://www.freecadweb.org"
+__url__ = "https://www.freecadweb.org"
 __doc__ = "Deburr operation page controller and command implementation."
 
 LOGLEVEL = False
@@ -137,7 +135,7 @@ class TaskPanelOpPage(PathOpGui.TaskPanelPage):
 Command = PathOpGui.SetupOperation('Deburr',
         PathDeburr.Create,
         TaskPanelOpPage,
-        'Path-Deburr',
+        'Path_Deburr',
         QtCore.QT_TRANSLATE_NOOP("PathDeburr", "Deburr"),
         QtCore.QT_TRANSLATE_NOOP("PathDeburr", "Creates a Deburr Path along Edges or around Faces"),
         PathDeburr.SetupProperties)

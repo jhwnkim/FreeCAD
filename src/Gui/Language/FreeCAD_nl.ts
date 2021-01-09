@@ -121,6 +121,81 @@
     </message>
   </context>
   <context>
+    <name>Command</name>
+    <message>
+      <source>Edit</source>
+      <translation>Bewerken</translation>
+    </message>
+    <message>
+      <source>Import</source>
+      <translation>Importeren</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Verwijderen</translation>
+    </message>
+    <message>
+      <source>Paste expressions</source>
+      <translation type="unfinished">Paste expressions</translation>
+    </message>
+    <message>
+      <source>Make link group</source>
+      <translation>Maak linkgroep</translation>
+    </message>
+    <message>
+      <source>Make link</source>
+      <translation>Maak link</translation>
+    </message>
+    <message>
+      <source>Make sub-link</source>
+      <translation>Maak sublink</translation>
+    </message>
+    <message>
+      <source>Import links</source>
+      <translation>Importeer links</translation>
+    </message>
+    <message>
+      <source>Import all links</source>
+      <translation>Importeer alle links</translation>
+    </message>
+    <message>
+      <source>Insert measurement</source>
+      <translation type="unfinished">Insert measurement</translation>
+    </message>
+    <message>
+      <source>Insert text document</source>
+      <translation type="unfinished">Insert text document</translation>
+    </message>
+    <message>
+      <source>Add a part</source>
+      <translation type="unfinished">Add a part</translation>
+    </message>
+    <message>
+      <source>Add a group</source>
+      <translation type="unfinished">Add a group</translation>
+    </message>
+    <message>
+      <source>Align</source>
+      <translation type="unfinished">Align</translation>
+    </message>
+    <message>
+      <source>Placement</source>
+      <translation>Plaatsing</translation>
+    </message>
+    <message>
+      <source>Transform</source>
+      <translation>Transformeren</translation>
+    </message>
+    <message>
+      <source>Link Transform</source>
+      <translation type="unfinished">Link Transform</translation>
+    </message>
+    <message>
+      <source>Measure distance</source>
+      <translation>Afstand meten</translation>
+    </message>
+  </context>
+  <context>
     <name>DlgCustomizeSpNavSettings</name>
     <message>
       <source>Spaceball Motion</source>
@@ -2533,6 +2608,30 @@ het openen of aanmaken van bestand</translation>
       <source>Show axis cross by default</source>
       <translation>Toon assenkruis standaard</translation>
     </message>
+    <message>
+      <source>Pick radius (px):</source>
+      <translation>Kies straal (px):</translation>
+    </message>
+    <message>
+      <source>Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </source>
+      <translation type="unfinished">Area for picking elements in 3D view.
+Larger value eases to pick things, but can make small features impossible to select.
+               </translation>
+    </message>
+    <message>
+      <source>This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</source>
+      <translation type="unfinished">This option is useful for troubleshooting graphics card and driver problems.
+
+Changing this option requires a restart of the application.</translation>
+    </message>
+    <message>
+      <source>Use software OpenGL</source>
+      <translation type="unfinished">Use software OpenGL</translation>
+    </message>
   </context>
   <context>
     <name>Gui::Dialog::DlgSettings3DViewImp</name>
@@ -3395,10 +3494,6 @@ De kanteling van de muis wordt niet uitgeschakeld door deze instelling.</transla
       <translation>Rotaties in 3D zullen de huidige cursorpositie als middelpunt voor de rotatie gebruiken</translation>
     </message>
     <message>
-      <source>Rotate at cursor</source>
-      <translation>Draai bij cursor</translation>
-    </message>
-    <message>
       <source>Isometric</source>
       <translation>Isometrisch</translation>
     </message>
@@ -3445,6 +3540,22 @@ De kanteling van de muis wordt niet uitgeschakeld door deze instelling.</transla
     <message>
       <source>Default camera orientation when creating a new document or selecting the home view</source>
       <translation>Standaard cameraoriëntatie bij het aanmaken van een nieuw document of het selecteren van het startscherm</translation>
+    </message>
+    <message>
+      <source>Rotation mode</source>
+      <translation type="unfinished">Rotation mode</translation>
+    </message>
+    <message>
+      <source>Window center</source>
+      <translation type="unfinished">Window center</translation>
+    </message>
+    <message>
+      <source>Drag at cursor</source>
+      <translation type="unfinished">Drag at cursor</translation>
+    </message>
+    <message>
+      <source>Object center</source>
+      <translation type="unfinished">Object center</translation>
     </message>
   </context>
   <context>
@@ -3589,10 +3700,6 @@ De kanteling van de muis wordt niet uitgeschakeld door deze instelling.</transla
       <translation>Eenvoudige kleur</translation>
     </message>
     <message>
-      <source>Pick radius (px):</source>
-      <translation>Kies straal (px):</translation>
-    </message>
-    <message>
       <source>Object being edited</source>
       <translation>Object in bewerking</translation>
     </message>
@@ -3607,12 +3714,6 @@ De kanteling van de muis wordt niet uitgeschakeld door deze instelling.</transla
     <message>
       <source>Enable selection highlighting and use specified color</source>
       <translation>Selectiemarkering mogelijk maken en een bepaalde kleur gebruiken</translation>
-    </message>
-    <message>
-      <source>Area for picking elements in 3D view.
-Larger value eases to pick things, but can make small features impossible to select.</source>
-      <translation>Ruimte voor het selecteren van elementen in 3D-weergave.
-Grotere waarde vergemakkelijkt de selectie van dingen, maar kan de selectie van kleine functies onmogelijk maken.</translation>
     </message>
     <message>
       <source>Background color for the model view</source>
@@ -8805,6 +8906,21 @@ Document: </translation>
     </message>
   </context>
   <context>
+    <name>StdCmdViewRestoreCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Standaardweergave</translation>
+    </message>
+    <message>
+      <source>Restore saved camera</source>
+      <translation type="unfinished">Restore saved camera</translation>
+    </message>
+    <message>
+      <source>Restore saved camera settings</source>
+      <translation type="unfinished">Restore saved camera settings</translation>
+    </message>
+  </context>
+  <context>
     <name>StdCmdViewRight</name>
     <message>
       <source>Standard-View</source>
@@ -8847,6 +8963,21 @@ Document: </translation>
     <message>
       <source>Rotate the view by 90° clockwise</source>
       <translation>Draai weergave 90° rechtsom</translation>
+    </message>
+  </context>
+  <context>
+    <name>StdCmdViewSaveCamera</name>
+    <message>
+      <source>Standard-View</source>
+      <translation>Standaardweergave</translation>
+    </message>
+    <message>
+      <source>Save current camera</source>
+      <translation type="unfinished">Save current camera</translation>
+    </message>
+    <message>
+      <source>Save current camera settings</source>
+      <translation type="unfinished">Save current camera settings</translation>
     </message>
   </context>
   <context>

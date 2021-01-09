@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
-# *                                                                         *
 # *   Copyright (c) 2017 sliptonic <shopinthewoods@gmail.com>               *
 # *                                                                         *
 # *   This program is free software; you can redistribute it and/or modify  *
@@ -40,7 +38,7 @@ Part = LazyLoader('Part', globals(), 'Part')
 
 __title__ = "Path Pocket Shape Operation UI"
 __author__ = "sliptonic (Brad Collette)"
-__url__ = "http://www.freecadweb.org"
+__url__ = "https://www.freecadweb.org"
 __doc__ = "Pocket Shape operation page controller and command implementation."
 
 def translate(context, text, disambig=None):
@@ -481,9 +479,9 @@ class TaskPanelOpPage(PathPocketBaseGui.TaskPanelOpPage):
 Command = PathOpGui.SetupOperation('Pocket Shape',
         PathPocketShape.Create,
         TaskPanelOpPage,
-        'Path-Pocket',
-        QtCore.QT_TRANSLATE_NOOP("PathPocket", "Pocket Shape"),
-        QtCore.QT_TRANSLATE_NOOP("PathPocket", "Creates a Path Pocket object from a face or faces"),
+        'Path_Pocket',
+        QtCore.QT_TRANSLATE_NOOP("Path_Pocket", "Pocket Shape"),
+        QtCore.QT_TRANSLATE_NOOP("Path_Pocket", "Creates a Path Pocket object from a face or faces"),
         PathPocketShape.SetupProperties)
 
 FreeCAD.Console.PrintLog("Loading PathPocketShapeGui... done\n")

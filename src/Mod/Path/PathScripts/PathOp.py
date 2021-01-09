@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 # ***************************************************************************
-# *                                                                         *
 # *   Copyright (c) 2017 sliptonic <shopinthewoods@gmail.com>               *
 # *                                                                         *
 # *   This program is free software; you can redistribute it and/or modify  *
@@ -22,16 +20,17 @@
 # *                                                                         *
 # ***************************************************************************
 
-import FreeCAD
+import time
+
+from PySide import QtCore
+
 import Path
 import PathScripts.PathGeom as PathGeom
 import PathScripts.PathLog as PathLog
+import PathScripts.PathPreferences as PathPreferences
 import PathScripts.PathUtil as PathUtil
 import PathScripts.PathUtils as PathUtils
-
 from PathScripts.PathUtils import waiting_effects
-from PySide import QtCore
-import time
 
 # lazily loaded modules
 from lazy_loader.lazy_loader import LazyLoader
@@ -39,7 +38,7 @@ Part = LazyLoader('Part', globals(), 'Part')
 
 __title__ = "Base class for all operations."
 __author__ = "sliptonic (Brad Collette)"
-__url__ = "http://www.freecadweb.org"
+__url__ = "https://www.freecadweb.org"
 __doc__ = "Base class and properties implementation for all Path operations."
 
 PathLog.setLevel(PathLog.Level.INFO, PathLog.thisModule())
@@ -92,7 +91,7 @@ class ObjectOp(object):
         FeatureBasePanels    ... Base geometry support for Arch.Panels
         FeatureLocations     ... Base location support
         FeatureCoolant       ... Support for operation coolant
-        FeatureDiameters     ... Support for turning operation diameters 
+        FeatureDiameters     ... Support for turning operation diameters
 
     The base class handles all base API and forwards calls to subclasses with
     an op prefix. For instance, an op is not expected to overwrite onChanged(),
@@ -174,7 +173,7 @@ class ObjectOp(object):
         if FeatureDiameters & features:
             obj.addProperty("App::PropertyDistance", "MinDiameter", "Diameter", QtCore.QT_TRANSLATE_NOOP("PathOp", "Lower limit of the turning diameter"))
             obj.addProperty("App::PropertyDistance", "MaxDiameter", "Diameter", QtCore.QT_TRANSLATE_NOOP("PathOp", "Upper limit of the turning diameter."))
-        
+
         # members being set later
         self.commandlist = None
         self.horizFeed = None
@@ -326,7 +325,7 @@ class ObjectOp(object):
             if 1 < len(job.Operations.Group):
                 obj.ToolController = PathUtil.toolControllerForOp(job.Operations.Group[-2])
             else:
-                obj.ToolController = PathUtils.findToolController(obj)
+                obj.ToolController = PathUtils.findToolController(obj, self)
             if not obj.ToolController:
                 return None
             obj.OpToolDiameter = obj.ToolController.Tool.Diameter
@@ -361,6 +360,8 @@ class ObjectOp(object):
         if FeatureDiameters & features:
             obj.MinDiameter = '0 mm'
             obj.MaxDiameter = '0 mm'
+            if job.Stock:
+                obj.MaxDiameter = job.Stock.Shape.BoundBox.XLength
 
         if FeatureStartPoint & features:
             obj.UseStartPoint = False
@@ -524,6 +525,10 @@ class ObjectOp(object):
 
         result = self.opExecute(obj)  # pylint: disable=assignment-from-no-return
 
+        if self.commandlist and (FeatureHeights & self.opFeatures(obj)):
+            # Let's finish by rapid to clearance...just for safety
+            self.commandlist.append(Path.Command("G0", {"Z": obj.ClearanceHeight.Value}))
+
         path = Path.Path(self.commandlist)
         obj.Path = path
         obj.CycleTime = self.getCycleTimeEstimate(obj)
@@ -543,11 +548,11 @@ class ObjectOp(object):
         hRapidrate = tc.HorizRapid.Value
         vRapidrate = tc.VertRapid.Value
 
-        if hFeedrate == 0 or vFeedrate == 0:
+        if (hFeedrate == 0 or vFeedrate == 0) and not PathPreferences.suppressAllSpeedsWarning():
             PathLog.warning(translate("Path", "Tool Controller feedrates required to calculate the cycle time."))
             return translate('Path', 'Feedrate Error')
 
-        if hRapidrate == 0 or vRapidrate == 0:
+        if (hRapidrate == 0 or vRapidrate == 0) and not PathPreferences.suppressRapidSpeedsWarning():
             PathLog.warning(translate("Path", "Add Tool Controller Rapid Speeds on the SetupSheet for more accurate cycle times."))
 
         # Get the cycle time in seconds
@@ -585,3 +590,11 @@ class ObjectOp(object):
                 obj.Base = baselist
             else:
                 PathLog.notice((translate("Path", "Base object %s.%s rejected by operation") + "\n") % (base.Label, sub))
+
+    def isToolSupported(self, obj, tool):
+        '''toolSupported(obj, tool) ... Returns true if the op supports the given tool.
+        This function can safely be overwritten by subclasses.'''
+
+        return True
+
+

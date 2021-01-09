@@ -78,6 +78,7 @@
 # include <BRepOffsetAPI_ThruSections.hxx>
 # include <BRepPrimAPI_MakePrism.hxx>
 # include <BRepPrimAPI_MakeRevol.hxx>
+# include <BRepPrimAPI_MakeTorus.hxx>
 # include <BRepTools.hxx>
 # include <BRepTools_ReShape.hxx>
 # include <BRepTools_ShapeSet.hxx>
@@ -144,6 +145,7 @@
 # include <Standard_Failure.hxx>
 # include <StlAPI_Writer.hxx>
 # include <Standard_Failure.hxx>
+# include <gp_Circ.hxx>
 # include <gp_GTrsf.hxx>
 # include <gp_Pln.hxx>
 # include <ShapeAnalysis_Shell.hxx>
@@ -169,6 +171,8 @@
 # include <APIHeaderSection_MakeHeader.hxx>
 # include <ShapeAnalysis_FreeBoundsProperties.hxx>
 # include <ShapeAnalysis_FreeBoundData.hxx>
+# include <BRepLProp_SLProps.hxx>
+# include <BRepGProp_Face.hxx>
 
 #if OCC_VERSION_HEX < 0x070300
 # include <BRepAlgo_Fuse.hxx>
@@ -861,7 +865,7 @@ void TopoShape::importBrep(const char *FileName)
         BRepTools::Read(aShape,encodeFilename(FileName).c_str(),aBuilder,pi);
         pi->EndScope();
 #else
-        BRepTools::Read(aShape,(const Standard_CString)FileName,aBuilder);
+        BRepTools::Read(aShape,(Standard_CString)FileName,aBuilder);
 #endif
         this->_Shape = aShape;
     }
@@ -989,7 +993,8 @@ void TopoShape::exportStep(const char *filename) const
             throw Base::FileException("Error in transferring STEP");
 
         APIHeaderSection_MakeHeader makeHeader(aWriter.Model());
-        makeHeader.SetName(new TCollection_HAsciiString((Standard_CString)(encodeFilename(filename).c_str())));
+        // https://forum.freecadweb.org/viewtopic.php?f=8&t=52967
+        //makeHeader.SetName(new TCollection_HAsciiString((Standard_CString)(encodeFilename(filename).c_str())));
         makeHeader.SetAuthorValue (1, new TCollection_HAsciiString("FreeCAD"));
         makeHeader.SetOrganizationValue (1, new TCollection_HAsciiString("FreeCAD"));
         makeHeader.SetOriginatingSystem(new TCollection_HAsciiString("FreeCAD"));
@@ -1334,6 +1339,9 @@ unsigned int TopoShape::getMemSize (void) const
         TopExp::MapShapes(_Shape, M);
         for (int i=0; i<M.Extent(); i++) {
             const TopoDS_Shape& shape = M(i+1);
+            if (shape.IsNull())
+                continue;
+
             // add the size of the underlying geomtric data
             Handle(TopoDS_TShape) tshape = shape.TShape();
             memsize += tshape->DynamicType()->Size();
@@ -1345,7 +1353,15 @@ unsigned int TopoShape::getMemSize (void) const
                     // first, last, tolerance
                     memsize += 5*sizeof(Standard_Real);
                     const TopoDS_Face& face = TopoDS::Face(shape);
-                    BRepAdaptor_Surface surface(face);
+                    // if no geometry is attached to a face an exception is raised
+                    BRepAdaptor_Surface surface;
+                    try {
+                        surface.Initialize(face);
+                    }
+                    catch (const Standard_Failure&) {
+                        continue;
+                    }
+
                     switch (surface.GetType())
                     {
                     case GeomAbs_Plane:
@@ -1393,7 +1409,15 @@ unsigned int TopoShape::getMemSize (void) const
                     // first, last, tolerance
                     memsize += 3*sizeof(Standard_Real);
                     const TopoDS_Edge& edge = TopoDS::Edge(shape);
-                    BRepAdaptor_Curve curve(edge);
+                    // if no geometry is attached to an edge an exception is raised
+                    BRepAdaptor_Curve curve;
+                    try {
+                        curve.Initialize(edge);
+                    }
+                    catch (const Standard_Failure&) {
+                        continue;
+                    }
+
                     switch (curve.GetType())
                     {
                     case GeomAbs_Line:
@@ -2285,6 +2309,48 @@ TopoDS_Shape TopoShape::makeSweep(const TopoDS_Shape& profile, double tol, int f
 #endif
     );
     return mkBuilder.Face();
+}
+
+TopoDS_Shape TopoShape::makeTorus(Standard_Real radius1, Standard_Real radius2,
+                                  Standard_Real angle1, Standard_Real angle2,
+                                  Standard_Real angle3, Standard_Boolean isSolid) const
+{
+    // https://forum.freecadweb.org/viewtopic.php?f=3&t=1445
+    // https://forum.freecadweb.org/viewtopic.php?f=3&t=52719
+#if 1
+    // Build a torus
+    gp_Circ circle;
+    circle.SetRadius(radius2);
+    gp_Pnt pos(radius1,0,0);
+    gp_Dir dir(0,1,0);
+    circle.SetAxis(gp_Ax1(pos, dir));
+
+    BRepBuilderAPI_MakeEdge mkEdge(circle, Base::toRadians<double>(angle1),
+                                           Base::toRadians<double>(angle2));
+    BRepBuilderAPI_MakeWire mkWire;
+    mkWire.Add(mkEdge.Edge());
+
+    if ((angle1 > -180.0 || angle2 < 180.0) && isSolid) {
+        BRepBuilderAPI_MakeVertex mkVertex(pos);
+        BRepBuilderAPI_MakeEdge mkEdge1(mkVertex.Vertex(), mkEdge.Vertex1());
+        BRepBuilderAPI_MakeEdge mkEdge2(mkVertex.Vertex(), mkEdge.Vertex2());
+        mkWire.Add(mkEdge1.Edge());
+        mkWire.Add(mkEdge2.Edge());
+    }
+
+    BRepBuilderAPI_MakeFace mkFace(mkWire.Wire());
+    BRepPrimAPI_MakeRevol mkRevol(mkFace.Face(), gp_Ax1(gp_Pnt(0,0,0), gp_Dir(0,0,1)),
+        Base::toRadians<double>(angle3), Standard_True);
+    return mkRevol.Shape();
+#else
+    (void)isSolid;
+    BRepPrimAPI_MakeTorus mkTorus(radius1,
+                                  radius2,
+                                  Base::toRadians<double>(angle1),
+                                  Base::toRadians<double>(angle2),
+                                  Base::toRadians<double>(angle3));
+    return mkTorus.Solid();
+#endif
 }
 
 TopoDS_Shape TopoShape::makeHelix(Standard_Real pitch, Standard_Real height,
@@ -4085,7 +4151,7 @@ TopoShape &TopoShape::makEFace(const std::vector<TopoShape> &shapes, const char 
     for(auto &s : shapes) {
         if (s.getShape().ShapeType() == TopAbs_COMPOUND)
             mkFace->useCompound(TopoDS::Compound(s.getShape()));
-        else
+        else if (s.getShape().ShapeType() != TopAbs_VERTEX)
             mkFace->addShape(s.getShape());
     }
     mkFace->Build();
@@ -4116,26 +4182,13 @@ bool TopoShape::findPlane(gp_Pln &pln, double tol) const {
     if(_Shape.IsNull())
         return false;
     TopoDS_Shape shape = _Shape;
-    TopExp_Explorer exp(_Shape,TopAbs_FACE);
+    TopExp_Explorer exp(_Shape,TopAbs_EDGE);
     if(exp.More()) {
-        auto face = exp.Current();
+        TopoDS_Shape edge = exp.Current();
         exp.Next();
-        if(!exp.More()) {
-            BRepAdaptor_Surface adapt(TopoDS::Face(face));
-            if(adapt.GetType() != GeomAbs_Plane)
-                return false;
-            pln = adapt.Plane();
-            return true;
-        }
-    }else{
-        TopExp_Explorer exp(_Shape,TopAbs_EDGE);
-        if(exp.More()) {
-            TopoDS_Shape edge = exp.Current();
-            exp.Next();
-            if(!exp.More()) {
-                // To deal with OCCT bug of wrong edge transformation
-                shape = BRepBuilderAPI_Copy(edge).Shape();
-            }
+        if (!exp.More()) {
+            // To deal with OCCT bug of wrong edge transformation
+            shape = BRepBuilderAPI_Copy(_Shape).Shape();
         }
     }
     try {
@@ -4143,6 +4196,24 @@ bool TopoShape::findPlane(gp_Pln &pln, double tol) const {
         if (!finder.Found())
             return false;
         pln = GeomAdaptor_Surface(finder.Surface()).Plane();
+
+        // To make the returned plane normal more stable, if the shape has any
+        // face, use the normal of the first face.
+        TopExp_Explorer exp(shape, TopAbs_FACE);
+        if(exp.More()) {
+            BRepAdaptor_Surface adapt(TopoDS::Face(exp.Current()));
+            double u = adapt.FirstUParameter()
+                + (adapt.LastUParameter() - adapt.FirstUParameter())/2.;
+            double v = adapt.FirstVParameter()
+                + (adapt.LastVParameter() - adapt.FirstVParameter())/2.;
+            BRepLProp_SLProps prop(adapt,u,v,2,Precision::Confusion());
+            if(prop.IsNormalDefined()) {
+                gp_Pnt pnt; gp_Vec vec;
+                // handles the orientation state of the shape
+                BRepGProp_Face(TopoDS::Face(exp.Current())).Normal(u,v,pnt,vec);
+                pln = gp_Pln(pnt, gp_Dir(vec));
+            }
+        }
         return true;
     }catch (Standard_Failure &e) {
         // For some reason the above BRepBuilderAPI_Copy failed to copy
@@ -4150,6 +4221,33 @@ bool TopoShape::findPlane(gp_Pln &pln, double tol) const {
         // BRepAdaptor_Curve::No geometry. However, without the above
         // copy, circular edges often have the wrong transformation!
         FC_LOG("failed to find surface: " << e.GetMessageString());
+        return false;
+    }
+}
+
+bool TopoShape::isInfinite() const
+{
+    if (_Shape.IsNull())
+        return false;
+
+    try {
+        // If the shape is empty an exception may be thrown
+        Bnd_Box bounds;
+        BRepBndLib::Add(_Shape, bounds);
+        bounds.SetGap(0.0);
+        Standard_Real xMin, yMin, zMin, xMax, yMax, zMax;
+        bounds.Get(xMin, yMin, zMin, xMax, yMax, zMax);
+
+        if (Precision::IsInfinite(xMax - xMin))
+            return true;
+        if (Precision::IsInfinite(yMax - yMin))
+            return true;
+        if (Precision::IsInfinite(zMax - zMin))
+            return true;
+
+        return false;
+    }
+    catch (Standard_Failure&) {
         return false;
     }
 }
