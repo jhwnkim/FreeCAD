@@ -76,10 +76,6 @@
 # include <boost/scoped_ptr.hpp>
 #endif
 
-
-
-
-
 /// Here the FreeCAD includes sorted by Base,App,Gui......
 #include <Base/Converter.h>
 #include <Base/Tools.h>
@@ -150,12 +146,12 @@ SbColor ViewProviderSketch::CurveColor                              (1.0f,1.0f,1
 SbColor ViewProviderSketch::CurveDraftColor                         (0.0f,0.0f,0.86f);    // #0000DC -> (  0,  0,220)
 SbColor ViewProviderSketch::CurveExternalColor                      (0.8f,0.2f,0.6f);     // #CC3399 -> (204, 51,153)
 SbColor ViewProviderSketch::CrossColorH                             (0.8f,0.4f,0.4f);     // #CC6666 -> (204,102,102)
-SbColor ViewProviderSketch::CrossColorV                             (0.4f,0.8f,0.4f);     // #66CC66 -> (102,204,102)
+SbColor ViewProviderSketch::CrossColorV                             (0.47f,1.0f,0.51f);   // #83FF83 -> (120,255,131)
 SbColor ViewProviderSketch::FullyConstrainedColor                   (0.0f,1.0f,0.0f);     // #00FF00 -> (  0,255,  0)
 SbColor ViewProviderSketch::ConstrDimColor                          (1.0f,0.149f,0.0f);   // #FF2600 -> (255, 38,  0)
 SbColor ViewProviderSketch::ConstrIcoColor                          (1.0f,0.149f,0.0f);   // #FF2600 -> (255, 38,  0)
 SbColor ViewProviderSketch::NonDrivingConstrDimColor                (0.0f,0.149f,1.0f);   // #0026FF -> (  0, 38,255)
-SbColor ViewProviderSketch::ExprBasedConstrDimColor                 (1.0f,0.5f,0.149f);   // #FF7F26 -> (255, 127,  38)
+SbColor ViewProviderSketch::ExprBasedConstrDimColor                 (1.0f,0.5f,0.149f);   // #FF7F26 -> (255, 127,38)
 SbColor ViewProviderSketch::InformationColor                        (0.0f,1.0f,0.0f);     // #00FF00 -> (  0,255,  0)
 SbColor ViewProviderSketch::PreselectColor                          (0.88f,0.88f,0.0f);   // #E1E100 -> (225,225,  0)
 SbColor ViewProviderSketch::SelectColor                             (0.11f,0.68f,0.11f);  // #1CAD1C -> ( 28,173, 28)
@@ -167,6 +163,7 @@ SbColor ViewProviderSketch::FullyConstraintElementColor             (0.50f,0.81f
 SbColor ViewProviderSketch::FullyConstraintConstructionElementColor (0.56f,0.66f,0.99f);  // #8FA9FD -> (143,169,253)
 SbColor ViewProviderSketch::FullyConstraintInternalAlignmentColor   (0.87f,0.87f,0.78f);  // #DEDEC8 -> (222,222,200)
 SbColor ViewProviderSketch::FullyConstraintConstructionPointColor   (1.0f,0.58f,0.50f);   // #FF9580 -> (255,149,128)
+SbColor ViewProviderSketch::InvalidSketchColor                      (1.0f,0.42f,0.0f);    // #FF6D00 -> (255,109,  0)
 // Variables for holding previous click
 SbTime  ViewProviderSketch::prvClickTime;
 SbVec2s ViewProviderSketch::prvClickPos;
@@ -188,8 +185,8 @@ struct EditData {
     PreselectCurve(-1),
     PreselectCross(-1),
     MarkerSize(7),
-    coinFontSize(11), // default of 11 points (not pixels)
-    constraintIconSize(15), // 11 points @ 96 ppi where 72 points = 1 inch
+    coinFontSize(17), // this value is in pixels, 17 pixels
+    constraintIconSize(15),
     blockedPreselection(false),
     FullyConstrained(false),
     //ActSketch(0), // if you are wondering, it went to SketchObject, accessible via getSolvedSketch() and via SketchObject interface as appropriate
@@ -2849,8 +2846,16 @@ void ViewProviderSketch::updateColor(void)
         return false;
     };
 
+    bool invalidSketch =    getSketchObject()->getLastHasRedundancies()           ||
+                            getSketchObject()->getLastHasConflicts()              ||
+                            getSketchObject()->getLastHasMalformedConstraints();
+
     // colors of the point set
-    if (edit->FullyConstrained) {
+    if( invalidSketch ) {
+        for (int  i=0; i < PtNum; i++)
+            pcolor[i] = InvalidSketchColor;
+    }
+    else if (edit->FullyConstrained) {
         for (int  i=0; i < PtNum; i++)
             pcolor[i] = FullyConstrainedColor;
     }
@@ -2960,6 +2965,13 @@ void ViewProviderSketch::updateColor(void)
             for (int k=j; j<k+indexes; j++) {
                 verts[j].getValue(x,y,z);
                 verts[j] = SbVec3f(x,y,zExtLine);
+            }
+        }
+        else if ( invalidSketch ) {
+            color[i] = InvalidSketchColor;
+            for (int k=j; j<k+indexes; j++) {
+                verts[j].getValue(x,y,z);
+                verts[j] = SbVec3f(x,y,zNormLine);
             }
         }
         else if (isConstructionGeom(getSketchObject(), GeoId)) {
@@ -3379,6 +3391,7 @@ void ViewProviderSketch::drawConstraintIcons()
 
         // Find the Constraint Icon SoImage Node
         SoSeparator *sep = static_cast<SoSeparator *>(edit->constrGroup->getChild(constrId));
+        int numChildren = sep->getNumChildren();
 
         SbVec3f absPos;
         // Somewhat hacky - we use SoZoomTranslations for most types of icon,
@@ -3442,14 +3455,16 @@ void ViewProviderSketch::drawConstraintIcons()
             // So, to get the position of the second icon, we add the two translations together
             //
             // See note ~30 lines up.
-            translationPtr = static_cast<SoTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_TRANSLATION));
-            if(dynamic_cast<SoZoomTranslation *>(translationPtr))
-                thisIcon.position += static_cast<SoZoomTranslation *>(translationPtr)->abPos.getValue();
-            else
-                thisIcon.position += translationPtr->translation.getValue();
+            if (numChildren > CONSTRAINT_SEPARATOR_INDEX_SECOND_CONSTRAINTID) {
+                translationPtr = static_cast<SoTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_TRANSLATION));
+                if(dynamic_cast<SoZoomTranslation *>(translationPtr))
+                    thisIcon.position += static_cast<SoZoomTranslation *>(translationPtr)->abPos.getValue();
+                else
+                    thisIcon.position += translationPtr->translation.getValue();
 
-            thisIcon.destination = dynamic_cast<SoImage *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_ICON));
-            thisIcon.infoPtr = static_cast<SoInfo *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_CONSTRAINTID));
+                thisIcon.destination = dynamic_cast<SoImage *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_ICON));
+                thisIcon.infoPtr = static_cast<SoInfo *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_CONSTRAINTID));
+            }
         }
         else {
             if ((*it)->Name.empty())
@@ -3678,7 +3693,7 @@ QImage ViewProviderSketch::renderConstrIcon(const QString &type,
     QImage icon = Gui::BitmapFactory().pixmapFromSvg(type.toLatin1().data(),QSizeF(edit->constraintIconSize,edit->constraintIconSize)).toImage();
 
     QFont font = QApplication::font();
-    font.setPixelSize(static_cast<int>(0.8 * edit->constraintIconSize));
+    font.setPixelSize(static_cast<int>(1.0 * edit->constraintIconSize));
     font.setBold(true);
     QFontMetrics qfm = QFontMetrics(font);
 
@@ -3808,13 +3823,13 @@ void ViewProviderSketch::unsubscribeToParameters()
 void ViewProviderSketch::updateInventorNodeSizes()
 {
     assert(edit);
-    edit->PointsDrawStyle->pointSize = std::lround(8 * edit->pixelScalingFactor);
+    edit->PointsDrawStyle->pointSize = 8 * edit->pixelScalingFactor;
     edit->PointSet->markerIndex = Gui::Inventor::MarkerBitmaps::getMarkerIndex("CIRCLE_FILLED", edit->MarkerSize);
-    edit->CurvesDrawStyle->lineWidth = std::lround(3 * edit->pixelScalingFactor);
-    edit->RootCrossDrawStyle->lineWidth = std::lround(2 * edit->pixelScalingFactor);
-    edit->EditCurvesDrawStyle->lineWidth = std::lround(3 * edit->pixelScalingFactor);
-    edit->ConstraintDrawStyle->lineWidth = std::lround(1 * edit->pixelScalingFactor);
-    edit->InformationDrawStyle->lineWidth = std::lround(1 * edit->pixelScalingFactor);
+    edit->CurvesDrawStyle->lineWidth = 3 * edit->pixelScalingFactor;
+    edit->RootCrossDrawStyle->lineWidth = 2 * edit->pixelScalingFactor;
+    edit->EditCurvesDrawStyle->lineWidth = 3 * edit->pixelScalingFactor;
+    edit->ConstraintDrawStyle->lineWidth = 1 * edit->pixelScalingFactor;
+    edit->InformationDrawStyle->lineWidth = 1 * edit->pixelScalingFactor;
 }
 
 void ViewProviderSketch::initItemsSizes()
@@ -3828,51 +3843,39 @@ void ViewProviderSketch::initItemsSizes()
     int defaultFontSizePixels = QApplication::fontMetrics().height(); // returns height in pixels, not points
     int sketcherfontSize = hGrp->GetInt("EditSketcherFontSize", defaultFontSizePixels);
 
-    auto pixelsToPoints = [](int pixels, int dpi) {
-        return pixels*72/dpi; // definition of point, 72 points = 1 inch
-    };
-
-    // coin takes the font size in points, not pixels
-    // the coin FontSize in points from the system font, taking into account the application scaling factor is:
-    // -> pixelsToPoints(defaultFontSizePixels * viewScalingFactor, dpi)
-
     int dpi = QApplication::desktop()->logicalDpiX();
 
     if(edit) {
         // simple scaling factor for hardcoded pixel values in the Sketcher
         edit->pixelScalingFactor = viewScalingFactor * dpi / 96; // 96 ppi is the standard pixel density for which pixel quantities were calculated
 
-        edit->coinFontSize = pixelsToPoints(sketcherfontSize, dpi);
+        // Coin documentation indicates the size of a font is:
+        // SoSFFloat SoFont::size        Size of font. Defaults to 10.0.
+        //
+        // For 2D rendered bitmap fonts (like for SoText2), this value is the height of a character in screen pixels. For 3D text, this value is the world-space coordinates height of a character in the current units setting (see documentation for SoUnits node).
+        //
+        // However, with hdpi monitors, the coin font labels do not respect the size passed in pixels:
+        // https://forum.freecadweb.org/viewtopic.php?f=3&t=54347&p=467610#p467610
+        // https://forum.freecadweb.org/viewtopic.php?f=10&t=49972&start=40#p467471
+        //
+        // Because I (abdullah) have  96 dpi logical, 82 dpi physical, and I see a 35px font setting for a "1" in a datum label as 34px,
+        // and I see kilsore and Elyas screenshots showing 41px and 61px in higher resolution monitors for the same configuration, I think
+        // that coin pixel size has to be corrected by the logical dpi of the monitor. The rationale is that: a) it obviously needs dpi
+        // correction, b) with physical dpi, the ratio of representation between kilsore and me is too far away.
+        //
+        // This means that the following correction does not have a documented basis, but appears necessary so that the Sketcher is usable in
+        // HDPI monitors.
+
+        edit->coinFontSize = std::lround(sketcherfontSize * 96.0f / dpi);
         edit->constraintIconSize = std::lround(0.8 * sketcherfontSize);
 
-        // The global default is used.
+        // For marker size the global default is used.
         //
         // Rationale:
         // -> Other WBs use the default value as is
         // -> If a user has a HDPI, he will eventually change the value for the other WBs
         // -> If we correct the value here in addition, we would get two times a resize
-
         edit->MarkerSize = markersize;
-
-        // This commented code would find a the closest supported marker value to a provided value.
-        // It may be useful if a different global marker size implementation is provided.
-        //
-        // Here marker size is used as a ratio to the default of 7 px (as a second scaling factor)
-        // the default marker size is 30% of the view3dFontPixels
-        // NOTE: Not all marker sizes are supported, grab the closest supported one.
-        /*
-        std::vector<int> supportedsizes {5, 7, 9, 11, 13, 15};
-        int calculatedmarker = std::lround(0.3*view3dFontPixels*markersize/7.0);
-
-        auto pos = std::upper_bound(supportedsizes.begin(), supportedsizes.end(), calculatedmarker);
-
-        if(pos == supportedsizes.end())
-            edit->MarkerSize = *std::prev(supportedsizes.end());
-        else if(pos == supportedsizes.begin())
-            edit->MarkerSize = *supportedsizes.begin();
-        else
-            edit->MarkerSize = (*pos - calculatedmarker > calculatedmarker - *std::prev(pos))?*std::prev(pos):*pos;
-        */
     }
 }
 
@@ -5024,11 +5027,11 @@ Restart:
                             norm1 = Base::Vector3d(-dir1.y,dir1.x,0.);
                             norm2 = norm1;
 
-                            Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 2.5, edit->constrGroup->getChild(i));
+                            Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 4.0, edit->constrGroup->getChild(i));
                             static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_FIRST_TRANSLATION))->abPos = SbVec3f(midpos1.x, midpos1.y, zConstr);
                             static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_FIRST_TRANSLATION))->translation = SbVec3f(relpos1.x, relpos1.y, 0);
 
-                            Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 2.5, edit->constrGroup->getChild(i));
+                            Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 4.0, edit->constrGroup->getChild(i));
 
                             Base::Vector3d secondPos = midpos2 - midpos1;
                             static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_TRANSLATION))->abPos = SbVec3f(secondPos.x, secondPos.y, zConstr);
@@ -5121,12 +5124,12 @@ Restart:
                             twoIcons = true;
                         }
 
-                        Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 2.5, edit->constrGroup->getChild(i));
+                        Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 4.0, edit->constrGroup->getChild(i));
                         static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_FIRST_TRANSLATION))->abPos = SbVec3f(midpos1.x, midpos1.y, zConstr);
                         static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_FIRST_TRANSLATION))->translation = SbVec3f(relpos1.x, relpos1.y, 0);
 
                         if (twoIcons) {
-                            Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 2.5, edit->constrGroup->getChild(i));
+                            Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 4.0, edit->constrGroup->getChild(i));
 
                             Base::Vector3d secondPos = midpos2 - midpos1;
                             static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_SECOND_TRANSLATION))->abPos = SbVec3f(secondPos.x, secondPos.y, zConstr);
@@ -5310,8 +5313,8 @@ Restart:
                             norm2 = Base::Vector3d(-dir2.y,dir2.x,0.);
                         }
 
-                        Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 2.5, edit->constrGroup->getChild(i));
-                        Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 2.5, edit->constrGroup->getChild(i));
+                        Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 4.0, edit->constrGroup->getChild(i));
+                        Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 4.0, edit->constrGroup->getChild(i));
 
                         static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_FIRST_TRANSLATION))->abPos = SbVec3f(midpos1.x, midpos1.y, zConstr); //Absolute Reference
 
@@ -5457,8 +5460,8 @@ Restart:
                                 Base::Vector3d norm1 = Base::Vector3d(-dir1.y,dir1.x,0.f);
                                 Base::Vector3d norm2 = Base::Vector3d(-dir2.y,dir2.x,0.f);
 
-                                Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 2.5, edit->constrGroup->getChild(i));
-                                Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 2.5, edit->constrGroup->getChild(i));
+                                Base::Vector3d relpos1 = seekConstraintPosition(midpos1, norm1, dir1, 4.0, edit->constrGroup->getChild(i));
+                                Base::Vector3d relpos2 = seekConstraintPosition(midpos2, norm2, dir2, 4.0, edit->constrGroup->getChild(i));
 
                                 static_cast<SoZoomTranslation *>(sep->getChild(CONSTRAINT_SEPARATOR_INDEX_FIRST_TRANSLATION))->abPos = SbVec3f(midpos1.x, midpos1.y, zConstr); //Absolute Reference
 
@@ -5919,7 +5922,7 @@ void ViewProviderSketch::rebuildConstraintsVisual(void)
                                             :NonDrivingConstrDimColor)
                                         :DeactivatedConstrDimColor;
                 text->size.setValue(edit->coinFontSize);
-                text->lineWidth = std::lround(2 * edit->pixelScalingFactor);
+                text->lineWidth = 2 * edit->pixelScalingFactor;
                 text->useAntialiasing = false;
                 SoAnnotation *anno = new SoAnnotation();
                 anno->renderCaching = SoSeparator::OFF;
@@ -6022,7 +6025,7 @@ void ViewProviderSketch::rebuildConstraintsVisual(void)
                 arrows->norm.setValue(norm);
                 arrows->string = "";
                 arrows->textColor = ConstrDimColor;
-                arrows->lineWidth = std::lround(2 * edit->pixelScalingFactor);
+                arrows->lineWidth = 2 * edit->pixelScalingFactor;
 
                 // #define CONSTRAINT_SEPARATOR_INDEX_MATERIAL_OR_DATUMLABEL 0
                 sep->addChild(arrows);
@@ -6310,6 +6313,10 @@ bool ViewProviderSketch::setEdit(int ModNum)
     // set the cross lines color
     //CrossColorV.setPackedValue((uint32_t)color, transparency);
     //CrossColorH.setPackedValue((uint32_t)color, transparency);
+    // set invalid sketch color
+    color = (unsigned long)(InvalidSketchColor.getPackedValue());
+    color = hGrp->GetUnsigned("InvalidSketchColor", color);
+    InvalidSketchColor.setPackedValue((uint32_t)color, transparency);
     // set the fully constrained color
     color = (unsigned long)(FullyConstrainedColor.getPackedValue());
     color = hGrp->GetUnsigned("FullyConstrainedColor", color);
@@ -6408,6 +6415,13 @@ QString ViewProviderSketch::appendRedundantMsg(const std::vector<int> &redundant
                         redundant);
 }
 
+QString ViewProviderSketch::appendPartiallyRedundantMsg(const std::vector<int> &partiallyredundant)
+{
+    return appendConstraintMsg(tr("The following constraint is partially redundant:"),
+                        tr("The following constraints are partially redundant:"),
+                        partiallyredundant);
+}
+
 QString ViewProviderSketch::appendMalformedMsg(const std::vector<int> &malformed)
 {
     return appendConstraintMsg(tr("Please remove the following malformed constraint:"),
@@ -6442,6 +6456,7 @@ void ViewProviderSketch::UpdateSolverInformation()
     int dofs = getSketchObject()->getLastDoF();
     bool hasConflicts = getSketchObject()->getLastHasConflicts();
     bool hasRedundancies = getSketchObject()->getLastHasRedundancies();
+    bool hasPartiallyRedundant = getSketchObject()->getLastHasPartialRedundancies();
     bool hasMalformed    = getSketchObject()->getLastHasMalformedConstraints();
 
     if (getSketchObject()->Geometry.getSize() == 0) {
@@ -6478,6 +6493,16 @@ void ViewProviderSketch::UpdateSolverInformation()
                         .arg(tr("(click to select)"))
                         .arg(appendRedundantMsg(getSketchObject()->getLastRedundant())));
         }
+
+        QString partiallyRedundantString;
+
+        if(hasPartiallyRedundant) {
+            partiallyRedundantString = QString::fromLatin1("<br/><font color='orangered'>%1<a href=\"#partiallyredundant\"><span style=\" text-decoration:  underline; color:#0000ff; background-color: #F8F8FF;\">%2</span></a><br/>%3</font><br/>")
+                                .arg(tr("Sketch contains partially redundant constraints "))
+                                .arg(tr("(click to select)"))
+                                .arg(appendPartiallyRedundantMsg(getSketchObject()->getLastPartiallyRedundant()));
+        }
+
         if (getSketchObject()->getLastSolverStatus() == 0) {
             if (dofs == 0) {
                 // color the sketch as fully constrained if it has geometry (other than the axes)
@@ -6485,14 +6510,19 @@ void ViewProviderSketch::UpdateSolverInformation()
                     edit->FullyConstrained = true;
 
                 if (!hasRedundancies) {
-                    signalSetUp(QString::fromLatin1("<font color='green'><span style=\"color:#008000; background-color: #ececec;\">%1</font></span>").arg(tr("Fully constrained sketch")));
+                    signalSetUp(QString::fromLatin1("<font color='green'><span style=\"color:#008000; background-color: #ececec;\">%1</font></span> %2").arg(tr("Fully constrained sketch")).arg(partiallyRedundantString));
                 }
             }
             else if (!hasRedundancies) {
+                QString infoString;
+
                 if (dofs == 1)
-                    signalSetUp(tr("Under-constrained sketch with <a href=\"#dofs\"><span style=\" text-decoration: underline; color:#0000ff; background-color: #F8F8FF;\">1 degree</span></a> of freedom"));
+                    signalSetUp(tr("Under-constrained sketch with <a href=\"#dofs\"><span style=\" text-decoration: underline; color:#0000ff; background-color: #F8F8FF;\">1 degree</span></a> of freedom. %1")
+                        .arg(partiallyRedundantString));
                 else
-                    signalSetUp(tr("Under-constrained sketch with <a href=\"#dofs\"><span style=\" text-decoration: underline; color:#0000ff; background-color: #F8F8FF;\">%1 degrees</span></a> of freedom").arg(dofs));
+                    signalSetUp(tr("Under-constrained sketch with <a href=\"#dofs\"><span style=\" text-decoration: underline; color:#0000ff; background-color: #F8F8FF;\">%1 degrees</span></a> of freedom. %2")
+                        .arg(dofs)
+                        .arg(partiallyRedundantString));
             }
 
             signalSolved(QString::fromLatin1("<font color='green'><span style=\"color:#008000; background-color: #ececec;\">%1</font></span>").arg(tr("Solved in %1 sec").arg(getSketchObject()->getLastSolveTime())));
@@ -6532,7 +6562,7 @@ void ViewProviderSketch::createEditInventorNodes(void)
 
     edit->PointsDrawStyle = new SoDrawStyle;
     edit->PointsDrawStyle->setName("PointsDrawStyle");
-    edit->PointsDrawStyle->pointSize = std::lround(8 * edit->pixelScalingFactor);
+    edit->PointsDrawStyle->pointSize = 8 * edit->pixelScalingFactor;
     pointsRoot->addChild(edit->PointsDrawStyle);
 
     edit->PointSet = new SoMarkerSet;
@@ -6558,7 +6588,7 @@ void ViewProviderSketch::createEditInventorNodes(void)
 
     edit->CurvesDrawStyle = new SoDrawStyle;
     edit->CurvesDrawStyle->setName("CurvesDrawStyle");
-    edit->CurvesDrawStyle->lineWidth = std::lround(3 * edit->pixelScalingFactor);
+    edit->CurvesDrawStyle->lineWidth = 3 * edit->pixelScalingFactor;
     curvesRoot->addChild(edit->CurvesDrawStyle);
 
     edit->CurveSet = new SoLineSet;
@@ -6578,7 +6608,7 @@ void ViewProviderSketch::createEditInventorNodes(void)
 
     edit->RootCrossDrawStyle = new SoDrawStyle;
     edit->RootCrossDrawStyle->setName("RootCrossDrawStyle");
-    edit->RootCrossDrawStyle->lineWidth = std::lround(2 * edit->pixelScalingFactor);
+    edit->RootCrossDrawStyle->lineWidth = 2 * edit->pixelScalingFactor;
     crossRoot->addChild(edit->RootCrossDrawStyle);
 
     edit->RootCrossMaterials = new SoMaterial;
@@ -6608,7 +6638,7 @@ void ViewProviderSketch::createEditInventorNodes(void)
 
     edit->EditCurvesDrawStyle = new SoDrawStyle;
     edit->EditCurvesDrawStyle->setName("EditCurvesDrawStyle");
-    edit->EditCurvesDrawStyle->lineWidth = std::lround(3 * edit->pixelScalingFactor);
+    edit->EditCurvesDrawStyle->lineWidth = 3 * edit->pixelScalingFactor;
     editCurvesRoot->addChild(edit->EditCurvesDrawStyle);
 
     edit->EditCurveSet = new SoLineSet;
@@ -6657,7 +6687,7 @@ void ViewProviderSketch::createEditInventorNodes(void)
     // use small line width for the Constraints
     edit->ConstraintDrawStyle = new SoDrawStyle;
     edit->ConstraintDrawStyle->setName("ConstraintDrawStyle");
-    edit->ConstraintDrawStyle->lineWidth = std::lround(1 * edit->pixelScalingFactor);
+    edit->ConstraintDrawStyle->lineWidth = 1 * edit->pixelScalingFactor;
     edit->EditRoot->addChild(edit->ConstraintDrawStyle);
 
     // add the group where all the constraints has its SoSeparator
@@ -6674,7 +6704,7 @@ void ViewProviderSketch::createEditInventorNodes(void)
     // use small line width for the information visual
     edit->InformationDrawStyle = new SoDrawStyle;
     edit->InformationDrawStyle->setName("InformationDrawStyle");
-    edit->InformationDrawStyle->lineWidth = std::lround(1 * edit->pixelScalingFactor);
+    edit->InformationDrawStyle->lineWidth = 1 * edit->pixelScalingFactor;
     edit->EditRoot->addChild(edit->InformationDrawStyle);
 
     // add the group where all the information entity has its SoSeparator
